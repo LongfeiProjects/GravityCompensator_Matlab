@@ -50,8 +50,9 @@ end
 % compute gravity effects on each actuator
 for iActuator= 1:num_Joints
     % each outloop compute/accumulate torque for single actuator
-%     iReference_Base = RobotFrames.AF_Base(:,:, iActuator); % take AF as reference to computer torque
-    iReference_Base = RobotFrames.DHFprev_Base(:,:, iActuator); % take DHFprev as reference to computer torque, same as Joint Frame in the code.
+    % same result when  reference frame is AF or DHF
+    iReference_Base = RobotFrames.AF_Base(:,:, iActuator); % take AF as reference to computer torque
+%     iReference_Base = RobotFrames.DHF_Base(:,:, iActuator); % take DHF as reference to computer torque, same as Joint Frame in the code.
     
     iReference_Base_z = iReference_Base(1:3, 3); % z axis is the joint axis of ith Joint
 

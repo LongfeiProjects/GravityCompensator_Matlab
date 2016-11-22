@@ -70,59 +70,53 @@ RobotFrames.BMF_Base = repmat(eye(4), 1, 1, num_Joints);
 % Frame(BMFi). It is consistent with "bodyMass" in the code.
 
 
-%% DH frames computation
+%% DH Frames computation with respect to (w.r.t.) Robot Base frame.
 
-% Frame DH0 with respect to (w.r.t.) Robot Base frame.
-DHF0_Base = DH2Frame(RobotConfig.Base_DH_Alpha, RobotConfig.Base_DH_Theta, RobotConfig.Base_DH_D, RobotConfig.Base_DH_R);
+% DH Frames start from index 0, Matlab index start from index 1. To
+% explicately desplay the DH index, the following function is used to
+% generate matlab matrix index. DHF_Base() is always recommended to use
+% index_matrix() for the access of index.
+index_matrix = @(index_DH)index_DH+1;
+
+index_DH = 0; % DHF0 w.r.t. Robot Base Frame
+DHF_Base(:,:,index_matrix(index_DH)) = DH2Frame(RobotConfig.Base_DH_Alpha, RobotConfig.Base_DH_Theta, RobotConfig.Base_DH_D, RobotConfig.Base_DH_R);
 
 % In Classic D-H convention, Oi is defined align with Ji+1(i+1th Actuator).
 for index_DH = 1:num_Joints
-   % Transformation of DHFi w.r.t. DHFi-1(DHFprevi):
+    
+   % Transformation of DHF(index_DH) w.r.t. DHF(index_DH-1)(i.e. DHFprevi).
    % T^(i-1)_i = TransZi-1(di)*RotZi-1(thetai)*TransXi(ri)*RotXi(alphai);
    % Note that TransZi-1() is same as TransZi() function, and all DH
    % parameters are with same index i.
+   % e.g. the first time DH2Frame() will generate transformation matrix of
+   % DHF(1) w.r.t. DHF(0). Due to the index difference, DHF(1) will be
+   % corresponding to Matlab matrix DHF_Base(index_matrix(1)), i.e. DHF_Base(2)
    DHFi_DHFprevi(:,:,index_DH) =  DH2Frame(RobotConfig.DH_Alpha(index_DH), Q(index_DH), RobotConfig.DH_D(index_DH), RobotConfig.DH_R(index_DH));
    
    % Computer Frame DHFi w.r.t. Robot Base frame
-   if(index_DH == 1)
-       % DHF1 to Base
-       DHF_Base(:,:,index_DH) = DHF0_Base * DHFi_DHFprevi(:,:,index_DH);
-   else
-       DHF_Base(:,:,index_DH) = DHF_Base(:,:,index_DH-1) * DHFi_DHFprevi(:,:,index_DH);
-   end
+   DHF_Base(:,:, index_matrix(index_DH)) = DHF_Base(:,:, index_matrix(index_DH-1))  * DHFi_DHFprevi(:,:,index_DH);
   
 end
 EEF_DHF7 = DH2Frame(RobotConfig.EndEffector_DH_Alpha, RobotConfig.EndEffector_DH_Theta, RobotConfig.EndEffector_DH_D, RobotConfig.EndEffector_DH_R);
-EEF_Base = DHF_Base(:, :, 7) * EEF_DHF7;
-
-for index_DH = 1:num_Joints
-    % starting from DH0, which is the same as Joint Frame.
-    if(index_DH == 1)
-        DHFprev_Base(:,:,index_DH) = DHF0_Base;
-    else
-        DHFprev_Base(:,:,index_DH) = DHF_Base(:,:,index_DH-1) ;
-    end
-end
+EEF_Base = DHF_Base(:, :, index_matrix(7)) * EEF_DHF7;
 
 % store to RobotFrames struct
-RobotFrames.DHF0_Base = DHF0_Base;
 RobotFrames.DHF_Base = DHF_Base;
 RobotFrames.EEF_Base = EEF_Base;
-RobotFrames.DHFprev_Base = DHFprev_Base;
 
 
 %% Link Frame computation
 % LFi located at DHFi-1, with additional rotation of theta_i along z axis
 % of DHFi-1. 
 
-for index_Link = 1:num_Joints
+for index_Link = 1:num_Links
     
-    if(index_Link ==1)
-        % Link 1 is virtual link between J1 and J2, LF1 located around J1.
-        LF_Base(:,:, index_Link) = DHF0_Base * DH2Frame(0.0, Q(index_Link), 0.0, 0.0);
-    else
+    if(index_Link < 8 )
         % LF_Base(i) = RotZ(Qi)*DHF_Base(i-1)
-        LF_Base(:,:, index_Link) = DHF_Base(:,:,index_Link-1) * DH2Frame(0.0, Q(index_Link), 0.0, 0.0);
+        LF_Base(:,:, index_Link) = DHF_Base(:,:, index_matrix(index_Link-1))  * DH2Frame(0.0, Q(index_Link), 0.0, 0.0);
+    else
+        % Link 8 is associated with fixed virtual link DHF7, therefore, no rotation
+        LF_Base(:,:, index_Link) = DHF_Base(:,:, index_matrix(index_Link-1)) * DH2Frame(0.0, 0.0, 0.0, 0.0);
     end
     
 end
