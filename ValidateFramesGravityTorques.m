@@ -69,7 +69,11 @@ Rx = @(tx)[ 1, 0, 0; 0, cos(tx), -sin(tx); 0, sin(tx), cos(tx)];
 
 % Q = [180 180 180 180 180 180 180]/180*pi; % Pose1
 % Q = [180 135 180 90 180 225 180]/180*pi; % Pose2
-Q = [249.02 170.38 153.37 57.70 198.19 228.19 171.08]/180*pi; % random Pose
+
+% This random Pose1 will show different formulas (mat2EulerXYZ.m and
+% AsrFrame::GetEulerAngles() in rtcontrol repo ) used to generate EulerXYZ
+% angles with same rotation matrix.
+Q = [179.62 132.61 160.012 86.159 162.98 234.31 205.12]/180*pi; % random Pose1
 
 RobotFrames = UpdateAllFrames(Q); 
 EEF_Trans = RobotFrames.EEF_Base; 
