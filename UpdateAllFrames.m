@@ -1,4 +1,4 @@
-function RobotFrames = UpdateAllFrames(Q)
+function RobotFrames = UpdateAllFrames(Q, RobotConfig)
 %UpdateAllFrames - Update all frames with given joint value Q.
 %
 %Code References:
@@ -9,6 +9,7 @@ function RobotFrames = UpdateAllFrames(Q)
 %
 % Inputs:
 %    Q - Robot joint values, a 7x1 vector for Auris robot
+%    RobotConfig - All robot parameters, obtained from Set7DOFsParameters.m
 %
 % Outputs:
 %    RobotFrames - A struct with all robot frames: DH frames, 
@@ -18,20 +19,16 @@ function RobotFrames = UpdateAllFrames(Q)
 
 
 %% initialize size of some variables
-if( ~exist('RobotConfig','var') )
-    RobotConfig = Set7DOFsParameters();
-%     disp('RobotConfig set.');
-end
 num_Joints = RobotConfig.num_Joints;
 % n joints will have n+1 links since each joint connects two links.
 num_Links = RobotConfig.num_Joints+1;
 
-% Some important frames: Matrix of D-H Frame (prev means index starts from 0), Link Frame(start from 1), Actuator Frame(start from 1) and Link Mass Frame(start from 1).
-RobotFrames.DHFprev_Base = repmat(eye(4), 1, 1, num_Joints);
+% frames to hand over as output: Matrix of D-H Frame (prev means index starts from 0), Link Frame(start from 1), Actuator Frame(start from 1) and Link Mass Frame(start from 1).
+RobotFrames.DHF_Base = repmat(eye(4), 1, 1, num_Joints);
 RobotFrames.AF_Base = repmat(eye(4), 1, 1, num_Joints);
 RobotFrames.LF_Base = repmat(eye(4), 1, 1, num_Joints);
 RobotFrames.BMF_Base = repmat(eye(4), 1, 1, num_Joints);
-
+RobotFrames.EEF_Base = eye(4);
 
 %% Classic D-H convention and frames
 % Joint1 to Joint7 refers to physical Actuator1 to Actuator7. According to
@@ -69,6 +66,16 @@ RobotFrames.BMF_Base = repmat(eye(4), 1, 1, num_Joints);
 % link part. To avoid confusion with links, it renamed as BodyMass
 % Frame(BMFi). It is consistent with "bodyMass" in the code.
 
+%% declare size of matrix than dynamically growing its size for large
+% data
+AF_Base = zeros(4,4,7);
+AF_LF = zeros(4,4,7);
+BMF_AF = zeros(4,4,7);
+BMF_Base = zeros(4,4,7);
+DHF_Base = zeros(4,4,8);
+DHFi_DHFprevi = zeros(4,4,7);
+LF_Base  = zeros(4,4,8);
+
 
 %% DH Frames computation with respect to (w.r.t.) Robot Base frame.
 
@@ -76,10 +83,11 @@ RobotFrames.BMF_Base = repmat(eye(4), 1, 1, num_Joints);
 % explicately desplay the DH index, the following function is used to
 % generate matlab matrix index. DHF_Base() is always recommended to use
 % index_matrix() for the access of index.
-index_matrix = @(index_DH)index_DH+1;
+% index_matrix = @(index_DH)index_DH+1; % However, anonymous function takes time with large size data!
 
 index_DH = 0; % DHF0 w.r.t. Robot Base Frame
-DHF_Base(:,:,index_matrix(index_DH)) = DH2Frame(RobotConfig.Base_DH_Alpha, RobotConfig.Base_DH_Theta, RobotConfig.Base_DH_D, RobotConfig.Base_DH_R);
+% DHF_Base(:,:,index_matrix(index_DH)) = DH2Frame(RobotConfig.Base_DH_Alpha, RobotConfig.Base_DH_Theta, RobotConfig.Base_DH_D, RobotConfig.Base_DH_R);
+DHF_Base(:,:,index_DH+1) = DH2Frame(RobotConfig.Base_DH_Alpha, RobotConfig.Base_DH_Theta, RobotConfig.Base_DH_D, RobotConfig.Base_DH_R);  % However, anonymous function takes time with large size data!
 
 % In Classic D-H convention, Oi is defined align with Ji+1(i+1th Actuator).
 for index_DH = 1:num_Joints
@@ -94,11 +102,13 @@ for index_DH = 1:num_Joints
    DHFi_DHFprevi(:,:,index_DH) =  DH2Frame(RobotConfig.DH_Alpha(index_DH), Q(index_DH), RobotConfig.DH_D(index_DH), RobotConfig.DH_R(index_DH));
    
    % Computer Frame DHFi w.r.t. Robot Base frame
-   DHF_Base(:,:, index_matrix(index_DH)) = DHF_Base(:,:, index_matrix(index_DH-1))  * DHFi_DHFprevi(:,:,index_DH);
+   %   DHF_Base(:,:, index_matrix(index_DH)) = DHF_Base(:,:, index_matrix(index_DH-1))  * DHFi_DHFprevi(:,:,index_DH);  % However, anonymous function takes time with large size data!
+   DHF_Base(:,:, index_DH+1) = DHF_Base(:,:, index_DH)  * DHFi_DHFprevi(:,:,index_DH);
   
 end
 EEF_DHF7 = DH2Frame(RobotConfig.EndEffector_DH_Alpha, RobotConfig.EndEffector_DH_Theta, RobotConfig.EndEffector_DH_D, RobotConfig.EndEffector_DH_R);
-EEF_Base = DHF_Base(:, :, index_matrix(7)) * EEF_DHF7;
+% EEF_Base = DHF_Base(:, :, index_matrix(7)) * EEF_DHF7;% However, anonymous function takes time with large size data!
+EEF_Base = DHF_Base(:, :, 8) * EEF_DHF7;
 
 % store to RobotFrames struct
 RobotFrames.DHF_Base = DHF_Base;
@@ -113,10 +123,12 @@ for index_Link = 1:num_Links
     
     if(index_Link < 8 )
         % LF_Base(i) = RotZ(Qi)*DHF_Base(i-1)
-        LF_Base(:,:, index_Link) = DHF_Base(:,:, index_matrix(index_Link-1))  * DH2Frame(0.0, Q(index_Link), 0.0, 0.0);
+        % LF_Base(:,:, index_Link) = DHF_Base(:,:, index_matrix(index_Link-1))  * DH2Frame(0.0, Q(index_Link), 0.0, 0.0); % However, anonymous function takes time with large size data!
+        LF_Base(:,:, index_Link) = DHF_Base(:,:, index_Link)  * DH2Frame(0.0, Q(index_Link), 0.0, 0.0);
     else
         % Link 8 is associated with fixed virtual link DHF7, therefore, no rotation
-        LF_Base(:,:, index_Link) = DHF_Base(:,:, index_matrix(index_Link-1)) * DH2Frame(0.0, 0.0, 0.0, 0.0);
+%         LF_Base(:,:, index_Link) = DHF_Base(:,:, index_matrix(index_Link-1)) * DH2Frame(0.0, 0.0, 0.0, 0.0); % However, anonymous function takes time with large size data!
+        LF_Base(:,:, index_Link) = DHF_Base(:,:, index_Link) * DH2Frame(0.0, 0.0, 0.0, 0.0);
     end
     
 end

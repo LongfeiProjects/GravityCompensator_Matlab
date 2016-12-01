@@ -30,10 +30,11 @@ end
 
 %% check with end effector pose between C++ code and matlab code;
 
+RobotConfig = Set7DOFsParameters();
 % for i_sample = 1:length(Q_experiment)
 for i_sample = 1:length(QCommand_cpp)
     Q = QCommand_cpp(i_sample,:)';
-    RobotFrames = UpdateAllFrames(Q);
+    RobotFrames = UpdateAllFrames(Q,RobotConfig);
     EEF_Trans = RobotFrames.EEF_Base;
     Position_matlab(i_sample, :) = EEF_Trans(1:3,4)';
     
@@ -53,7 +54,7 @@ end
 % for i_sample = 1:length(Q_experiment)
 for i_sample = 1:length(QCommand_cpp)
     Q = QCommand_cpp(i_sample,:)';
-    GravityT_matlab(i_sample, :) = ComputerGravityTorque(Q);
+    GravityT_matlab(i_sample, :) = ComputerGravityTorque(Q, RobotConfig);
     
     GravityT_Error(i_sample, :)  = norm(GravityT_cpp(i_sample, :)) - norm(GravityT_matlab(i_sample, :)) ; 
 end
@@ -76,10 +77,10 @@ Q = [180 135 180 90 180 225 180]/180*pi; % Pose2
 % (eg: decimal precision scale of 5) to reproduce the Euler Angles in Thor. 
 % Q = [179.63710 132.68370 160.03061 86.18202 162.92809 234.33295 205.13373]/180*pi; % random Pose1
 
-RobotFrames = UpdateAllFrames(Q); 
+RobotFrames = UpdateAllFrames(Q, RobotConfig); 
 EEF_Trans = RobotFrames.EEF_Base; 
 Pose = [EEF_Trans(1:3,4)', mat2EulerXYZ(EEF_Trans(1:3, 1:3))*180/pi],
-gravity = ComputerGravityTorque(Q)'
+gravity = ComputerGravityTorque(Q, RobotConfig)'
 
 
 

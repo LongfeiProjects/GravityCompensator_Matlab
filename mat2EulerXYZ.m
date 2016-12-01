@@ -13,8 +13,7 @@ tx = atan2(-a23, a33);
 % tx = atan2(-a12, a11);
 ty = atan2(a13, -sin(tx)*a23 + cos(tx)*a33);
 tz = atan2(cos(tx)*a21 + sin(tx)*a31, cos(tx)*a22 + sin(tx)*a32);
-% disp('hahahah~~~~~~~~~~~');
-[tx, ty, tz];
+% [tx, ty, tz];
 if (abs(a23) < 1e-6 && abs(a33) < 1e-6)
     if (ty > 0.0)
         txf = (tx + tz) / 2.0;
