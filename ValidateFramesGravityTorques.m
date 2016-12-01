@@ -68,16 +68,19 @@ Ry = @(ty)[cos(ty), 0, sin(ty); 0, 1, 0; -sin(ty), 0, cos(ty)];
 Rx = @(tx)[ 1, 0, 0; 0, cos(tx), -sin(tx); 0, sin(tx), cos(tx)];
 
 % Q = [180 180 180 180 180 180 180]/180*pi; % Pose1
-% Q = [180 135 180 90 180 225 180]/180*pi; % Pose2
+Q = [180 135 180 90 180 225 180]/180*pi; % Pose2
 
+% Q = [179.95709 180.22076 180.22090 179.86920 180.18906 180.01328 179.92484]/180*pi; % A Real robot configuration close to Pose1
+% Q = [138.38727 219.67690 118.79504 114.11444 217.43028 215.32700 205.68263]/180*pi; % Radom Pose2
 % Certain random Poses (maybe close to Singularity?) needs high precision
 % (eg: decimal precision scale of 5) to reproduce the Euler Angles in Thor. 
-Q = [179.63710 132.68370 160.03061 86.18202 162.92809 234.33295 205.13373]/180*pi; % random Pose1
+% Q = [179.63710 132.68370 160.03061 86.18202 162.92809 234.33295 205.13373]/180*pi; % random Pose1
 
 RobotFrames = UpdateAllFrames(Q); 
 EEF_Trans = RobotFrames.EEF_Base; 
 Pose = [EEF_Trans(1:3,4)', mat2EulerXYZ(EEF_Trans(1:3, 1:3))*180/pi],
 gravity = ComputerGravityTorque(Q)'
+
 
 
 
