@@ -69,7 +69,7 @@ Ry = @(ty)[cos(ty), 0, sin(ty); 0, 1, 0; -sin(ty), 0, cos(ty)];
 Rx = @(tx)[ 1, 0, 0; 0, cos(tx), -sin(tx); 0, sin(tx), cos(tx)];
 
 % Q = [180 180 180 180 180 180 180]/180*pi; % Pose1
-Q = [180 135 180 90 180 225 180]/180*pi; % Pose2
+Q = [180 90 180 180 180 180 180]/180*pi; % Pose2      // temp test to verify gravity model
 
 % Q = [179.95709 180.22076 180.22090 179.86920 180.18906 180.01328 179.92484]/180*pi; % A Real robot configuration close to Pose1
 % Q = [138.38727 219.67690 118.79504 114.11444 217.43028 215.32700 205.68263]/180*pi; % Radom Pose2
@@ -77,13 +77,117 @@ Q = [180 135 180 90 180 225 180]/180*pi; % Pose2
 % (eg: decimal precision scale of 5) to reproduce the Euler Angles in Thor. 
 % Q = [179.63710 132.68370 160.03061 86.18202 162.92809 234.33295 205.13373]/180*pi; % random Pose1
 
+RobotConfig = Set7DOFsParameters();
+
+    RobotConfig.EndEffectorMass = 5.0;
+	RobotConfig.EndEffectorCOMPosition(1) = 1.0;
+	RobotConfig.EndEffectorCOMPosition(2) = 2.0;
+	RobotConfig.EndEffectorCOMPosition(3) = -3.0;
+
 RobotFrames = UpdateAllFrames(Q, RobotConfig); 
 EEF_Trans = RobotFrames.EEF_Base; 
-Pose = [EEF_Trans(1:3,4)', mat2EulerXYZ(EEF_Trans(1:3, 1:3))*180/pi],
+Pose = [EEF_Trans(1:3,4)', mat2EulerXYZ(EEF_Trans(1:3, 1:3))*180/pi];
 gravity = ComputerGravityTorque(Q, RobotConfig)'
 
 
+%% Manually verify the gravity torque with this special joint configuration on Actuator 2
+Q = [180 90 180 180 180 180 180]/180*pi; % Pose2      // temp test to verify gravity model
+Robot = RobotConfig;
+
+g = 9.81;
+% 	Robot.LinkMass(2) = 1.34420;
+% 	Robot.LinkMass(3) = 1.34420;
+% 	Robot.LinkMass(4) = 1.09452;
+% 	Robot.LinkMass(5) = 0.59020;
+% 	Robot.LinkMass(6) = 0.59020;
+% 	Robot.LinkMass(7) = 0.23948;
+M2 = Robot.LinkMass(2);
+M3 = Robot.LinkMass(3);
+M4 = Robot.LinkMass(4);
+M5 = Robot.LinkMass(5);
+M6 = Robot.LinkMass(6);
+M7 = Robot.LinkMass(7);
+M_EE = 5;
+
+% 	Robot.LinkCOMPosition(1, 1) = -0.00000394;
+% 	Robot.LinkCOMPosition(1, 2) = 0.001804699;
+% 	Robot.LinkCOMPosition(1, 3) = -0.0748562;
+% 	Robot.LinkCOMPosition(2, 1) = 0.000022339;
+% 	Robot.LinkCOMPosition(2, 2) = 0.07515658;
+% 	Robot.LinkCOMPosition(2, 3) = -0.0301928;
+% 	Robot.LinkCOMPosition(3, 1) = -0.00002234;
+% 	Robot.LinkCOMPosition(3, 2) = 0.009582299;
+% 	Robot.LinkCOMPosition(3, 3) = -0.0966774;
+% 	Robot.LinkCOMPosition(4, 1) = -0.00003269;
+% 	Robot.LinkCOMPosition(4, 2) = 0.09546485;
+% 	Robot.LinkCOMPosition(4, 3) = -0.0287837;
+% 	Robot.LinkCOMPosition(5, 1) = 0.000064423;
+% 	Robot.LinkCOMPosition(5, 2) = -0.00987523;
+% 	Robot.LinkCOMPosition(5, 3) = -0.06073370;
+% 	Robot.LinkCOMPosition(6, 1) = 0.000056819;
+% 	Robot.LinkCOMPosition(6, 2) = 0.04279498;
+% 	Robot.LinkCOMPosition(6, 3) = -0.00982194;
+% 	Robot.LinkCOMPosition(7, 1) = 0.00000000;
+% 	Robot.LinkCOMPosition(7, 2) = 0.00002000;
+% 	Robot.LinkCOMPosition(7, 3) = -0.01702000;
+L2 = Robot.LinkCOMPosition(2, 2); 
+L3 = Robot.LinkCOMPosition(3, 3); 
+L4 = Robot.LinkCOMPosition(4, 2); 
+L5 = Robot.LinkCOMPosition(5, 3); 
+L6 = Robot.LinkCOMPosition(6, 2); 
+L7 = Robot.LinkCOMPosition(7, 3); 
+L_EE = -3; 
+
+A3 = 0.345/2;
+A4 = 0.345;
+A5 = 0.345*2 - 0.10375;
+A6 = 0.345*2;
+A7 = 0.345*2 + 0.10375;
+
+% from Body2 to Actuator 2
+body2_gravitytorque2 = L2*M2*g;
+% from Body3 to Actuator 2
+body3_gravitytorque2 = (A3 - L3)*M3*g;
+% from Body4 to Actuator 2
+body4_gravitytorque2 = (A4 + L4)*M4*g;
+% from Body5 to Actuator 2
+body5_gravitytorque2 = (A5 - L5 )*M5*g;
+% from Body6 to Actuator 2
+body6_gravitytorque2 = (A6 + L6)*M6*g;
+% from Body7 to Actuator 2
+body7_gravitytorque2 = (A7 - L7)*M7*g;
+% from BodyEE to Actuator 2
+bodyEE_gravitytorque2 = (A7 - L_EE)*M_EE*g;
+
+gravitytorque2 = body2_gravitytorque2 + body3_gravitytorque2 + body4_gravitytorque2 + ... 
+    body5_gravitytorque2 + body6_gravitytorque2 + body7_gravitytorque2 + bodyEE_gravitytorque2; 
+
+gravitytorque2,
+[body2_gravitytorque2, body3_gravitytorque2, body4_gravitytorque2 + ... 
+    body5_gravitytorque2, body6_gravitytorque2, body7_gravitytorque2, bodyEE_gravitytorque2 ],
 
 
 
+%% Manually verify the gravity torque with this special joint configuration on Actuator 4
 
+A3 = 0.345/2;
+A4 = 0.345;
+A5 = 0.345*2 - 0.10375;
+A6 = 0.345*2;
+A7 = 0.345*2 + 0.10375;
+
+% from Body4 to Actuator 4
+body4_gravitytorque4 = (L4)*M4*g;
+% from Body5 to Actuator 4
+body5_gravitytorque4 = (A5 - A4 - L5 )*M5*g;
+% from Body6 to Actuator 4
+body6_gravitytorque4 = (A6 - A4 + L6)*M6*g;
+% from Body7 to Actuator 4
+body7_gravitytorque4 = (A7 - A4 - L7)*M7*g;
+% from BodyEE to Actuator 4
+bodyEE_gravitytorque4 = (A7 - A4 - L_EE)*M_EE*g;
+
+gravitytorque4 = body4_gravitytorque4 + body5_gravitytorque4 + body6_gravitytorque4 + body7_gravitytorque4 + bodyEE_gravitytorque4; 
+
+gravitytorque4,
+[body4_gravitytorque4 + body5_gravitytorque4, body6_gravitytorque4, body7_gravitytorque4, bodyEE_gravitytorque4],

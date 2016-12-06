@@ -165,7 +165,7 @@ end
 % default). This part is renamed as bodyMass7E (7+E)
 bodyMass7E = RobotConfig.LinkMass(7) + RobotConfig.EndEffectorMass;
 % component of offset from bodyMass7E Frame w.r.t. Actuator 7 Frame
-BMF_AF(:,:, 7) = [eye(3), (RobotConfig.LinkCOMPosition(7,:)' * RobotConfig.LinkMass(7) + EEF_DHF7(1:3,4) * RobotConfig.EndEffectorMass) / bodyMass7E; 0, 0, 0, 1];
+BMF_AF(:,:, 7) = [eye(3), (RobotConfig.LinkCOMPosition(7,:)' * RobotConfig.LinkMass(7) + RobotConfig.EndEffectorCOMPosition' * RobotConfig.EndEffectorMass) / bodyMass7E; 0, 0, 0, 1];
 
 % Compute Body Mass Frame w.r.t. Robot Base Frame
 for index_bodyMass = 1:num_Joints
