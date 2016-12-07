@@ -108,6 +108,7 @@ M5 = Robot.LinkMass(5);
 M6 = Robot.LinkMass(6);
 M7 = Robot.LinkMass(7);
 M_EE = 5;
+Offset_EE = [1, 2, -3];
 
 % 	Robot.LinkCOMPosition(1, 1) = -0.00000394;
 % 	Robot.LinkCOMPosition(1, 2) = 0.001804699;
@@ -130,13 +131,15 @@ M_EE = 5;
 % 	Robot.LinkCOMPosition(7, 1) = 0.00000000;
 % 	Robot.LinkCOMPosition(7, 2) = 0.00002000;
 % 	Robot.LinkCOMPosition(7, 3) = -0.01702000;
+
+% sign (i.e. +/-) depends if BMF_y/z align with RBF_x axis
 L2 = Robot.LinkCOMPosition(2, 2); 
-L3 = Robot.LinkCOMPosition(3, 3); 
+L3 = - Robot.LinkCOMPosition(3, 3); 
 L4 = Robot.LinkCOMPosition(4, 2); 
-L5 = Robot.LinkCOMPosition(5, 3); 
+L5 = - Robot.LinkCOMPosition(5, 3); 
 L6 = Robot.LinkCOMPosition(6, 2); 
-L7 = Robot.LinkCOMPosition(7, 3); 
-L_EE = -3; 
+L7 = - Robot.LinkCOMPosition(7, 3); 
+L_EE = - Offset_EE(3); 
 
 A3 = 0.345/2;
 A4 = 0.345;
@@ -147,30 +150,116 @@ A7 = 0.345*2 + 0.10375;
 % from Body2 to Actuator 2
 body2_gravitytorque2 = L2*M2*g;
 % from Body3 to Actuator 2
-body3_gravitytorque2 = (A3 - L3)*M3*g;
+body3_gravitytorque2 = (A3 + L3)*M3*g;
 % from Body4 to Actuator 2
 body4_gravitytorque2 = (A4 + L4)*M4*g;
 % from Body5 to Actuator 2
-body5_gravitytorque2 = (A5 - L5 )*M5*g;
+body5_gravitytorque2 = (A5 + L5 )*M5*g;
 % from Body6 to Actuator 2
 body6_gravitytorque2 = (A6 + L6)*M6*g;
 % from Body7 to Actuator 2
-body7_gravitytorque2 = (A7 - L7)*M7*g;
+body7_gravitytorque2 = (A7 + L7)*M7*g;
 % from BodyEE to Actuator 2
-bodyEE_gravitytorque2 = (A7 - L_EE)*M_EE*g;
+bodyEE_gravitytorque2 = (A7 + L_EE)*M_EE*g;
 
 gravitytorque2 = body2_gravitytorque2 + body3_gravitytorque2 + body4_gravitytorque2 + ... 
     body5_gravitytorque2 + body6_gravitytorque2 + body7_gravitytorque2 + bodyEE_gravitytorque2; 
 
 gravitytorque2,
 [body2_gravitytorque2, body3_gravitytorque2, body4_gravitytorque2 + ... 
-    body5_gravitytorque2, body6_gravitytorque2, body7_gravitytorque2, bodyEE_gravitytorque2 ],
+    body5_gravitytorque2, body6_gravitytorque2, body7_gravitytorque2, bodyEE_gravitytorque2 ];
+
+
+%% Manually verify the gravity torque with this special joint configuration on Actuator 3
+
+% 	Robot.LinkCOMPosition(1, 1) = -0.00000394;
+% 	Robot.LinkCOMPosition(1, 2) = 0.001804699;
+% 	Robot.LinkCOMPosition(1, 3) = -0.0748562;
+% 	Robot.LinkCOMPosition(2, 1) = 0.000022339;
+% 	Robot.LinkCOMPosition(2, 2) = 0.07515658;
+% 	Robot.LinkCOMPosition(2, 3) = -0.0301928;
+% 	Robot.LinkCOMPosition(3, 1) = -0.00002234;
+% 	Robot.LinkCOMPosition(3, 2) = 0.009582299;
+% 	Robot.LinkCOMPosition(3, 3) = -0.0966774;
+% 	Robot.LinkCOMPosition(4, 1) = -0.00003269;
+% 	Robot.LinkCOMPosition(4, 2) = 0.09546485;
+% 	Robot.LinkCOMPosition(4, 3) = -0.0287837;
+% 	Robot.LinkCOMPosition(5, 1) = 0.000064423;
+% 	Robot.LinkCOMPosition(5, 2) = -0.00987523;
+% 	Robot.LinkCOMPosition(5, 3) = -0.06073370;
+% 	Robot.LinkCOMPosition(6, 1) = 0.000056819;
+% 	Robot.LinkCOMPosition(6, 2) = 0.04279498;
+% 	Robot.LinkCOMPosition(6, 3) = -0.00982194;
+% 	Robot.LinkCOMPosition(7, 1) = 0.00000000;
+% 	Robot.LinkCOMPosition(7, 2) = 0.00002000;
+% 	Robot.LinkCOMPosition(7, 3) = -0.01702000;
+
+% sign (i.e. +/-) depends if BMF_y/z align with RBF_y axis
+L3 = Robot.LinkCOMPosition(3, 2); 
+L4 = - Robot.LinkCOMPosition(4, 3); 
+L5 = Robot.LinkCOMPosition(5, 2); 
+L6 = - Robot.LinkCOMPosition(6, 3); 
+L7 = Robot.LinkCOMPosition(7, 2); 
+L_EE = Offset_EE(2); 
+
+% offset along RBF_y
+A4 = 0.04; 
+A5 = A4 + 0.04;
+A6 = A5 + 0.0;
+A7 = A6 + 0.0;
+
+
+% from Body3 to Actuator 3
+body3_gravitytorque3 = L3*M3*g;
+% from Body4 to Actuator 3
+body4_gravitytorque3 = (A4 + L4)*M4*g;
+% from Body5 to Actuator 3
+body5_gravitytorque3 = (A5 + L5)*M5*g;
+% from Body6 to Actuator 3
+body6_gravitytorque3 = (A6 + L6)*M6*g;
+% from Body7 to Actuator 3
+body7_gravitytorque3 = (A7 + L7)*M7*g;
+% from BodyEE to Actuator 3
+bodyEE_gravitytorque3 = (A7 + L_EE)*M_EE*g;
+
+gravitytorque3 = body3_gravitytorque3 + body4_gravitytorque3 + body5_gravitytorque3 + body6_gravitytorque3 + body7_gravitytorque3 + bodyEE_gravitytorque3; 
+
+% 104.0030
+gravitytorque3,
 
 
 
 %% Manually verify the gravity torque with this special joint configuration on Actuator 4
 
-A3 = 0.345/2;
+% 	Robot.LinkCOMPosition(1, 1) = -0.00000394;
+% 	Robot.LinkCOMPosition(1, 2) = 0.001804699;
+% 	Robot.LinkCOMPosition(1, 3) = -0.0748562;
+% 	Robot.LinkCOMPosition(2, 1) = 0.000022339;
+% 	Robot.LinkCOMPosition(2, 2) = 0.07515658;
+% 	Robot.LinkCOMPosition(2, 3) = -0.0301928;
+% 	Robot.LinkCOMPosition(3, 1) = -0.00002234;
+% 	Robot.LinkCOMPosition(3, 2) = 0.009582299;
+% 	Robot.LinkCOMPosition(3, 3) = -0.0966774;
+% 	Robot.LinkCOMPosition(4, 1) = -0.00003269;
+% 	Robot.LinkCOMPosition(4, 2) = 0.09546485;
+% 	Robot.LinkCOMPosition(4, 3) = -0.0287837;
+% 	Robot.LinkCOMPosition(5, 1) = 0.000064423;
+% 	Robot.LinkCOMPosition(5, 2) = -0.00987523;
+% 	Robot.LinkCOMPosition(5, 3) = -0.06073370;
+% 	Robot.LinkCOMPosition(6, 1) = 0.000056819;
+% 	Robot.LinkCOMPosition(6, 2) = 0.04279498;
+% 	Robot.LinkCOMPosition(6, 3) = -0.00982194;
+% 	Robot.LinkCOMPosition(7, 1) = 0.00000000;
+% 	Robot.LinkCOMPosition(7, 2) = 0.00002000;
+% 	Robot.LinkCOMPosition(7, 3) = -0.01702000;
+
+% sign (i.e. +/-) depends if BMF_y/z align with RBF_x axis
+L4 = Robot.LinkCOMPosition(4, 2); 
+L5 = - Robot.LinkCOMPosition(5, 3); 
+L6 = Robot.LinkCOMPosition(6, 2); 
+L7 = - Robot.LinkCOMPosition(7, 3); 
+L_EE = - Offset_EE(3); 
+
 A4 = 0.345;
 A5 = 0.345*2 - 0.10375;
 A6 = 0.345*2;
@@ -179,15 +268,36 @@ A7 = 0.345*2 + 0.10375;
 % from Body4 to Actuator 4
 body4_gravitytorque4 = (L4)*M4*g;
 % from Body5 to Actuator 4
-body5_gravitytorque4 = (A5 - A4 - L5 )*M5*g;
+body5_gravitytorque4 = (A5 - A4 + L5 )*M5*g;
 % from Body6 to Actuator 4
 body6_gravitytorque4 = (A6 - A4 + L6)*M6*g;
 % from Body7 to Actuator 4
-body7_gravitytorque4 = (A7 - A4 - L7)*M7*g;
+body7_gravitytorque4 = (A7 - A4 + L7)*M7*g;
 % from BodyEE to Actuator 4
-bodyEE_gravitytorque4 = (A7 - A4 - L_EE)*M_EE*g;
+bodyEE_gravitytorque4 = (A7 - A4 + L_EE)*M_EE*g;
 
 gravitytorque4 = body4_gravitytorque4 + body5_gravitytorque4 + body6_gravitytorque4 + body7_gravitytorque4 + bodyEE_gravitytorque4; 
 
 gravitytorque4,
-[body4_gravitytorque4 + body5_gravitytorque4, body6_gravitytorque4, body7_gravitytorque4, bodyEE_gravitytorque4],
+[body4_gravitytorque4 + body5_gravitytorque4, body6_gravitytorque4, body7_gravitytorque4, bodyEE_gravitytorque4];
+
+
+%% Manually verify the gravity torque with this special joint configuration on Actuator 3
+
+% 	Robot.LinkCOMPosition(7, 1) = 0.00000000;
+% 	Robot.LinkCOMPosition(7, 2) = 0.00002000;
+% 	Robot.LinkCOMPosition(7, 3) = -0.01702000;
+
+% sign (i.e. +/-) depends if BMF_y/z align with RBF_y axis
+L7 = Robot.LinkCOMPosition(7, 2); 
+L_EE = Offset_EE(2); 
+
+% from Body7 to Actuator 7
+body7_gravitytorque7 = L7*M7*g;
+% from BodyEE to Actuator 7
+bodyEE_gravitytorque7 = L_EE*M_EE*g;
+
+gravitytorque7 = body7_gravitytorque7 + bodyEE_gravitytorque7; 
+
+gravitytorque7,
+

@@ -68,9 +68,8 @@ for iActuator= 1:num_Joints
         jGravityTorque_Reference_z = sum(jGravityTorque_Base.*iReference_Base_z)/norm(iReference_Base_z);
         GravityTorque(iActuator) = GravityTorque(iActuator) + jGravityTorque_Reference_z;
         
-%         disp(['', num2str(), '', num2str(), '', num2str()]);
 %         fprintf('Actuator %d from Body mass %d, jGravityTorque_Bas = [%2.4f, %2.4f, %2.4f] \n', iActuator, jPostBody, jGravityTorque_Base(1), jGravityTorque_Base(2), jGravityTorque_Base(3));
-        fprintf('Actuator %d from Body mass %d, jLevelArm_Base = [%2.4f, %2.4f, %2.4f] \n', iActuator, jPostBody, jLevelArm_Base(1), jLevelArm_Base(2), jLevelArm_Base(3));
+%         fprintf('Actuator %d from Body mass %d, jLevelArm_Base = [%2.4f, %2.4f, %2.4f] \n', iActuator, jPostBody, jLevelArm_Base(1), jLevelArm_Base(2), jLevelArm_Base(3));
         
     end
             
@@ -79,7 +78,6 @@ for iActuator= 1:num_Joints
     % Joint.GravityTorque(iActuator)  = GravityTorque(iActuator);
    
 end
-    fprintf('bodyMass is [%2.4f, %2.4f, %2.4f, %2.4f, %2.4f, %2.4f, %2.4f] \n', bodyMass(1), bodyMass(2), bodyMass(3), bodyMass(4), bodyMass(5), bodyMass(6), bodyMass(7));
 
 
 end
