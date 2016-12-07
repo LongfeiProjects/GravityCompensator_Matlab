@@ -25,9 +25,9 @@ function Robot = Set7DOFsParameters()
 	Robot.GravityAcceleration(3) = -9.81;
     
     % Auris robot setup in the Cart on their site
-    Robot.GravityAcceleration(1) = -9.81;
-	Robot.GravityAcceleration(2) = 0.0;
-	Robot.GravityAcceleration(3) = 0.0;
+%     Robot.GravityAcceleration(1) = -9.81;
+% 	Robot.GravityAcceleration(2) = 0.0;
+% 	Robot.GravityAcceleration(3) = 0.0;
 
 	Robot.DH_Alpha(1) = ASR_PI / 2.0;
 	Robot.DH_Alpha(2) = ASR_PI / 2.0;
@@ -115,5 +115,6 @@ function Robot = Set7DOFsParameters()
 	Robot.EndEffectorCOMPosition(1) = 0.0;
 	Robot.EndEffectorCOMPosition(2) = 0.0;
 	Robot.EndEffectorCOMPosition(3) = 0.0;
+      
     
 end
