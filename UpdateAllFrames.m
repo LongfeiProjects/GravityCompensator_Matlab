@@ -24,11 +24,13 @@ num_Joints = RobotConfig.num_Joints;
 num_Links = RobotConfig.num_Joints+1;
 
 % frames to hand over as output: Matrix of D-H Frame (prev means index starts from 0), Link Frame(start from 1), Actuator Frame(start from 1) and Link Mass Frame(start from 1).
-RobotFrames.DHF_Base = repmat(eye(4), 1, 1, num_Joints);
+RobotFrames.DHF_Base = repmat(eye(4), 1, 1, num_Joints+1);
 RobotFrames.AF_Base = repmat(eye(4), 1, 1, num_Joints);
-RobotFrames.LF_Base = repmat(eye(4), 1, 1, num_Joints);
+RobotFrames.LF_Base = repmat(eye(4), 1, 1, num_Links);
 RobotFrames.BMF_Base = repmat(eye(4), 1, 1, num_Joints);
+RobotFrames.JacobDHF_Base = repmat(eye(4), 1, 1, num_Joints);
 RobotFrames.EEF_Base = eye(4);
+
 
 %% Classic D-H convention and frames
 % Joint1 to Joint7 refers to physical Actuator1 to Actuator7. According to
@@ -75,6 +77,7 @@ BMF_Base = zeros(4,4,7);
 DHF_Base = zeros(4,4,8);
 DHFi_DHFprevi = zeros(4,4,7);
 LF_Base  = zeros(4,4,8);
+JacobDHF_Base = zeros(6,7);
 
 
 %% DH Frames computation with respect to (w.r.t.) Robot Base frame.
@@ -114,6 +117,15 @@ EEF_Base = DHF_Base(:, :, 8) * EEF_DHF7;
 RobotFrames.DHF_Base = DHF_Base;
 RobotFrames.EEF_Base = EEF_Base;
 
+
+%% Jacobian matrix of EEF_Base w.r.t. Joint positions, a 6x7 matrix
+for index_Joint = 1:num_Joints
+    % each jacobian matrix is 
+    zAxis_Base = DHF_Base(1:3, 3, index_Joint);
+    JacobDHF_Base(1:3, index_Joint) = cross(zAxis_Base, EEF_Base(1:3,4) - DHF_Base(1:3,4, index_Joint));
+    JacobDHF_Base(4:6, index_Joint) = zAxis_Base;
+end
+RobotFrames.JacobDHF_Base = JacobDHF_Base;
 
 %% Link Frame computation
 % LFi located at DHFi-1, with additional rotation of theta_i along z axis
