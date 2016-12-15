@@ -118,12 +118,12 @@ RobotFrames.DHF_Base = DHF_Base;
 RobotFrames.EEF_Base = EEF_Base;
 
 
-%% Jacobian matrix of EEF_Base w.r.t. Joint positions, a 6x7 matrix
+%% Jacobian matrix of EEF_Base w.r.t. Joint positions, a 6x7 matrix with order [Angular velocity; position velocity]
 for index_Joint = 1:num_Joints
     % each jacobian matrix is 
     zAxis_Base = DHF_Base(1:3, 3, index_Joint);
-    JacobDHF_Base(1:3, index_Joint) = cross(zAxis_Base, EEF_Base(1:3,4) - DHF_Base(1:3,4, index_Joint));
-    JacobDHF_Base(4:6, index_Joint) = zAxis_Base;
+    JacobDHF_Base(1:3, index_Joint) = zAxis_Base;
+    JacobDHF_Base(4:6, index_Joint) = cross(zAxis_Base, EEF_Base(1:3,4) - DHF_Base(1:3,4, index_Joint));
 end
 RobotFrames.JacobDHF_Base = JacobDHF_Base;
 
