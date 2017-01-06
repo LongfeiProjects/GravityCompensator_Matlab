@@ -66,6 +66,11 @@ function GravityTorque2 = ComputerGravityTorque_MS7(Q)
 	Robot.ToolCOMPosition(2) = 0.0;
 	Robot.ToolCOMPosition(3) = 0.0;
     
+    Robot.IDMMass = 0.0;
+	Robot.IDMCOMPosition(1) = 0.0;
+	Robot.IDMCOMPosition(2) = 0.0;
+	Robot.IDMCOMPosition(3) = 0.0;
+    
 % modify due to the change of JointFrame (AF)
 	Robot.LinkCOMPosition(1, 1) = -Robot.LinkCOMPosition(1, 1);
 	Robot.LinkCOMPosition(1, 2) = -Robot.LinkCOMPosition(1, 2);
@@ -78,11 +83,12 @@ RobotConfig = Robot;
 
     
 %% test and verify Gravity compensator with ValidateFramesGravityTorques
-    RobotConfig.ToolMass = 5.0;
-	RobotConfig.ToolCOMPosition(1) = 1.0;
-	RobotConfig.ToolCOMPosition(2) = -2.0;
-	RobotConfig.ToolCOMPosition(3) = 3.0;
-    warndlg('The Tool Mass and Offset are changed for verification in ComputerGravityTorque_MS7.m', 'Default parameter changed');
+    % remap loat of 5kg [1.0; -2.0; 3.0] w.r.t. ToolFrame, to IDMFrame
+    RobotConfig.IDMMass = 5.0;
+    RobotConfig.IDMCOMPosition(1) = -2.0 + 77.15/1000; 
+	RobotConfig.IDMCOMPosition(2) = 3.0 - 100/1000;
+	RobotConfig.IDMCOMPosition(3) = 1.0;
+    warndlg('The IDM Mass and Offset are changed for verification in ComputerGravityTorque_MS7.m', 'Default parameter changed');
     % GravityTorque2 = [-0.0000 -205.2469  104.0030 -175.2742   98.0997 -152.7704   98.1000]
 
 %% obtain robot joint frames
@@ -104,10 +110,11 @@ for index_bodyMass = 1:num_Joints
 end
 
 ToolCOM_Base = RobotJointFrames.T0_tool*[eye(3), RobotConfig.ToolCOMPosition'; 0, 0, 0, 1];
+IDMCOM_Base = RobotJointFrames.T0_IDM*[eye(3), RobotConfig.IDMCOMPosition'; 0, 0, 0, 1];
+
 
 %% Compute gravity torques on each Actuator
 GravityTorque2 = zeros(num_Joints,1);
-bodyMass = RobotConfig.LinkMass;
 
 % compute gravity effects on each actuator
 for iActuator= 1:num_Joints
@@ -121,7 +128,7 @@ for iActuator= 1:num_Joints
     for jPostBody = iActuator : num_Joints
         jBMF_Base = BMF_Base(:,:,jPostBody);
         jLevelArm_Base = jBMF_Base(1:3,4) - iReference_Base(1:3,4);
-        jGravityTorque_Base = cross(jLevelArm_Base, bodyMass(jPostBody)*RobotConfig.GravityAcceleration');
+        jGravityTorque_Base = cross(jLevelArm_Base, RobotConfig.LinkMass(jPostBody)*RobotConfig.GravityAcceleration');
         % project gravity torque vector to the ith Actuator(Joint) axis
 %         jGravityTorque_Reference_z = dot(jGravityTorque_Base, iReference_Base_z)/norm(iReference_Base_z);
         % explicitly write dot operation to speed up for large size data
@@ -137,6 +144,13 @@ for iActuator= 1:num_Joints
     jGravityTorque_Base = cross(jLevelArm_Base, RobotConfig.ToolMass*RobotConfig.GravityAcceleration');
     jGravityTorque_Reference_z = sum(jGravityTorque_Base.*iReference_Base_z)/norm(iReference_Base_z);
     GravityTorque2(iActuator) = GravityTorque2(iActuator) + jGravityTorque_Reference_z;
+    
+    % gravity impact of IDM
+    jLevelArm_Base = IDMCOM_Base(1:3,4) - iReference_Base(1:3,4);
+    jGravityTorque_Base = cross(jLevelArm_Base, RobotConfig.IDMMass*RobotConfig.GravityAcceleration');
+    jGravityTorque_Reference_z = sum(jGravityTorque_Base.*iReference_Base_z)/norm(iReference_Base_z);
+    GravityTorque2(iActuator) = GravityTorque2(iActuator) + jGravityTorque_Reference_z;
+    
    
 end
 
