@@ -1,5 +1,5 @@
-function RobotJointFrames = UpdateJointFramesAuris7DOF(Q)
-%UpdateJointFramesAuris7DOF - Update all joint frames with given joint value Q.
+function RobotJointFrames = UpdateJointFrames_MS7(Q)
+%UpdateJointFrames_MS7 - Update all joint frames with given joint value Q.
 %Hereby, the joint frames are redefined as frames located at the center of
 %Actuators. The program is deliberately written to fit the notation in
 %the reference document.
@@ -21,19 +21,26 @@ function RobotJointFrames = UpdateJointFramesAuris7DOF(Q)
 
 %% set up link offsets 
 L0z = 92.75 /1000;
-L1z = 128.75/1000;
-L2y = 172.5/1000;
-L3z = 172.5/1000;
-L4y = 241.25/1000;
-L5z = 103.75/1000;
-L6y = 103.75/1000;
-Ltoolz = 100/1000;
 
 L1y = 40/1000;
+L1z = 128.75/1000;
+
+L2y = 172.5/1000;
 L2z = 40/1000;
+
 L3y = 40/1000;
+L3z = 172.5/1000;
+
+L4y = 241.25/1000;
 L4z = 40/1000;
+
+L5z = 103.75/1000;
+
+L6y = 103.75/1000;
+
 Ltooly = 77.15/1000;
+Ltoolz = 100/1000;
+
 
 
 %% computer inter-link tranformation T_{i,\hat{k}}
@@ -101,13 +108,9 @@ T0_IDM = T0_tool * Ttool_IDM;
 
 
 %% save frames to structure
-RobotJointFrames.T0_1 = T0_1;
-RobotJointFrames.T0_2 = T0_2;
-RobotJointFrames.T0_3 = T0_3;
-RobotJointFrames.T0_4 = T0_4;
-RobotJointFrames.T0_5 = T0_5;
-RobotJointFrames.T0_6 = T0_6;
-RobotJointFrames.T0_7 = T0_7;
+for i=1:7
+    eval(['RobotJointFrames.T0_i(:,:,i) = T0_', num2str(i),';']);
+end
 RobotJointFrames.T0_tool = T0_tool;
 RobotJointFrames.T0_IDM = T0_IDM;
 
