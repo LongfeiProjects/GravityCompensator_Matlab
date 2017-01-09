@@ -13,7 +13,7 @@ RobotJointFrames = UpdateJointFrames_MS7(Q);
 % for i = 1:7, compare the transformation matrix
 i = 2; eval(['[RobotJointFrames.T0_i(:,:,', num2str(i),')  zeros(4,2)      RobotFrames.AF_Base(:,:,', num2str(i),')]']);
 
-RobotJointFrames.T0_i,
+RobotJointFrames.T0_k,
 RobotJointFrames.T0_tool,
 
 %% verify the gravity compensator model with JointFrame in MS7(without DH parameters).

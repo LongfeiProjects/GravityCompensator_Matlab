@@ -106,7 +106,7 @@ end
 
 % Compute Body Mass Frame w.r.t. Robot Base Frame
 for index_bodyMass = 1:num_Joints
-    BMF_Base(:,:, index_bodyMass) = RobotJointFrames.T0_i(:,:, index_bodyMass) * BMF_AF(:,:, index_bodyMass);
+    BMF_Base(:,:, index_bodyMass) = RobotJointFrames.T0_k(:,:, index_bodyMass) * BMF_AF(:,:, index_bodyMass);
 end
 
 ToolCOM_Base = RobotJointFrames.T0_tool*[eye(3), RobotConfig.ToolCOMPosition'; 0, 0, 0, 1];
@@ -120,7 +120,7 @@ GravityTorque2 = zeros(num_Joints,1);
 for iActuator= 1:num_Joints
     % each outloop compute/accumulate torque for single actuator
     % same result when  reference frame is AF or DHF
-    iReference_Base = RobotJointFrames.T0_i(:,:, iActuator); % take AF as reference to computer torque
+    iReference_Base = RobotJointFrames.T0_k(:,:, iActuator); % take AF as reference to computer torque
 
     iReference_Base_z = iReference_Base(1:3, 3); % z axis is the joint axis of ith Joint
 
