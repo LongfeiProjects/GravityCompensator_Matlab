@@ -1,0 +1,39 @@
+<!-- DataLoggerConfig.xml-->
+
+<!-- design note: should endianess matter???-->
+<!-- design note: dont support array in array for now-->
+
+<DataLoggerConfig name="config" defaultMode="BWTestMode" defaultOutputFile="logFile.log">
+    <Projet name="projet" version="version" comment="comment"/>
+
+    <Mode name="BWTestMode" activeOnStart="true" speed = "1">
+
+        <Variable name="PositionJoint_deg" 		offset="0x00" type="float" byteSize="4" format="decimal" refId="PositionJoint_deg"/> <!-- default refId is "" -->
+        <Variable name="PositionJointError_deg" 	offset="0x00" type="float" byteSize="4" format="decimal" refId="PositionJointError_deg"/>
+        <Variable name="PositionJointOutputCmd" 	offset="0x00" type="float" byteSize="4" format="decimal" refId="PositionJointOutputCmd"/>
+
+        <Variable name="PositionMotor_deg" 		offset="0x00" type="float" byteSize="4" format="decimal" refId="PositionMotor_deg"/>
+        <Variable name="PositionMotorError_deg" 	offset="0x00" type="float" byteSize="4" format="decimal" refId="PositionMotorError_deg"/>
+        <Variable name="PositionMotorOutputCmd" 	offset="0x00" type="float" byteSize="4" format="decimal" refId="PositionMotorOutputCmd"/>
+
+        <Variable name="VelocityMotor_degpsec" 		offset="0x00" type="float" byteSize="4" format="decimal" refId="VelocityMotor_degpsec"/>
+        <Variable name="VelocityMotorError_degpsec" 	offset="0x00" type="float" byteSize="4" format="decimal" refId="VelocityMotorError_degpsec"/>
+        <Variable name="VelocityMotorOutputCmd" 	offset="0x00" type="float" byteSize="4" format="decimal" refId="VelocityMotorOutputCmd"/>
+        <Variable name="MeasuredJointTorque_nm" 	offset="0x00" type="float" byteSize="4" format="decimal" refId="MeasuredJointTorque_nm"/>
+        <Variable name="TorqueJointError_nm" 		offset="0x00" type="float" byteSize="4" format="decimal" refId="TorqueJointError_nm"/>
+        <Variable name="TorqueJointOutputCmd" 		offset="0x00" type="float" byteSize="4" format="decimal" refId="TorqueJointOutputCmd"/>
+
+        <Variable name="CurrentMotor_amp" 		offset="0x00" type="float" byteSize="4" format="decimal" refId="CurrentMotor_amp"/>
+
+
+        <Variable name="PositionJointCmd_deg" 		offset="0x00" type="float" byteSize="4" format="decimal" refId="PositionJointCmd_deg"/>
+        <Variable name="PositionMotorCmd_deg" 		offset="0x00" type="float" byteSize="4" format="decimal" refId="PositionMotorCmd_deg"/>
+        <Variable name="VelocityMotorCmd_degpsec" 	offset="0x00" type="float" byteSize="4" format="decimal" refId="VelocityMotorCmd_degpsec"/>
+        <Variable name="TorqueJointCmd_nm" 		offset="0x00" type="float" byteSize="4" format="decimal" refId="TorqueJointCmd_nm"/>
+        <Variable name="CurrentMotorCmd_amp" 		offset="0x00" type="float" byteSize="4" format="decimal" refId="CurrentMotorCmd_amp"/>
+        <Variable name="FrameIdOut" 		        offset="0x00" type="int"   byteSize="2" format="decimal" refId="FrameIdOut"/>
+        <Variable name="FrameIdIn" 		        offset="0x00" type="int"   byteSize="4" format="decimal" refId="FrameIdIn"/>
+        <Variable name="DerniereLigne" 		        offset="0x00" type="int"   byteSize="4" format="decimal" refId="FrameIdIn"/>
+    </Mode>
+
+</DataLoggerConfig>

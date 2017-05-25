@@ -1,0 +1,27 @@
+% limitation.tex
+
+There are certain limitations for this test.
+
+\begin{enumerate}
+	\item NOVA or robot did not provide same/similar data value with the same robot configuration. (eg: Comparing the joint wrench data at the base between Figure \ref{fig:pose6discarded} and Figure \ref{fig:pose6used})
+	\item Pose3 is not achievable due to the limit of joint 6. The closest configuration to Pose3 is [293.0001,   137.0502,  220.5201,  87.3998 ,  217.9778,  307.4591,  103.1300], and this data used for the offline computation on PC as well.
+	\item Accuracy of Joint Sensor Data (joint sensor data to be added  after torque sensor calibration ...)
+\end{enumerate}
+
+
+\begin{figure}
+	\begin{center}
+		\includegraphics[width=0.9\textwidth]{./images/Pose6}%
+		\captionof{figure}{Used Pose6}
+		\label{fig:pose6used}
+	\end{center}
+\end{figure}
+
+\begin{figure}
+	\begin{center}
+		\includegraphics[width=0.9\textwidth]{./images/Pose6_old}%
+		\captionof{figure}{Discarded Pose6}
+		\label{fig:pose6discarded}
+	\end{center}
+\end{figure}
+

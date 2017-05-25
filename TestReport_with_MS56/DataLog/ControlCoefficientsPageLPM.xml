@@ -1,0 +1,2434 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ConfigController>
+	<Actuator Id="1">
+		<Loop Name="jointPositionLoop">
+			<CoefficientGroup Name="Loop Compensator">
+				<Coefficient Name="b1" Type="double">79.5000</Coefficient>
+				<Coefficient Name="b2" Type="double">72.6000</Coefficient>
+				<Coefficient Name="b3" Type="double">72.7000</Coefficient>
+				<Coefficient Name="b4" Type="double">72.8000</Coefficient>
+				<Coefficient Name="b5" Type="double">72.7000</Coefficient>
+				<Coefficient Name="b6" Type="double">72.8000</Coefficient>
+				<Coefficient Name="a1" Type="double">72.1000</Coefficient>
+				<Coefficient Name="a2" Type="double">72.2000</Coefficient>
+				<Coefficient Name="a3" Type="double">72.3000</Coefficient>
+				<Coefficient Name="a4" Type="double">72.4000</Coefficient>
+				<Coefficient Name="a5" Type="double">72.3000</Coefficient>
+				<Coefficient Name="a6" Type="double">72.4000</Coefficient>
+				<Coefficient Name="Kp" Type="double">72.1000</Coefficient>
+				<Coefficient Name="Km" Type="double">72.2000</Coefficient>
+			</CoefficientGroup>
+			<CoefficientGroup Name="Frequency Response">
+				<Coefficient Name="Amplitude (deg)" Type="double">90.0000</Coefficient>
+				<Coefficient Name="Max Frequency (Hz)" Type="double">60.0000</Coefficient>
+				<Coefficient Name="Alpha" Type="double">2.0000</Coefficient>
+			</CoefficientGroup>
+			<CoefficientGroup Name="Additional Options Check Box">
+				<Coefficient Name="Gains Scheduling" Type="bool">0</Coefficient>
+			</CoefficientGroup>
+			<CoefficientGroup Name="Additional Options">
+				<Coefficient Name="Inertia" Type="double">123.0000</Coefficient>
+				<Coefficient Name="Viscous Friction" Type="double">456.0000</Coefficient>
+			</CoefficientGroup>
+		</Loop>
+		<Loop Name="motorPositionLoop">
+			<CoefficientGroup Name="Loop Compensator">
+				<Coefficient Name="b1" Type="double">72.5000</Coefficient>
+				<Coefficient Name="b2" Type="double">72.6000</Coefficient>
+				<Coefficient Name="b3" Type="double">72.7000</Coefficient>
+				<Coefficient Name="b4" Type="double">72.8000</Coefficient>
+				<Coefficient Name="b5" Type="double">72.7000</Coefficient>
+				<Coefficient Name="b6" Type="double">72.8000</Coefficient>
+				<Coefficient Name="a1" Type="double">72.1000</Coefficient>
+				<Coefficient Name="a2" Type="double">72.2000</Coefficient>
+				<Coefficient Name="a3" Type="double">72.3000</Coefficient>
+				<Coefficient Name="a4" Type="double">72.4000</Coefficient>
+				<Coefficient Name="a5" Type="double">72.3000</Coefficient>
+				<Coefficient Name="a6" Type="double">72.4000</Coefficient>
+				<Coefficient Name="Kp" Type="double">72.1000</Coefficient>
+				<Coefficient Name="Km" Type="double">72.2000</Coefficient>
+			</CoefficientGroup>
+			<CoefficientGroup Name="Frequency Response">
+				<Coefficient Name="Amplitude (deg)" Type="double">90.0000</Coefficient>
+				<Coefficient Name="Max Frequency (Hz)" Type="double">60.0000</Coefficient>
+				<Coefficient Name="Alpha" Type="double">2.0000</Coefficient>
+			</CoefficientGroup>
+			<CoefficientGroup Name="Additional Options Check Box">
+				<Coefficient Name="Gains Scheduling" Type="bool">0</Coefficient>
+			</CoefficientGroup>
+			<CoefficientGroup Name="Additional Options">
+				<Coefficient Name="Inertia" Type="double">123.0000</Coefficient>
+				<Coefficient Name="Viscous Friction" Type="double">456.0000</Coefficient>
+			</CoefficientGroup>
+		</Loop>
+		<Loop Name="jointVelocityLoop">
+			<CoefficientGroup Name="Loop Compensator">
+				<Coefficient Name="b1" Type="double">72.5000</Coefficient>
+				<Coefficient Name="b2" Type="double">72.6000</Coefficient>
+				<Coefficient Name="b3" Type="double">72.7000</Coefficient>
+				<Coefficient Name="b4" Type="double">72.8000</Coefficient>
+				<Coefficient Name="b5" Type="double">72.7000</Coefficient>
+				<Coefficient Name="b6" Type="double">72.8000</Coefficient>
+				<Coefficient Name="a1" Type="double">72.1000</Coefficient>
+				<Coefficient Name="a2" Type="double">72.2000</Coefficient>
+				<Coefficient Name="a3" Type="double">72.3000</Coefficient>
+				<Coefficient Name="a4" Type="double">72.4000</Coefficient>
+				<Coefficient Name="a5" Type="double">72.3000</Coefficient>
+				<Coefficient Name="a6" Type="double">72.4000</Coefficient>
+				<Coefficient Name="Kp" Type="double">72.1000</Coefficient>
+				<Coefficient Name="Km" Type="double">72.2000</Coefficient>
+			</CoefficientGroup>
+			<CoefficientGroup Name="Frequency Response">
+				<Coefficient Name="Amplitude (deg)" Type="double">90.0000</Coefficient>
+				<Coefficient Name="Max Frequency (Hz)" Type="double">60.0000</Coefficient>
+				<Coefficient Name="Alpha" Type="double">2.0000</Coefficient>
+			</CoefficientGroup>
+			<CoefficientGroup Name="Additional Options Check Box">
+				<Coefficient Name="Gains Scheduling" Type="bool">0</Coefficient>
+			</CoefficientGroup>
+			<CoefficientGroup Name="Additional Options">
+				<Coefficient Name="Inertia" Type="double">123.0000</Coefficient>
+				<Coefficient Name="Viscous Friction" Type="double">456.0000</Coefficient>
+			</CoefficientGroup>
+		</Loop>
+		<Loop Name="motorVelocityLoop">
+			<CoefficientGroup Name="Loop Compensator">
+				<Coefficient Name="b1" Type="double">72.5000</Coefficient>
+				<Coefficient Name="b2" Type="double">72.6000</Coefficient>
+				<Coefficient Name="b3" Type="double">72.7000</Coefficient>
+				<Coefficient Name="b4" Type="double">72.8000</Coefficient>
+				<Coefficient Name="b5" Type="double">72.7000</Coefficient>
+				<Coefficient Name="b6" Type="double">72.8000</Coefficient>
+				<Coefficient Name="a1" Type="double">72.1000</Coefficient>
+				<Coefficient Name="a2" Type="double">72.2000</Coefficient>
+				<Coefficient Name="a3" Type="double">72.3000</Coefficient>
+				<Coefficient Name="a4" Type="double">72.4000</Coefficient>
+				<Coefficient Name="a5" Type="double">72.3000</Coefficient>
+				<Coefficient Name="a6" Type="double">72.4000</Coefficient>
+				<Coefficient Name="Kp" Type="double">72.1000</Coefficient>
+				<Coefficient Name="Km" Type="double">72.2000</Coefficient>
+			</CoefficientGroup>
+			<CoefficientGroup Name="Frequency Response">
+				<Coefficient Name="Amplitude (deg)" Type="double">90.0000</Coefficient>
+				<Coefficient Name="Max Frequency (Hz)" Type="double">60.0000</Coefficient>
+				<Coefficient Name="Alpha" Type="double">2.0000</Coefficient>
+			</CoefficientGroup>
+			<CoefficientGroup Name="Additional Options Check Box">
+				<Coefficient Name="Gains Scheduling" Type="bool">0</Coefficient>
+			</CoefficientGroup>
+			<CoefficientGroup Name="Additional Options">
+				<Coefficient Name="Inertia" Type="double">123.0000</Coefficient>
+				<Coefficient Name="Viscous Friction" Type="double">456.0000</Coefficient>
+			</CoefficientGroup>
+		</Loop>
+		<Loop Name="currentLoop">
+			<CoefficientGroup Name="Loop Compensator">
+				<Coefficient Name="Kpq" Type="double">122.1000</Coefficient>
+				<Coefficient Name="Kiq" Type="double">123.2000</Coefficient>
+				<Coefficient Name="Kpd" Type="double">124.3000</Coefficient>
+				<Coefficient Name="Kid" Type="double">125.4000</Coefficient>
+			</CoefficientGroup>
+			<CoefficientGroup Name="Frequency Response">
+				<Coefficient Name="Amplitude (deg)" Type="double">90.0000</Coefficient>
+				<Coefficient Name="Max Frequency (Hz)" Type="double">60.0000</Coefficient>
+				<Coefficient Name="Alpha" Type="double">2.0000</Coefficient>
+			</CoefficientGroup>
+			<CoefficientGroup Name="Additional Options Check Box">
+				<Coefficient Name="Gains Scheduling" Type="bool">0</Coefficient>
+			</CoefficientGroup>
+			<CoefficientGroup Name="Additional Options">
+				<Coefficient Name="Inertia" Type="double">123.0000</Coefficient>
+				<Coefficient Name="Viscous Friction" Type="double">456.0000</Coefficient>
+			</CoefficientGroup>
+		</Loop>
+		<Loop Name="torqueLoop">
+			<CoefficientGroup Name="Loop Compensator">
+				<Coefficient Name="b1" Type="double">72.5000</Coefficient>
+				<Coefficient Name="b2" Type="double">72.6000</Coefficient>
+				<Coefficient Name="b3" Type="double">72.7000</Coefficient>
+				<Coefficient Name="b4" Type="double">72.8000</Coefficient>
+				<Coefficient Name="b5" Type="double">72.7000</Coefficient>
+				<Coefficient Name="b6" Type="double">72.8000</Coefficient>
+				<Coefficient Name="a1" Type="double">72.1000</Coefficient>
+				<Coefficient Name="a2" Type="double">72.2000</Coefficient>
+				<Coefficient Name="a3" Type="double">72.3000</Coefficient>
+				<Coefficient Name="a4" Type="double">72.4000</Coefficient>
+				<Coefficient Name="a5" Type="double">72.3000</Coefficient>
+				<Coefficient Name="a6" Type="double">72.4000</Coefficient>
+				<Coefficient Name="Kp" Type="double">72.1000</Coefficient>
+				<Coefficient Name="Km" Type="double">72.2000</Coefficient>
+			</CoefficientGroup>
+			<CoefficientGroup Name="Frequency Response">
+				<Coefficient Name="Amplitude (deg)" Type="double">90.0000</Coefficient>
+				<Coefficient Name="Max Frequency (Hz)" Type="double">60.0000</Coefficient>
+				<Coefficient Name="Alpha" Type="double">2.0000</Coefficient>
+			</CoefficientGroup>
+			<CoefficientGroup Name="Additional Options Check Box">
+				<Coefficient Name="Gains Scheduling" Type="bool">0</Coefficient>
+			</CoefficientGroup>
+			<CoefficientGroup Name="Additional Options">
+				<Coefficient Name="Inertia" Type="double">123.0000</Coefficient>
+				<Coefficient Name="Viscous Friction" Type="double">456.0000</Coefficient>
+			</CoefficientGroup>
+		</Loop>
+		<CoefficientGroup Name="Feedforward Gains">
+			<Coefficient Name="Motor Position Loop" Type="double">96.2000</Coefficient>
+			<Coefficient Name="Current Loop" Type="double">178.5300</Coefficient>
+			<Coefficient Name="Joint Velocity Loop" Type="double">170.3000</Coefficient>
+			<Coefficient Name="Torque Loop" Type="double">1234.5000</Coefficient>
+			<Coefficient Name="Motor Velocity Loop" Type="double">275000.6000</Coefficient>
+		</CoefficientGroup>
+		<CoefficientGroup Name="Control Architecture">
+			<Coefficient Name="Joint Position Loop" Type="bool">0</Coefficient>
+			<Coefficient Name="Motor Position Loop" Type="bool">0</Coefficient>
+			<Coefficient Name="Joint Velocity Loop" Type="bool">0</Coefficient>
+			<Coefficient Name="Motor Velocity Loop" Type="bool">0</Coefficient>
+			<Coefficient Name="Torque Loop" Type="bool">0</Coefficient>
+			<Coefficient Name="Current Loop" Type="bool">0</Coefficient>
+		</CoefficientGroup>
+	</Actuator>
+	<Actuator Id="2">
+		<Loop Name="jointPositionLoop">
+			<CoefficientGroup Name="Loop Compensator">
+				<Coefficient Name="b1" Type="double">72.5000</Coefficient>
+				<Coefficient Name="b2" Type="double">72.6000</Coefficient>
+				<Coefficient Name="b3" Type="double">72.7000</Coefficient>
+				<Coefficient Name="b4" Type="double">72.8000</Coefficient>
+				<Coefficient Name="b5" Type="double">72.7000</Coefficient>
+				<Coefficient Name="b6" Type="double">72.8000</Coefficient>
+				<Coefficient Name="a1" Type="double">72.1000</Coefficient>
+				<Coefficient Name="a2" Type="double">72.2000</Coefficient>
+				<Coefficient Name="a3" Type="double">72.3000</Coefficient>
+				<Coefficient Name="a4" Type="double">72.4000</Coefficient>
+				<Coefficient Name="a5" Type="double">72.3000</Coefficient>
+				<Coefficient Name="a6" Type="double">72.4000</Coefficient>
+				<Coefficient Name="Kp" Type="double">72.1000</Coefficient>
+				<Coefficient Name="Km" Type="double">72.2000</Coefficient>
+			</CoefficientGroup>
+			<CoefficientGroup Name="Frequency Response">
+				<Coefficient Name="Amplitude (deg)" Type="double">90.0000</Coefficient>
+				<Coefficient Name="Max Frequency (Hz)" Type="double">60.0000</Coefficient>
+				<Coefficient Name="Alpha" Type="double">2.0000</Coefficient>
+			</CoefficientGroup>
+			<CoefficientGroup Name="Additional Options Check Box">
+				<Coefficient Name="Gains Scheduling" Type="bool">0</Coefficient>
+			</CoefficientGroup>
+			<CoefficientGroup Name="Additional Options">
+				<Coefficient Name="Inertia" Type="double">123.0000</Coefficient>
+				<Coefficient Name="Viscous Friction" Type="double">456.0000</Coefficient>
+			</CoefficientGroup>
+		</Loop>
+		<Loop Name="motorPositionLoop">
+			<CoefficientGroup Name="Loop Compensator">
+				<Coefficient Name="b1" Type="double">72.5000</Coefficient>
+				<Coefficient Name="b2" Type="double">72.6000</Coefficient>
+				<Coefficient Name="b3" Type="double">72.7000</Coefficient>
+				<Coefficient Name="b4" Type="double">72.8000</Coefficient>
+				<Coefficient Name="b5" Type="double">72.7000</Coefficient>
+				<Coefficient Name="b6" Type="double">72.8000</Coefficient>
+				<Coefficient Name="a1" Type="double">72.1000</Coefficient>
+				<Coefficient Name="a2" Type="double">72.2000</Coefficient>
+				<Coefficient Name="a3" Type="double">72.3000</Coefficient>
+				<Coefficient Name="a4" Type="double">72.4000</Coefficient>
+				<Coefficient Name="a5" Type="double">72.3000</Coefficient>
+				<Coefficient Name="a6" Type="double">72.4000</Coefficient>
+				<Coefficient Name="Kp" Type="double">72.1000</Coefficient>
+				<Coefficient Name="Km" Type="double">72.2000</Coefficient>
+			</CoefficientGroup>
+			<CoefficientGroup Name="Frequency Response">
+				<Coefficient Name="Amplitude (deg)" Type="double">90.0000</Coefficient>
+				<Coefficient Name="Max Frequency (Hz)" Type="double">60.0000</Coefficient>
+				<Coefficient Name="Alpha" Type="double">2.0000</Coefficient>
+			</CoefficientGroup>
+			<CoefficientGroup Name="Additional Options Check Box">
+				<Coefficient Name="Gains Scheduling" Type="bool">0</Coefficient>
+			</CoefficientGroup>
+			<CoefficientGroup Name="Additional Options">
+				<Coefficient Name="Inertia" Type="double">123.0000</Coefficient>
+				<Coefficient Name="Viscous Friction" Type="double">456.0000</Coefficient>
+			</CoefficientGroup>
+		</Loop>
+		<Loop Name="jointVelocityLoop">
+			<CoefficientGroup Name="Loop Compensator">
+				<Coefficient Name="b1" Type="double">72.5000</Coefficient>
+				<Coefficient Name="b2" Type="double">72.6000</Coefficient>
+				<Coefficient Name="b3" Type="double">72.7000</Coefficient>
+				<Coefficient Name="b4" Type="double">72.8000</Coefficient>
+				<Coefficient Name="b5" Type="double">72.7000</Coefficient>
+				<Coefficient Name="b6" Type="double">72.8000</Coefficient>
+				<Coefficient Name="a1" Type="double">72.1000</Coefficient>
+				<Coefficient Name="a2" Type="double">72.2000</Coefficient>
+				<Coefficient Name="a3" Type="double">72.3000</Coefficient>
+				<Coefficient Name="a4" Type="double">72.4000</Coefficient>
+				<Coefficient Name="a5" Type="double">72.3000</Coefficient>
+				<Coefficient Name="a6" Type="double">72.4000</Coefficient>
+				<Coefficient Name="Kp" Type="double">72.1000</Coefficient>
+				<Coefficient Name="Km" Type="double">72.2000</Coefficient>
+			</CoefficientGroup>
+			<CoefficientGroup Name="Frequency Response">
+				<Coefficient Name="Amplitude (deg)" Type="double">90.0000</Coefficient>
+				<Coefficient Name="Max Frequency (Hz)" Type="double">60.0000</Coefficient>
+				<Coefficient Name="Alpha" Type="double">2.0000</Coefficient>
+			</CoefficientGroup>
+			<CoefficientGroup Name="Additional Options Check Box">
+				<Coefficient Name="Gains Scheduling" Type="bool">0</Coefficient>
+			</CoefficientGroup>
+			<CoefficientGroup Name="Additional Options">
+				<Coefficient Name="Inertia" Type="double">123.0000</Coefficient>
+				<Coefficient Name="Viscous Friction" Type="double">456.0000</Coefficient>
+			</CoefficientGroup>
+		</Loop>
+		<Loop Name="motorVelocityLoop">
+			<CoefficientGroup Name="Loop Compensator">
+				<Coefficient Name="b1" Type="double">72.5000</Coefficient>
+				<Coefficient Name="b2" Type="double">72.6000</Coefficient>
+				<Coefficient Name="b3" Type="double">72.7000</Coefficient>
+				<Coefficient Name="b4" Type="double">72.8000</Coefficient>
+				<Coefficient Name="b5" Type="double">72.7000</Coefficient>
+				<Coefficient Name="b6" Type="double">72.8000</Coefficient>
+				<Coefficient Name="a1" Type="double">72.1000</Coefficient>
+				<Coefficient Name="a2" Type="double">72.2000</Coefficient>
+				<Coefficient Name="a3" Type="double">72.3000</Coefficient>
+				<Coefficient Name="a4" Type="double">72.4000</Coefficient>
+				<Coefficient Name="a5" Type="double">72.3000</Coefficient>
+				<Coefficient Name="a6" Type="double">72.4000</Coefficient>
+				<Coefficient Name="Kp" Type="double">72.1000</Coefficient>
+				<Coefficient Name="Km" Type="double">72.2000</Coefficient>
+			</CoefficientGroup>
+			<CoefficientGroup Name="Frequency Response">
+				<Coefficient Name="Amplitude (deg)" Type="double">90.0000</Coefficient>
+				<Coefficient Name="Max Frequency (Hz)" Type="double">60.0000</Coefficient>
+				<Coefficient Name="Alpha" Type="double">2.0000</Coefficient>
+			</CoefficientGroup>
+			<CoefficientGroup Name="Additional Options Check Box">
+				<Coefficient Name="Gains Scheduling" Type="bool">0</Coefficient>
+			</CoefficientGroup>
+			<CoefficientGroup Name="Additional Options">
+				<Coefficient Name="Inertia" Type="double">123.0000</Coefficient>
+				<Coefficient Name="Viscous Friction" Type="double">456.0000</Coefficient>
+			</CoefficientGroup>
+		</Loop>
+		<Loop Name="currentLoop">
+			<CoefficientGroup Name="Loop Compensator">
+				<Coefficient Name="Kpq" Type="double">122.1000</Coefficient>
+				<Coefficient Name="Kiq" Type="double">123.2000</Coefficient>
+				<Coefficient Name="Kpd" Type="double">124.3000</Coefficient>
+				<Coefficient Name="Kid" Type="double">125.4000</Coefficient>
+			</CoefficientGroup>
+			<CoefficientGroup Name="Frequency Response">
+				<Coefficient Name="Amplitude (deg)" Type="double">90.0000</Coefficient>
+				<Coefficient Name="Max Frequency (Hz)" Type="double">60.0000</Coefficient>
+				<Coefficient Name="Alpha" Type="double">2.0000</Coefficient>
+			</CoefficientGroup>
+			<CoefficientGroup Name="Additional Options Check Box">
+				<Coefficient Name="Gains Scheduling" Type="bool">0</Coefficient>
+			</CoefficientGroup>
+			<CoefficientGroup Name="Additional Options">
+				<Coefficient Name="Inertia" Type="double">123.0000</Coefficient>
+				<Coefficient Name="Viscous Friction" Type="double">456.0000</Coefficient>
+			</CoefficientGroup>
+		</Loop>
+		<Loop Name="torqueLoop">
+			<CoefficientGroup Name="Loop Compensator">
+				<Coefficient Name="b1" Type="double">72.5000</Coefficient>
+				<Coefficient Name="b2" Type="double">72.6000</Coefficient>
+				<Coefficient Name="b3" Type="double">72.7000</Coefficient>
+				<Coefficient Name="b4" Type="double">72.8000</Coefficient>
+				<Coefficient Name="b5" Type="double">72.7000</Coefficient>
+				<Coefficient Name="b6" Type="double">72.8000</Coefficient>
+				<Coefficient Name="a1" Type="double">72.1000</Coefficient>
+				<Coefficient Name="a2" Type="double">72.2000</Coefficient>
+				<Coefficient Name="a3" Type="double">72.3000</Coefficient>
+				<Coefficient Name="a4" Type="double">72.4000</Coefficient>
+				<Coefficient Name="a5" Type="double">72.3000</Coefficient>
+				<Coefficient Name="a6" Type="double">72.4000</Coefficient>
+				<Coefficient Name="Kp" Type="double">72.1000</Coefficient>
+				<Coefficient Name="Km" Type="double">72.2000</Coefficient>
+			</CoefficientGroup>
+			<CoefficientGroup Name="Frequency Response">
+				<Coefficient Name="Amplitude (deg)" Type="double">90.0000</Coefficient>
+				<Coefficient Name="Max Frequency (Hz)" Type="double">60.0000</Coefficient>
+				<Coefficient Name="Alpha" Type="double">2.0000</Coefficient>
+			</CoefficientGroup>
+			<CoefficientGroup Name="Additional Options Check Box">
+				<Coefficient Name="Gains Scheduling" Type="bool">0</Coefficient>
+			</CoefficientGroup>
+			<CoefficientGroup Name="Additional Options">
+				<Coefficient Name="Inertia" Type="double">123.0000</Coefficient>
+				<Coefficient Name="Viscous Friction" Type="double">456.0000</Coefficient>
+			</CoefficientGroup>
+		</Loop>
+		<CoefficientGroup Name="Feedforward Gains">
+			<Coefficient Name="Motor Position Loop" Type="double">96.2000</Coefficient>
+			<Coefficient Name="Current Loop" Type="double">178.5300</Coefficient>
+			<Coefficient Name="Joint Velocity Loop" Type="double">170.3000</Coefficient>
+			<Coefficient Name="Torque Loop" Type="double">1234.5000</Coefficient>
+			<Coefficient Name="Motor Velocity Loop" Type="double">275000.6000</Coefficient>
+		</CoefficientGroup>
+		<CoefficientGroup Name="Control Architecture">
+			<Coefficient Name="Joint Position Loop" Type="bool">0</Coefficient>
+			<Coefficient Name="Motor Position Loop" Type="bool">0</Coefficient>
+			<Coefficient Name="Joint Velocity Loop" Type="bool">0</Coefficient>
+			<Coefficient Name="Motor Velocity Loop" Type="bool">0</Coefficient>
+			<Coefficient Name="Torque Loop" Type="bool">0</Coefficient>
+			<Coefficient Name="Current Loop" Type="bool">0</Coefficient>
+		</CoefficientGroup>
+	</Actuator>
+	<Actuator Id="3">
+		<Loop Name="jointPositionLoop">
+			<CoefficientGroup Name="Loop Compensator">
+				<Coefficient Name="b1" Type="double">72.5000</Coefficient>
+				<Coefficient Name="b2" Type="double">72.6000</Coefficient>
+				<Coefficient Name="b3" Type="double">72.7000</Coefficient>
+				<Coefficient Name="b4" Type="double">72.8000</Coefficient>
+				<Coefficient Name="b5" Type="double">72.7000</Coefficient>
+				<Coefficient Name="b6" Type="double">72.8000</Coefficient>
+				<Coefficient Name="a1" Type="double">72.1000</Coefficient>
+				<Coefficient Name="a2" Type="double">72.2000</Coefficient>
+				<Coefficient Name="a3" Type="double">72.3000</Coefficient>
+				<Coefficient Name="a4" Type="double">72.4000</Coefficient>
+				<Coefficient Name="a5" Type="double">72.3000</Coefficient>
+				<Coefficient Name="a6" Type="double">72.4000</Coefficient>
+				<Coefficient Name="Kp" Type="double">72.1000</Coefficient>
+				<Coefficient Name="Km" Type="double">72.2000</Coefficient>
+			</CoefficientGroup>
+			<CoefficientGroup Name="Frequency Response">
+				<Coefficient Name="Amplitude (deg)" Type="double">90.0000</Coefficient>
+				<Coefficient Name="Max Frequency (Hz)" Type="double">60.0000</Coefficient>
+				<Coefficient Name="Alpha" Type="double">2.0000</Coefficient>
+			</CoefficientGroup>
+			<CoefficientGroup Name="Additional Options Check Box">
+				<Coefficient Name="Gains Scheduling" Type="bool">0</Coefficient>
+			</CoefficientGroup>
+			<CoefficientGroup Name="Additional Options">
+				<Coefficient Name="Inertia" Type="double">123.0000</Coefficient>
+				<Coefficient Name="Viscous Friction" Type="double">456.0000</Coefficient>
+			</CoefficientGroup>
+		</Loop>
+		<Loop Name="motorPositionLoop">
+			<CoefficientGroup Name="Loop Compensator">
+				<Coefficient Name="b1" Type="double">72.5000</Coefficient>
+				<Coefficient Name="b2" Type="double">72.6000</Coefficient>
+				<Coefficient Name="b3" Type="double">72.7000</Coefficient>
+				<Coefficient Name="b4" Type="double">72.8000</Coefficient>
+				<Coefficient Name="b5" Type="double">72.7000</Coefficient>
+				<Coefficient Name="b6" Type="double">72.8000</Coefficient>
+				<Coefficient Name="a1" Type="double">72.1000</Coefficient>
+				<Coefficient Name="a2" Type="double">72.2000</Coefficient>
+				<Coefficient Name="a3" Type="double">72.3000</Coefficient>
+				<Coefficient Name="a4" Type="double">72.4000</Coefficient>
+				<Coefficient Name="a5" Type="double">72.3000</Coefficient>
+				<Coefficient Name="a6" Type="double">72.4000</Coefficient>
+				<Coefficient Name="Kp" Type="double">72.1000</Coefficient>
+				<Coefficient Name="Km" Type="double">72.2000</Coefficient>
+			</CoefficientGroup>
+			<CoefficientGroup Name="Frequency Response">
+				<Coefficient Name="Amplitude (deg)" Type="double">90.0000</Coefficient>
+				<Coefficient Name="Max Frequency (Hz)" Type="double">60.0000</Coefficient>
+				<Coefficient Name="Alpha" Type="double">2.0000</Coefficient>
+			</CoefficientGroup>
+			<CoefficientGroup Name="Additional Options Check Box">
+				<Coefficient Name="Gains Scheduling" Type="bool">0</Coefficient>
+			</CoefficientGroup>
+			<CoefficientGroup Name="Additional Options">
+				<Coefficient Name="Inertia" Type="double">123.0000</Coefficient>
+				<Coefficient Name="Viscous Friction" Type="double">456.0000</Coefficient>
+			</CoefficientGroup>
+		</Loop>
+		<Loop Name="jointVelocityLoop">
+			<CoefficientGroup Name="Loop Compensator">
+				<Coefficient Name="b1" Type="double">72.5000</Coefficient>
+				<Coefficient Name="b2" Type="double">72.6000</Coefficient>
+				<Coefficient Name="b3" Type="double">72.7000</Coefficient>
+				<Coefficient Name="b4" Type="double">72.8000</Coefficient>
+				<Coefficient Name="b5" Type="double">72.7000</Coefficient>
+				<Coefficient Name="b6" Type="double">72.8000</Coefficient>
+				<Coefficient Name="a1" Type="double">72.1000</Coefficient>
+				<Coefficient Name="a2" Type="double">72.2000</Coefficient>
+				<Coefficient Name="a3" Type="double">72.3000</Coefficient>
+				<Coefficient Name="a4" Type="double">72.4000</Coefficient>
+				<Coefficient Name="a5" Type="double">72.3000</Coefficient>
+				<Coefficient Name="a6" Type="double">72.4000</Coefficient>
+				<Coefficient Name="Kp" Type="double">72.1000</Coefficient>
+				<Coefficient Name="Km" Type="double">72.2000</Coefficient>
+			</CoefficientGroup>
+			<CoefficientGroup Name="Frequency Response">
+				<Coefficient Name="Amplitude (deg)" Type="double">90.0000</Coefficient>
+				<Coefficient Name="Max Frequency (Hz)" Type="double">60.0000</Coefficient>
+				<Coefficient Name="Alpha" Type="double">2.0000</Coefficient>
+			</CoefficientGroup>
+			<CoefficientGroup Name="Additional Options Check Box">
+				<Coefficient Name="Gains Scheduling" Type="bool">0</Coefficient>
+			</CoefficientGroup>
+			<CoefficientGroup Name="Additional Options">
+				<Coefficient Name="Inertia" Type="double">123.0000</Coefficient>
+				<Coefficient Name="Viscous Friction" Type="double">456.0000</Coefficient>
+			</CoefficientGroup>
+		</Loop>
+		<Loop Name="motorVelocityLoop">
+			<CoefficientGroup Name="Loop Compensator">
+				<Coefficient Name="b1" Type="double">72.5000</Coefficient>
+				<Coefficient Name="b2" Type="double">72.6000</Coefficient>
+				<Coefficient Name="b3" Type="double">72.7000</Coefficient>
+				<Coefficient Name="b4" Type="double">72.8000</Coefficient>
+				<Coefficient Name="b5" Type="double">72.7000</Coefficient>
+				<Coefficient Name="b6" Type="double">72.8000</Coefficient>
+				<Coefficient Name="a1" Type="double">72.1000</Coefficient>
+				<Coefficient Name="a2" Type="double">72.2000</Coefficient>
+				<Coefficient Name="a3" Type="double">72.3000</Coefficient>
+				<Coefficient Name="a4" Type="double">72.4000</Coefficient>
+				<Coefficient Name="a5" Type="double">72.3000</Coefficient>
+				<Coefficient Name="a6" Type="double">72.4000</Coefficient>
+				<Coefficient Name="Kp" Type="double">72.1000</Coefficient>
+				<Coefficient Name="Km" Type="double">72.2000</Coefficient>
+			</CoefficientGroup>
+			<CoefficientGroup Name="Frequency Response">
+				<Coefficient Name="Amplitude (deg)" Type="double">90.0000</Coefficient>
+				<Coefficient Name="Max Frequency (Hz)" Type="double">60.0000</Coefficient>
+				<Coefficient Name="Alpha" Type="double">2.0000</Coefficient>
+			</CoefficientGroup>
+			<CoefficientGroup Name="Additional Options Check Box">
+				<Coefficient Name="Gains Scheduling" Type="bool">0</Coefficient>
+			</CoefficientGroup>
+			<CoefficientGroup Name="Additional Options">
+				<Coefficient Name="Inertia" Type="double">123.0000</Coefficient>
+				<Coefficient Name="Viscous Friction" Type="double">456.0000</Coefficient>
+			</CoefficientGroup>
+		</Loop>
+		<Loop Name="currentLoop">
+			<CoefficientGroup Name="Loop Compensator">
+				<Coefficient Name="Kpq" Type="double">122.1000</Coefficient>
+				<Coefficient Name="Kiq" Type="double">123.2000</Coefficient>
+				<Coefficient Name="Kpd" Type="double">124.3000</Coefficient>
+				<Coefficient Name="Kid" Type="double">125.4000</Coefficient>
+			</CoefficientGroup>
+			<CoefficientGroup Name="Frequency Response">
+				<Coefficient Name="Amplitude (deg)" Type="double">90.0000</Coefficient>
+				<Coefficient Name="Max Frequency (Hz)" Type="double">60.0000</Coefficient>
+				<Coefficient Name="Alpha" Type="double">2.0000</Coefficient>
+			</CoefficientGroup>
+			<CoefficientGroup Name="Additional Options Check Box">
+				<Coefficient Name="Gains Scheduling" Type="bool">0</Coefficient>
+			</CoefficientGroup>
+			<CoefficientGroup Name="Additional Options">
+				<Coefficient Name="Inertia" Type="double">123.0000</Coefficient>
+				<Coefficient Name="Viscous Friction" Type="double">456.0000</Coefficient>
+			</CoefficientGroup>
+		</Loop>
+		<Loop Name="torqueLoop">
+			<CoefficientGroup Name="Loop Compensator">
+				<Coefficient Name="b1" Type="double">72.5000</Coefficient>
+				<Coefficient Name="b2" Type="double">72.6000</Coefficient>
+				<Coefficient Name="b3" Type="double">72.7000</Coefficient>
+				<Coefficient Name="b4" Type="double">72.8000</Coefficient>
+				<Coefficient Name="b5" Type="double">72.7000</Coefficient>
+				<Coefficient Name="b6" Type="double">72.8000</Coefficient>
+				<Coefficient Name="a1" Type="double">72.1000</Coefficient>
+				<Coefficient Name="a2" Type="double">72.2000</Coefficient>
+				<Coefficient Name="a3" Type="double">72.3000</Coefficient>
+				<Coefficient Name="a4" Type="double">72.4000</Coefficient>
+				<Coefficient Name="a5" Type="double">72.3000</Coefficient>
+				<Coefficient Name="a6" Type="double">72.4000</Coefficient>
+				<Coefficient Name="Kp" Type="double">72.1000</Coefficient>
+				<Coefficient Name="Km" Type="double">72.2000</Coefficient>
+			</CoefficientGroup>
+			<CoefficientGroup Name="Frequency Response">
+				<Coefficient Name="Amplitude (deg)" Type="double">90.0000</Coefficient>
+				<Coefficient Name="Max Frequency (Hz)" Type="double">60.0000</Coefficient>
+				<Coefficient Name="Alpha" Type="double">2.0000</Coefficient>
+			</CoefficientGroup>
+			<CoefficientGroup Name="Additional Options Check Box">
+				<Coefficient Name="Gains Scheduling" Type="bool">0</Coefficient>
+			</CoefficientGroup>
+			<CoefficientGroup Name="Additional Options">
+				<Coefficient Name="Inertia" Type="double">123.0000</Coefficient>
+				<Coefficient Name="Viscous Friction" Type="double">456.0000</Coefficient>
+			</CoefficientGroup>
+		</Loop>
+		<CoefficientGroup Name="Feedforward Gains">
+			<Coefficient Name="Motor Position Loop" Type="double">96.2000</Coefficient>
+			<Coefficient Name="Current Loop" Type="double">178.5300</Coefficient>
+			<Coefficient Name="Joint Velocity Loop" Type="double">170.3000</Coefficient>
+			<Coefficient Name="Torque Loop" Type="double">1234.5000</Coefficient>
+			<Coefficient Name="Motor Velocity Loop" Type="double">275000.6000</Coefficient>
+		</CoefficientGroup>
+		<CoefficientGroup Name="Control Architecture">
+			<Coefficient Name="Joint Position Loop" Type="bool">0</Coefficient>
+			<Coefficient Name="Motor Position Loop" Type="bool">0</Coefficient>
+			<Coefficient Name="Joint Velocity Loop" Type="bool">0</Coefficient>
+			<Coefficient Name="Motor Velocity Loop" Type="bool">0</Coefficient>
+			<Coefficient Name="Torque Loop" Type="bool">0</Coefficient>
+			<Coefficient Name="Current Loop" Type="bool">0</Coefficient>
+		</CoefficientGroup>
+	</Actuator>
+	<Actuator Id="4">
+		<Loop Name="jointPositionLoop">
+			<CoefficientGroup Name="Loop Compensator">
+				<Coefficient Name="b1" Type="double">72.5000</Coefficient>
+				<Coefficient Name="b2" Type="double">72.6000</Coefficient>
+				<Coefficient Name="b3" Type="double">72.7000</Coefficient>
+				<Coefficient Name="b4" Type="double">72.8000</Coefficient>
+				<Coefficient Name="b5" Type="double">72.7000</Coefficient>
+				<Coefficient Name="b6" Type="double">72.8000</Coefficient>
+				<Coefficient Name="a1" Type="double">72.1000</Coefficient>
+				<Coefficient Name="a2" Type="double">72.2000</Coefficient>
+				<Coefficient Name="a3" Type="double">72.3000</Coefficient>
+				<Coefficient Name="a4" Type="double">72.4000</Coefficient>
+				<Coefficient Name="a5" Type="double">72.3000</Coefficient>
+				<Coefficient Name="a6" Type="double">72.4000</Coefficient>
+				<Coefficient Name="Kp" Type="double">72.1000</Coefficient>
+				<Coefficient Name="Km" Type="double">72.2000</Coefficient>
+			</CoefficientGroup>
+			<CoefficientGroup Name="Frequency Response">
+				<Coefficient Name="Amplitude (deg)" Type="double">90.0000</Coefficient>
+				<Coefficient Name="Max Frequency (Hz)" Type="double">60.0000</Coefficient>
+				<Coefficient Name="Alpha" Type="double">2.0000</Coefficient>
+			</CoefficientGroup>
+			<CoefficientGroup Name="Additional Options Check Box">
+				<Coefficient Name="Gains Scheduling" Type="bool">0</Coefficient>
+			</CoefficientGroup>
+			<CoefficientGroup Name="Additional Options">
+				<Coefficient Name="Inertia" Type="double">123.0000</Coefficient>
+				<Coefficient Name="Viscous Friction" Type="double">456.0000</Coefficient>
+			</CoefficientGroup>
+		</Loop>
+		<Loop Name="motorPositionLoop">
+			<CoefficientGroup Name="Loop Compensator">
+				<Coefficient Name="b1" Type="double">72.5000</Coefficient>
+				<Coefficient Name="b2" Type="double">72.6000</Coefficient>
+				<Coefficient Name="b3" Type="double">72.7000</Coefficient>
+				<Coefficient Name="b4" Type="double">72.8000</Coefficient>
+				<Coefficient Name="b5" Type="double">72.7000</Coefficient>
+				<Coefficient Name="b6" Type="double">72.8000</Coefficient>
+				<Coefficient Name="a1" Type="double">72.1000</Coefficient>
+				<Coefficient Name="a2" Type="double">72.2000</Coefficient>
+				<Coefficient Name="a3" Type="double">72.3000</Coefficient>
+				<Coefficient Name="a4" Type="double">72.4000</Coefficient>
+				<Coefficient Name="a5" Type="double">72.3000</Coefficient>
+				<Coefficient Name="a6" Type="double">72.4000</Coefficient>
+				<Coefficient Name="Kp" Type="double">72.1000</Coefficient>
+				<Coefficient Name="Km" Type="double">72.2000</Coefficient>
+			</CoefficientGroup>
+			<CoefficientGroup Name="Frequency Response">
+				<Coefficient Name="Amplitude (deg)" Type="double">90.0000</Coefficient>
+				<Coefficient Name="Max Frequency (Hz)" Type="double">60.0000</Coefficient>
+				<Coefficient Name="Alpha" Type="double">2.0000</Coefficient>
+			</CoefficientGroup>
+			<CoefficientGroup Name="Additional Options Check Box">
+				<Coefficient Name="Gains Scheduling" Type="bool">0</Coefficient>
+			</CoefficientGroup>
+			<CoefficientGroup Name="Additional Options">
+				<Coefficient Name="Inertia" Type="double">123.0000</Coefficient>
+				<Coefficient Name="Viscous Friction" Type="double">456.0000</Coefficient>
+			</CoefficientGroup>
+		</Loop>
+		<Loop Name="jointVelocityLoop">
+			<CoefficientGroup Name="Loop Compensator">
+				<Coefficient Name="b1" Type="double">72.5000</Coefficient>
+				<Coefficient Name="b2" Type="double">72.6000</Coefficient>
+				<Coefficient Name="b3" Type="double">72.7000</Coefficient>
+				<Coefficient Name="b4" Type="double">72.8000</Coefficient>
+				<Coefficient Name="b5" Type="double">72.7000</Coefficient>
+				<Coefficient Name="b6" Type="double">72.8000</Coefficient>
+				<Coefficient Name="a1" Type="double">72.1000</Coefficient>
+				<Coefficient Name="a2" Type="double">72.2000</Coefficient>
+				<Coefficient Name="a3" Type="double">72.3000</Coefficient>
+				<Coefficient Name="a4" Type="double">72.4000</Coefficient>
+				<Coefficient Name="a5" Type="double">72.3000</Coefficient>
+				<Coefficient Name="a6" Type="double">72.4000</Coefficient>
+				<Coefficient Name="Kp" Type="double">72.1000</Coefficient>
+				<Coefficient Name="Km" Type="double">72.2000</Coefficient>
+			</CoefficientGroup>
+			<CoefficientGroup Name="Frequency Response">
+				<Coefficient Name="Amplitude (deg)" Type="double">90.0000</Coefficient>
+				<Coefficient Name="Max Frequency (Hz)" Type="double">60.0000</Coefficient>
+				<Coefficient Name="Alpha" Type="double">2.0000</Coefficient>
+			</CoefficientGroup>
+			<CoefficientGroup Name="Additional Options Check Box">
+				<Coefficient Name="Gains Scheduling" Type="bool">0</Coefficient>
+			</CoefficientGroup>
+			<CoefficientGroup Name="Additional Options">
+				<Coefficient Name="Inertia" Type="double">123.0000</Coefficient>
+				<Coefficient Name="Viscous Friction" Type="double">456.0000</Coefficient>
+			</CoefficientGroup>
+		</Loop>
+		<Loop Name="motorVelocityLoop">
+			<CoefficientGroup Name="Loop Compensator">
+				<Coefficient Name="b1" Type="double">72.5000</Coefficient>
+				<Coefficient Name="b2" Type="double">72.6000</Coefficient>
+				<Coefficient Name="b3" Type="double">72.7000</Coefficient>
+				<Coefficient Name="b4" Type="double">72.8000</Coefficient>
+				<Coefficient Name="b5" Type="double">72.7000</Coefficient>
+				<Coefficient Name="b6" Type="double">72.8000</Coefficient>
+				<Coefficient Name="a1" Type="double">72.1000</Coefficient>
+				<Coefficient Name="a2" Type="double">72.2000</Coefficient>
+				<Coefficient Name="a3" Type="double">72.3000</Coefficient>
+				<Coefficient Name="a4" Type="double">72.4000</Coefficient>
+				<Coefficient Name="a5" Type="double">72.3000</Coefficient>
+				<Coefficient Name="a6" Type="double">72.4000</Coefficient>
+				<Coefficient Name="Kp" Type="double">72.1000</Coefficient>
+				<Coefficient Name="Km" Type="double">72.2000</Coefficient>
+			</CoefficientGroup>
+			<CoefficientGroup Name="Frequency Response">
+				<Coefficient Name="Amplitude (deg)" Type="double">90.0000</Coefficient>
+				<Coefficient Name="Max Frequency (Hz)" Type="double">60.0000</Coefficient>
+				<Coefficient Name="Alpha" Type="double">2.0000</Coefficient>
+			</CoefficientGroup>
+			<CoefficientGroup Name="Additional Options Check Box">
+				<Coefficient Name="Gains Scheduling" Type="bool">0</Coefficient>
+			</CoefficientGroup>
+			<CoefficientGroup Name="Additional Options">
+				<Coefficient Name="Inertia" Type="double">123.0000</Coefficient>
+				<Coefficient Name="Viscous Friction" Type="double">456.0000</Coefficient>
+			</CoefficientGroup>
+		</Loop>
+		<Loop Name="currentLoop">
+			<CoefficientGroup Name="Loop Compensator">
+				<Coefficient Name="Kpq" Type="double">122.1000</Coefficient>
+				<Coefficient Name="Kiq" Type="double">123.2000</Coefficient>
+				<Coefficient Name="Kpd" Type="double">124.3000</Coefficient>
+				<Coefficient Name="Kid" Type="double">125.4000</Coefficient>
+			</CoefficientGroup>
+			<CoefficientGroup Name="Frequency Response">
+				<Coefficient Name="Amplitude (deg)" Type="double">90.0000</Coefficient>
+				<Coefficient Name="Max Frequency (Hz)" Type="double">60.0000</Coefficient>
+				<Coefficient Name="Alpha" Type="double">2.0000</Coefficient>
+			</CoefficientGroup>
+			<CoefficientGroup Name="Additional Options Check Box">
+				<Coefficient Name="Gains Scheduling" Type="bool">0</Coefficient>
+			</CoefficientGroup>
+			<CoefficientGroup Name="Additional Options">
+				<Coefficient Name="Inertia" Type="double">123.0000</Coefficient>
+				<Coefficient Name="Viscous Friction" Type="double">456.0000</Coefficient>
+			</CoefficientGroup>
+		</Loop>
+		<Loop Name="torqueLoop">
+			<CoefficientGroup Name="Loop Compensator">
+				<Coefficient Name="b1" Type="double">72.5000</Coefficient>
+				<Coefficient Name="b2" Type="double">72.6000</Coefficient>
+				<Coefficient Name="b3" Type="double">72.7000</Coefficient>
+				<Coefficient Name="b4" Type="double">72.8000</Coefficient>
+				<Coefficient Name="b5" Type="double">72.7000</Coefficient>
+				<Coefficient Name="b6" Type="double">72.8000</Coefficient>
+				<Coefficient Name="a1" Type="double">72.1000</Coefficient>
+				<Coefficient Name="a2" Type="double">72.2000</Coefficient>
+				<Coefficient Name="a3" Type="double">72.3000</Coefficient>
+				<Coefficient Name="a4" Type="double">72.4000</Coefficient>
+				<Coefficient Name="a5" Type="double">72.3000</Coefficient>
+				<Coefficient Name="a6" Type="double">72.4000</Coefficient>
+				<Coefficient Name="Kp" Type="double">72.1000</Coefficient>
+				<Coefficient Name="Km" Type="double">72.2000</Coefficient>
+			</CoefficientGroup>
+			<CoefficientGroup Name="Frequency Response">
+				<Coefficient Name="Amplitude (deg)" Type="double">90.0000</Coefficient>
+				<Coefficient Name="Max Frequency (Hz)" Type="double">60.0000</Coefficient>
+				<Coefficient Name="Alpha" Type="double">2.0000</Coefficient>
+			</CoefficientGroup>
+			<CoefficientGroup Name="Additional Options Check Box">
+				<Coefficient Name="Gains Scheduling" Type="bool">0</Coefficient>
+			</CoefficientGroup>
+			<CoefficientGroup Name="Additional Options">
+				<Coefficient Name="Inertia" Type="double">123.0000</Coefficient>
+				<Coefficient Name="Viscous Friction" Type="double">456.0000</Coefficient>
+			</CoefficientGroup>
+		</Loop>
+		<CoefficientGroup Name="Feedforward Gains">
+			<Coefficient Name="Motor Position Loop" Type="double">96.2000</Coefficient>
+			<Coefficient Name="Current Loop" Type="double">178.5300</Coefficient>
+			<Coefficient Name="Joint Velocity Loop" Type="double">170.3000</Coefficient>
+			<Coefficient Name="Torque Loop" Type="double">1234.5000</Coefficient>
+			<Coefficient Name="Motor Velocity Loop" Type="double">275000.6000</Coefficient>
+		</CoefficientGroup>
+		<CoefficientGroup Name="Control Architecture">
+			<Coefficient Name="Joint Position Loop" Type="bool">0</Coefficient>
+			<Coefficient Name="Motor Position Loop" Type="bool">0</Coefficient>
+			<Coefficient Name="Joint Velocity Loop" Type="bool">0</Coefficient>
+			<Coefficient Name="Motor Velocity Loop" Type="bool">0</Coefficient>
+			<Coefficient Name="Torque Loop" Type="bool">0</Coefficient>
+			<Coefficient Name="Current Loop" Type="bool">0</Coefficient>
+		</CoefficientGroup>
+	</Actuator>
+	<Actuator Id="5">
+		<Loop Name="jointPositionLoop">
+			<CoefficientGroup Name="Loop Compensator">
+				<Coefficient Name="b1" Type="double">72.5000</Coefficient>
+				<Coefficient Name="b2" Type="double">72.6000</Coefficient>
+				<Coefficient Name="b3" Type="double">72.7000</Coefficient>
+				<Coefficient Name="b4" Type="double">72.8000</Coefficient>
+				<Coefficient Name="b5" Type="double">72.7000</Coefficient>
+				<Coefficient Name="b6" Type="double">72.8000</Coefficient>
+				<Coefficient Name="a1" Type="double">72.1000</Coefficient>
+				<Coefficient Name="a2" Type="double">72.2000</Coefficient>
+				<Coefficient Name="a3" Type="double">72.3000</Coefficient>
+				<Coefficient Name="a4" Type="double">72.4000</Coefficient>
+				<Coefficient Name="a5" Type="double">72.3000</Coefficient>
+				<Coefficient Name="a6" Type="double">72.4000</Coefficient>
+				<Coefficient Name="Kp" Type="double">72.1000</Coefficient>
+				<Coefficient Name="Km" Type="double">72.2000</Coefficient>
+			</CoefficientGroup>
+			<CoefficientGroup Name="Frequency Response">
+				<Coefficient Name="Amplitude (deg)" Type="double">90.0000</Coefficient>
+				<Coefficient Name="Max Frequency (Hz)" Type="double">60.0000</Coefficient>
+				<Coefficient Name="Alpha" Type="double">2.0000</Coefficient>
+			</CoefficientGroup>
+			<CoefficientGroup Name="Additional Options Check Box">
+				<Coefficient Name="Gains Scheduling" Type="bool">0</Coefficient>
+			</CoefficientGroup>
+			<CoefficientGroup Name="Additional Options">
+				<Coefficient Name="Inertia" Type="double">123.0000</Coefficient>
+				<Coefficient Name="Viscous Friction" Type="double">456.0000</Coefficient>
+			</CoefficientGroup>
+		</Loop>
+		<Loop Name="motorPositionLoop">
+			<CoefficientGroup Name="Loop Compensator">
+				<Coefficient Name="b1" Type="double">72.5000</Coefficient>
+				<Coefficient Name="b2" Type="double">72.6000</Coefficient>
+				<Coefficient Name="b3" Type="double">72.7000</Coefficient>
+				<Coefficient Name="b4" Type="double">72.8000</Coefficient>
+				<Coefficient Name="b5" Type="double">72.7000</Coefficient>
+				<Coefficient Name="b6" Type="double">72.8000</Coefficient>
+				<Coefficient Name="a1" Type="double">72.1000</Coefficient>
+				<Coefficient Name="a2" Type="double">72.2000</Coefficient>
+				<Coefficient Name="a3" Type="double">72.3000</Coefficient>
+				<Coefficient Name="a4" Type="double">72.4000</Coefficient>
+				<Coefficient Name="a5" Type="double">72.3000</Coefficient>
+				<Coefficient Name="a6" Type="double">72.4000</Coefficient>
+				<Coefficient Name="Kp" Type="double">72.1000</Coefficient>
+				<Coefficient Name="Km" Type="double">72.2000</Coefficient>
+			</CoefficientGroup>
+			<CoefficientGroup Name="Frequency Response">
+				<Coefficient Name="Amplitude (deg)" Type="double">90.0000</Coefficient>
+				<Coefficient Name="Max Frequency (Hz)" Type="double">60.0000</Coefficient>
+				<Coefficient Name="Alpha" Type="double">2.0000</Coefficient>
+			</CoefficientGroup>
+			<CoefficientGroup Name="Additional Options Check Box">
+				<Coefficient Name="Gains Scheduling" Type="bool">0</Coefficient>
+			</CoefficientGroup>
+			<CoefficientGroup Name="Additional Options">
+				<Coefficient Name="Inertia" Type="double">123.0000</Coefficient>
+				<Coefficient Name="Viscous Friction" Type="double">456.0000</Coefficient>
+			</CoefficientGroup>
+		</Loop>
+		<Loop Name="jointVelocityLoop">
+			<CoefficientGroup Name="Loop Compensator">
+				<Coefficient Name="b1" Type="double">72.5000</Coefficient>
+				<Coefficient Name="b2" Type="double">72.6000</Coefficient>
+				<Coefficient Name="b3" Type="double">72.7000</Coefficient>
+				<Coefficient Name="b4" Type="double">72.8000</Coefficient>
+				<Coefficient Name="b5" Type="double">72.7000</Coefficient>
+				<Coefficient Name="b6" Type="double">72.8000</Coefficient>
+				<Coefficient Name="a1" Type="double">72.1000</Coefficient>
+				<Coefficient Name="a2" Type="double">72.2000</Coefficient>
+				<Coefficient Name="a3" Type="double">72.3000</Coefficient>
+				<Coefficient Name="a4" Type="double">72.4000</Coefficient>
+				<Coefficient Name="a5" Type="double">72.3000</Coefficient>
+				<Coefficient Name="a6" Type="double">72.4000</Coefficient>
+				<Coefficient Name="Kp" Type="double">72.1000</Coefficient>
+				<Coefficient Name="Km" Type="double">72.2000</Coefficient>
+			</CoefficientGroup>
+			<CoefficientGroup Name="Frequency Response">
+				<Coefficient Name="Amplitude (deg)" Type="double">90.0000</Coefficient>
+				<Coefficient Name="Max Frequency (Hz)" Type="double">60.0000</Coefficient>
+				<Coefficient Name="Alpha" Type="double">2.0000</Coefficient>
+			</CoefficientGroup>
+			<CoefficientGroup Name="Additional Options Check Box">
+				<Coefficient Name="Gains Scheduling" Type="bool">0</Coefficient>
+			</CoefficientGroup>
+			<CoefficientGroup Name="Additional Options">
+				<Coefficient Name="Inertia" Type="double">123.0000</Coefficient>
+				<Coefficient Name="Viscous Friction" Type="double">456.0000</Coefficient>
+			</CoefficientGroup>
+		</Loop>
+		<Loop Name="motorVelocityLoop">
+			<CoefficientGroup Name="Loop Compensator">
+				<Coefficient Name="b1" Type="double">72.5000</Coefficient>
+				<Coefficient Name="b2" Type="double">72.6000</Coefficient>
+				<Coefficient Name="b3" Type="double">72.7000</Coefficient>
+				<Coefficient Name="b4" Type="double">72.8000</Coefficient>
+				<Coefficient Name="b5" Type="double">72.7000</Coefficient>
+				<Coefficient Name="b6" Type="double">72.8000</Coefficient>
+				<Coefficient Name="a1" Type="double">72.1000</Coefficient>
+				<Coefficient Name="a2" Type="double">72.2000</Coefficient>
+				<Coefficient Name="a3" Type="double">72.3000</Coefficient>
+				<Coefficient Name="a4" Type="double">72.4000</Coefficient>
+				<Coefficient Name="a5" Type="double">72.3000</Coefficient>
+				<Coefficient Name="a6" Type="double">72.4000</Coefficient>
+				<Coefficient Name="Kp" Type="double">72.1000</Coefficient>
+				<Coefficient Name="Km" Type="double">72.2000</Coefficient>
+			</CoefficientGroup>
+			<CoefficientGroup Name="Frequency Response">
+				<Coefficient Name="Amplitude (deg)" Type="double">90.0000</Coefficient>
+				<Coefficient Name="Max Frequency (Hz)" Type="double">60.0000</Coefficient>
+				<Coefficient Name="Alpha" Type="double">2.0000</Coefficient>
+			</CoefficientGroup>
+			<CoefficientGroup Name="Additional Options Check Box">
+				<Coefficient Name="Gains Scheduling" Type="bool">0</Coefficient>
+			</CoefficientGroup>
+			<CoefficientGroup Name="Additional Options">
+				<Coefficient Name="Inertia" Type="double">123.0000</Coefficient>
+				<Coefficient Name="Viscous Friction" Type="double">456.0000</Coefficient>
+			</CoefficientGroup>
+		</Loop>
+		<Loop Name="currentLoop">
+			<CoefficientGroup Name="Loop Compensator">
+				<Coefficient Name="Kpq" Type="double">122.1000</Coefficient>
+				<Coefficient Name="Kiq" Type="double">123.2000</Coefficient>
+				<Coefficient Name="Kpd" Type="double">124.3000</Coefficient>
+				<Coefficient Name="Kid" Type="double">125.4000</Coefficient>
+			</CoefficientGroup>
+			<CoefficientGroup Name="Frequency Response">
+				<Coefficient Name="Amplitude (deg)" Type="double">90.0000</Coefficient>
+				<Coefficient Name="Max Frequency (Hz)" Type="double">60.0000</Coefficient>
+				<Coefficient Name="Alpha" Type="double">2.0000</Coefficient>
+			</CoefficientGroup>
+			<CoefficientGroup Name="Additional Options Check Box">
+				<Coefficient Name="Gains Scheduling" Type="bool">0</Coefficient>
+			</CoefficientGroup>
+			<CoefficientGroup Name="Additional Options">
+				<Coefficient Name="Inertia" Type="double">123.0000</Coefficient>
+				<Coefficient Name="Viscous Friction" Type="double">456.0000</Coefficient>
+			</CoefficientGroup>
+		</Loop>
+		<Loop Name="torqueLoop">
+			<CoefficientGroup Name="Loop Compensator">
+				<Coefficient Name="b1" Type="double">72.5000</Coefficient>
+				<Coefficient Name="b2" Type="double">72.6000</Coefficient>
+				<Coefficient Name="b3" Type="double">72.7000</Coefficient>
+				<Coefficient Name="b4" Type="double">72.8000</Coefficient>
+				<Coefficient Name="b5" Type="double">72.7000</Coefficient>
+				<Coefficient Name="b6" Type="double">72.8000</Coefficient>
+				<Coefficient Name="a1" Type="double">72.1000</Coefficient>
+				<Coefficient Name="a2" Type="double">72.2000</Coefficient>
+				<Coefficient Name="a3" Type="double">72.3000</Coefficient>
+				<Coefficient Name="a4" Type="double">72.4000</Coefficient>
+				<Coefficient Name="a5" Type="double">72.3000</Coefficient>
+				<Coefficient Name="a6" Type="double">72.4000</Coefficient>
+				<Coefficient Name="Kp" Type="double">72.1000</Coefficient>
+				<Coefficient Name="Km" Type="double">72.2000</Coefficient>
+			</CoefficientGroup>
+			<CoefficientGroup Name="Frequency Response">
+				<Coefficient Name="Amplitude (deg)" Type="double">90.0000</Coefficient>
+				<Coefficient Name="Max Frequency (Hz)" Type="double">60.0000</Coefficient>
+				<Coefficient Name="Alpha" Type="double">2.0000</Coefficient>
+			</CoefficientGroup>
+			<CoefficientGroup Name="Additional Options Check Box">
+				<Coefficient Name="Gains Scheduling" Type="bool">0</Coefficient>
+			</CoefficientGroup>
+			<CoefficientGroup Name="Additional Options">
+				<Coefficient Name="Inertia" Type="double">123.0000</Coefficient>
+				<Coefficient Name="Viscous Friction" Type="double">456.0000</Coefficient>
+			</CoefficientGroup>
+		</Loop>
+		<CoefficientGroup Name="Feedforward Gains">
+			<Coefficient Name="Motor Position Loop" Type="double">96.2000</Coefficient>
+			<Coefficient Name="Current Loop" Type="double">178.5300</Coefficient>
+			<Coefficient Name="Joint Velocity Loop" Type="double">170.3000</Coefficient>
+			<Coefficient Name="Torque Loop" Type="double">1234.5000</Coefficient>
+			<Coefficient Name="Motor Velocity Loop" Type="double">275000.6000</Coefficient>
+		</CoefficientGroup>
+		<CoefficientGroup Name="Control Architecture">
+			<Coefficient Name="Joint Position Loop" Type="bool">0</Coefficient>
+			<Coefficient Name="Motor Position Loop" Type="bool">0</Coefficient>
+			<Coefficient Name="Joint Velocity Loop" Type="bool">0</Coefficient>
+			<Coefficient Name="Motor Velocity Loop" Type="bool">0</Coefficient>
+			<Coefficient Name="Torque Loop" Type="bool">0</Coefficient>
+			<Coefficient Name="Current Loop" Type="bool">0</Coefficient>
+		</CoefficientGroup>
+	</Actuator>
+	<Actuator Id="6">
+		<Loop Name="jointPositionLoop">
+			<CoefficientGroup Name="Loop Compensator">
+				<Coefficient Name="b1" Type="double">72.5000</Coefficient>
+				<Coefficient Name="b2" Type="double">72.6000</Coefficient>
+				<Coefficient Name="b3" Type="double">72.7000</Coefficient>
+				<Coefficient Name="b4" Type="double">72.8000</Coefficient>
+				<Coefficient Name="b5" Type="double">72.7000</Coefficient>
+				<Coefficient Name="b6" Type="double">72.8000</Coefficient>
+				<Coefficient Name="a1" Type="double">72.1000</Coefficient>
+				<Coefficient Name="a2" Type="double">72.2000</Coefficient>
+				<Coefficient Name="a3" Type="double">72.3000</Coefficient>
+				<Coefficient Name="a4" Type="double">72.4000</Coefficient>
+				<Coefficient Name="a5" Type="double">72.3000</Coefficient>
+				<Coefficient Name="a6" Type="double">72.4000</Coefficient>
+				<Coefficient Name="Kp" Type="double">72.1000</Coefficient>
+				<Coefficient Name="Km" Type="double">72.2000</Coefficient>
+			</CoefficientGroup>
+			<CoefficientGroup Name="Frequency Response">
+				<Coefficient Name="Amplitude (deg)" Type="double">90.0000</Coefficient>
+				<Coefficient Name="Max Frequency (Hz)" Type="double">60.0000</Coefficient>
+				<Coefficient Name="Alpha" Type="double">2.0000</Coefficient>
+			</CoefficientGroup>
+			<CoefficientGroup Name="Additional Options Check Box">
+				<Coefficient Name="Gains Scheduling" Type="bool">0</Coefficient>
+			</CoefficientGroup>
+			<CoefficientGroup Name="Additional Options">
+				<Coefficient Name="Inertia" Type="double">123.0000</Coefficient>
+				<Coefficient Name="Viscous Friction" Type="double">456.0000</Coefficient>
+			</CoefficientGroup>
+		</Loop>
+		<Loop Name="motorPositionLoop">
+			<CoefficientGroup Name="Loop Compensator">
+				<Coefficient Name="b1" Type="double">72.5000</Coefficient>
+				<Coefficient Name="b2" Type="double">72.6000</Coefficient>
+				<Coefficient Name="b3" Type="double">72.7000</Coefficient>
+				<Coefficient Name="b4" Type="double">72.8000</Coefficient>
+				<Coefficient Name="b5" Type="double">72.7000</Coefficient>
+				<Coefficient Name="b6" Type="double">72.8000</Coefficient>
+				<Coefficient Name="a1" Type="double">72.1000</Coefficient>
+				<Coefficient Name="a2" Type="double">72.2000</Coefficient>
+				<Coefficient Name="a3" Type="double">72.3000</Coefficient>
+				<Coefficient Name="a4" Type="double">72.4000</Coefficient>
+				<Coefficient Name="a5" Type="double">72.3000</Coefficient>
+				<Coefficient Name="a6" Type="double">72.4000</Coefficient>
+				<Coefficient Name="Kp" Type="double">72.1000</Coefficient>
+				<Coefficient Name="Km" Type="double">72.2000</Coefficient>
+			</CoefficientGroup>
+			<CoefficientGroup Name="Frequency Response">
+				<Coefficient Name="Amplitude (deg)" Type="double">90.0000</Coefficient>
+				<Coefficient Name="Max Frequency (Hz)" Type="double">60.0000</Coefficient>
+				<Coefficient Name="Alpha" Type="double">2.0000</Coefficient>
+			</CoefficientGroup>
+			<CoefficientGroup Name="Additional Options Check Box">
+				<Coefficient Name="Gains Scheduling" Type="bool">0</Coefficient>
+			</CoefficientGroup>
+			<CoefficientGroup Name="Additional Options">
+				<Coefficient Name="Inertia" Type="double">123.0000</Coefficient>
+				<Coefficient Name="Viscous Friction" Type="double">456.0000</Coefficient>
+			</CoefficientGroup>
+		</Loop>
+		<Loop Name="jointVelocityLoop">
+			<CoefficientGroup Name="Loop Compensator">
+				<Coefficient Name="b1" Type="double">72.5000</Coefficient>
+				<Coefficient Name="b2" Type="double">72.6000</Coefficient>
+				<Coefficient Name="b3" Type="double">72.7000</Coefficient>
+				<Coefficient Name="b4" Type="double">72.8000</Coefficient>
+				<Coefficient Name="b5" Type="double">72.7000</Coefficient>
+				<Coefficient Name="b6" Type="double">72.8000</Coefficient>
+				<Coefficient Name="a1" Type="double">72.1000</Coefficient>
+				<Coefficient Name="a2" Type="double">72.2000</Coefficient>
+				<Coefficient Name="a3" Type="double">72.3000</Coefficient>
+				<Coefficient Name="a4" Type="double">72.4000</Coefficient>
+				<Coefficient Name="a5" Type="double">72.3000</Coefficient>
+				<Coefficient Name="a6" Type="double">72.4000</Coefficient>
+				<Coefficient Name="Kp" Type="double">72.1000</Coefficient>
+				<Coefficient Name="Km" Type="double">72.2000</Coefficient>
+			</CoefficientGroup>
+			<CoefficientGroup Name="Frequency Response">
+				<Coefficient Name="Amplitude (deg)" Type="double">90.0000</Coefficient>
+				<Coefficient Name="Max Frequency (Hz)" Type="double">60.0000</Coefficient>
+				<Coefficient Name="Alpha" Type="double">2.0000</Coefficient>
+			</CoefficientGroup>
+			<CoefficientGroup Name="Additional Options Check Box">
+				<Coefficient Name="Gains Scheduling" Type="bool">0</Coefficient>
+			</CoefficientGroup>
+			<CoefficientGroup Name="Additional Options">
+				<Coefficient Name="Inertia" Type="double">123.0000</Coefficient>
+				<Coefficient Name="Viscous Friction" Type="double">456.0000</Coefficient>
+			</CoefficientGroup>
+		</Loop>
+		<Loop Name="motorVelocityLoop">
+			<CoefficientGroup Name="Loop Compensator">
+				<Coefficient Name="b1" Type="double">72.5000</Coefficient>
+				<Coefficient Name="b2" Type="double">72.6000</Coefficient>
+				<Coefficient Name="b3" Type="double">72.7000</Coefficient>
+				<Coefficient Name="b4" Type="double">72.8000</Coefficient>
+				<Coefficient Name="b5" Type="double">72.7000</Coefficient>
+				<Coefficient Name="b6" Type="double">72.8000</Coefficient>
+				<Coefficient Name="a1" Type="double">72.1000</Coefficient>
+				<Coefficient Name="a2" Type="double">72.2000</Coefficient>
+				<Coefficient Name="a3" Type="double">72.3000</Coefficient>
+				<Coefficient Name="a4" Type="double">72.4000</Coefficient>
+				<Coefficient Name="a5" Type="double">72.3000</Coefficient>
+				<Coefficient Name="a6" Type="double">72.4000</Coefficient>
+				<Coefficient Name="Kp" Type="double">72.1000</Coefficient>
+				<Coefficient Name="Km" Type="double">72.2000</Coefficient>
+			</CoefficientGroup>
+			<CoefficientGroup Name="Frequency Response">
+				<Coefficient Name="Amplitude (deg)" Type="double">90.0000</Coefficient>
+				<Coefficient Name="Max Frequency (Hz)" Type="double">60.0000</Coefficient>
+				<Coefficient Name="Alpha" Type="double">2.0000</Coefficient>
+			</CoefficientGroup>
+			<CoefficientGroup Name="Additional Options Check Box">
+				<Coefficient Name="Gains Scheduling" Type="bool">0</Coefficient>
+			</CoefficientGroup>
+			<CoefficientGroup Name="Additional Options">
+				<Coefficient Name="Inertia" Type="double">123.0000</Coefficient>
+				<Coefficient Name="Viscous Friction" Type="double">456.0000</Coefficient>
+			</CoefficientGroup>
+		</Loop>
+		<Loop Name="currentLoop">
+			<CoefficientGroup Name="Loop Compensator">
+				<Coefficient Name="Kpq" Type="double">122.1000</Coefficient>
+				<Coefficient Name="Kiq" Type="double">123.2000</Coefficient>
+				<Coefficient Name="Kpd" Type="double">124.3000</Coefficient>
+				<Coefficient Name="Kid" Type="double">125.4000</Coefficient>
+			</CoefficientGroup>
+			<CoefficientGroup Name="Frequency Response">
+				<Coefficient Name="Amplitude (deg)" Type="double">90.0000</Coefficient>
+				<Coefficient Name="Max Frequency (Hz)" Type="double">60.0000</Coefficient>
+				<Coefficient Name="Alpha" Type="double">2.0000</Coefficient>
+			</CoefficientGroup>
+			<CoefficientGroup Name="Additional Options Check Box">
+				<Coefficient Name="Gains Scheduling" Type="bool">0</Coefficient>
+			</CoefficientGroup>
+			<CoefficientGroup Name="Additional Options">
+				<Coefficient Name="Inertia" Type="double">123.0000</Coefficient>
+				<Coefficient Name="Viscous Friction" Type="double">456.0000</Coefficient>
+			</CoefficientGroup>
+		</Loop>
+		<Loop Name="torqueLoop">
+			<CoefficientGroup Name="Loop Compensator">
+				<Coefficient Name="b1" Type="double">72.5000</Coefficient>
+				<Coefficient Name="b2" Type="double">72.6000</Coefficient>
+				<Coefficient Name="b3" Type="double">72.7000</Coefficient>
+				<Coefficient Name="b4" Type="double">72.8000</Coefficient>
+				<Coefficient Name="b5" Type="double">72.7000</Coefficient>
+				<Coefficient Name="b6" Type="double">72.8000</Coefficient>
+				<Coefficient Name="a1" Type="double">72.1000</Coefficient>
+				<Coefficient Name="a2" Type="double">72.2000</Coefficient>
+				<Coefficient Name="a3" Type="double">72.3000</Coefficient>
+				<Coefficient Name="a4" Type="double">72.4000</Coefficient>
+				<Coefficient Name="a5" Type="double">72.3000</Coefficient>
+				<Coefficient Name="a6" Type="double">72.4000</Coefficient>
+				<Coefficient Name="Kp" Type="double">72.1000</Coefficient>
+				<Coefficient Name="Km" Type="double">72.2000</Coefficient>
+			</CoefficientGroup>
+			<CoefficientGroup Name="Frequency Response">
+				<Coefficient Name="Amplitude (deg)" Type="double">90.0000</Coefficient>
+				<Coefficient Name="Max Frequency (Hz)" Type="double">60.0000</Coefficient>
+				<Coefficient Name="Alpha" Type="double">2.0000</Coefficient>
+			</CoefficientGroup>
+			<CoefficientGroup Name="Additional Options Check Box">
+				<Coefficient Name="Gains Scheduling" Type="bool">0</Coefficient>
+			</CoefficientGroup>
+			<CoefficientGroup Name="Additional Options">
+				<Coefficient Name="Inertia" Type="double">123.0000</Coefficient>
+				<Coefficient Name="Viscous Friction" Type="double">456.0000</Coefficient>
+			</CoefficientGroup>
+		</Loop>
+		<CoefficientGroup Name="Feedforward Gains">
+			<Coefficient Name="Motor Position Loop" Type="double">96.2000</Coefficient>
+			<Coefficient Name="Current Loop" Type="double">178.5300</Coefficient>
+			<Coefficient Name="Joint Velocity Loop" Type="double">170.3000</Coefficient>
+			<Coefficient Name="Torque Loop" Type="double">1234.5000</Coefficient>
+			<Coefficient Name="Motor Velocity Loop" Type="double">275000.6000</Coefficient>
+		</CoefficientGroup>
+		<CoefficientGroup Name="Control Architecture">
+			<Coefficient Name="Joint Position Loop" Type="bool">0</Coefficient>
+			<Coefficient Name="Motor Position Loop" Type="bool">0</Coefficient>
+			<Coefficient Name="Joint Velocity Loop" Type="bool">0</Coefficient>
+			<Coefficient Name="Motor Velocity Loop" Type="bool">0</Coefficient>
+			<Coefficient Name="Torque Loop" Type="bool">0</Coefficient>
+			<Coefficient Name="Current Loop" Type="bool">0</Coefficient>
+		</CoefficientGroup>
+	</Actuator>
+	<Actuator Id="7">
+		<Loop Name="jointPositionLoop">
+			<CoefficientGroup Name="Loop Compensator">
+				<Coefficient Name="b1" Type="double">72.5000</Coefficient>
+				<Coefficient Name="b2" Type="double">72.6000</Coefficient>
+				<Coefficient Name="b3" Type="double">72.7000</Coefficient>
+				<Coefficient Name="b4" Type="double">72.8000</Coefficient>
+				<Coefficient Name="b5" Type="double">72.7000</Coefficient>
+				<Coefficient Name="b6" Type="double">72.8000</Coefficient>
+				<Coefficient Name="a1" Type="double">72.1000</Coefficient>
+				<Coefficient Name="a2" Type="double">72.2000</Coefficient>
+				<Coefficient Name="a3" Type="double">72.3000</Coefficient>
+				<Coefficient Name="a4" Type="double">72.4000</Coefficient>
+				<Coefficient Name="a5" Type="double">72.3000</Coefficient>
+				<Coefficient Name="a6" Type="double">72.4000</Coefficient>
+				<Coefficient Name="Kp" Type="double">72.1000</Coefficient>
+				<Coefficient Name="Km" Type="double">72.2000</Coefficient>
+			</CoefficientGroup>
+			<CoefficientGroup Name="Frequency Response">
+				<Coefficient Name="Amplitude (deg)" Type="double">90.0000</Coefficient>
+				<Coefficient Name="Max Frequency (Hz)" Type="double">60.0000</Coefficient>
+				<Coefficient Name="Alpha" Type="double">2.0000</Coefficient>
+			</CoefficientGroup>
+			<CoefficientGroup Name="Additional Options Check Box">
+				<Coefficient Name="Gains Scheduling" Type="bool">0</Coefficient>
+			</CoefficientGroup>
+			<CoefficientGroup Name="Additional Options">
+				<Coefficient Name="Inertia" Type="double">123.0000</Coefficient>
+				<Coefficient Name="Viscous Friction" Type="double">456.0000</Coefficient>
+			</CoefficientGroup>
+		</Loop>
+		<Loop Name="motorPositionLoop">
+			<CoefficientGroup Name="Loop Compensator">
+				<Coefficient Name="b1" Type="double">72.5000</Coefficient>
+				<Coefficient Name="b2" Type="double">72.6000</Coefficient>
+				<Coefficient Name="b3" Type="double">72.7000</Coefficient>
+				<Coefficient Name="b4" Type="double">72.8000</Coefficient>
+				<Coefficient Name="b5" Type="double">72.7000</Coefficient>
+				<Coefficient Name="b6" Type="double">72.8000</Coefficient>
+				<Coefficient Name="a1" Type="double">72.1000</Coefficient>
+				<Coefficient Name="a2" Type="double">72.2000</Coefficient>
+				<Coefficient Name="a3" Type="double">72.3000</Coefficient>
+				<Coefficient Name="a4" Type="double">72.4000</Coefficient>
+				<Coefficient Name="a5" Type="double">72.3000</Coefficient>
+				<Coefficient Name="a6" Type="double">72.4000</Coefficient>
+				<Coefficient Name="Kp" Type="double">72.1000</Coefficient>
+				<Coefficient Name="Km" Type="double">72.2000</Coefficient>
+			</CoefficientGroup>
+			<CoefficientGroup Name="Frequency Response">
+				<Coefficient Name="Amplitude (deg)" Type="double">90.0000</Coefficient>
+				<Coefficient Name="Max Frequency (Hz)" Type="double">60.0000</Coefficient>
+				<Coefficient Name="Alpha" Type="double">2.0000</Coefficient>
+			</CoefficientGroup>
+			<CoefficientGroup Name="Additional Options Check Box">
+				<Coefficient Name="Gains Scheduling" Type="bool">0</Coefficient>
+			</CoefficientGroup>
+			<CoefficientGroup Name="Additional Options">
+				<Coefficient Name="Inertia" Type="double">123.0000</Coefficient>
+				<Coefficient Name="Viscous Friction" Type="double">456.0000</Coefficient>
+			</CoefficientGroup>
+		</Loop>
+		<Loop Name="jointVelocityLoop">
+			<CoefficientGroup Name="Loop Compensator">
+				<Coefficient Name="b1" Type="double">72.5000</Coefficient>
+				<Coefficient Name="b2" Type="double">72.6000</Coefficient>
+				<Coefficient Name="b3" Type="double">72.7000</Coefficient>
+				<Coefficient Name="b4" Type="double">72.8000</Coefficient>
+				<Coefficient Name="b5" Type="double">72.7000</Coefficient>
+				<Coefficient Name="b6" Type="double">72.8000</Coefficient>
+				<Coefficient Name="a1" Type="double">72.1000</Coefficient>
+				<Coefficient Name="a2" Type="double">72.2000</Coefficient>
+				<Coefficient Name="a3" Type="double">72.3000</Coefficient>
+				<Coefficient Name="a4" Type="double">72.4000</Coefficient>
+				<Coefficient Name="a5" Type="double">72.3000</Coefficient>
+				<Coefficient Name="a6" Type="double">72.4000</Coefficient>
+				<Coefficient Name="Kp" Type="double">72.1000</Coefficient>
+				<Coefficient Name="Km" Type="double">72.2000</Coefficient>
+			</CoefficientGroup>
+			<CoefficientGroup Name="Frequency Response">
+				<Coefficient Name="Amplitude (deg)" Type="double">90.0000</Coefficient>
+				<Coefficient Name="Max Frequency (Hz)" Type="double">60.0000</Coefficient>
+				<Coefficient Name="Alpha" Type="double">2.0000</Coefficient>
+			</CoefficientGroup>
+			<CoefficientGroup Name="Additional Options Check Box">
+				<Coefficient Name="Gains Scheduling" Type="bool">0</Coefficient>
+			</CoefficientGroup>
+			<CoefficientGroup Name="Additional Options">
+				<Coefficient Name="Inertia" Type="double">123.0000</Coefficient>
+				<Coefficient Name="Viscous Friction" Type="double">456.0000</Coefficient>
+			</CoefficientGroup>
+		</Loop>
+		<Loop Name="motorVelocityLoop">
+			<CoefficientGroup Name="Loop Compensator">
+				<Coefficient Name="b1" Type="double">72.5000</Coefficient>
+				<Coefficient Name="b2" Type="double">72.6000</Coefficient>
+				<Coefficient Name="b3" Type="double">72.7000</Coefficient>
+				<Coefficient Name="b4" Type="double">72.8000</Coefficient>
+				<Coefficient Name="b5" Type="double">72.7000</Coefficient>
+				<Coefficient Name="b6" Type="double">72.8000</Coefficient>
+				<Coefficient Name="a1" Type="double">72.1000</Coefficient>
+				<Coefficient Name="a2" Type="double">72.2000</Coefficient>
+				<Coefficient Name="a3" Type="double">72.3000</Coefficient>
+				<Coefficient Name="a4" Type="double">72.4000</Coefficient>
+				<Coefficient Name="a5" Type="double">72.3000</Coefficient>
+				<Coefficient Name="a6" Type="double">72.4000</Coefficient>
+				<Coefficient Name="Kp" Type="double">72.1000</Coefficient>
+				<Coefficient Name="Km" Type="double">72.2000</Coefficient>
+			</CoefficientGroup>
+			<CoefficientGroup Name="Frequency Response">
+				<Coefficient Name="Amplitude (deg)" Type="double">90.0000</Coefficient>
+				<Coefficient Name="Max Frequency (Hz)" Type="double">60.0000</Coefficient>
+				<Coefficient Name="Alpha" Type="double">2.0000</Coefficient>
+			</CoefficientGroup>
+			<CoefficientGroup Name="Additional Options Check Box">
+				<Coefficient Name="Gains Scheduling" Type="bool">0</Coefficient>
+			</CoefficientGroup>
+			<CoefficientGroup Name="Additional Options">
+				<Coefficient Name="Inertia" Type="double">123.0000</Coefficient>
+				<Coefficient Name="Viscous Friction" Type="double">456.0000</Coefficient>
+			</CoefficientGroup>
+		</Loop>
+		<Loop Name="currentLoop">
+			<CoefficientGroup Name="Loop Compensator">
+				<Coefficient Name="Kpq" Type="double">122.1000</Coefficient>
+				<Coefficient Name="Kiq" Type="double">123.2000</Coefficient>
+				<Coefficient Name="Kpd" Type="double">124.3000</Coefficient>
+				<Coefficient Name="Kid" Type="double">125.4000</Coefficient>
+			</CoefficientGroup>
+			<CoefficientGroup Name="Frequency Response">
+				<Coefficient Name="Amplitude (deg)" Type="double">90.0000</Coefficient>
+				<Coefficient Name="Max Frequency (Hz)" Type="double">60.0000</Coefficient>
+				<Coefficient Name="Alpha" Type="double">2.0000</Coefficient>
+			</CoefficientGroup>
+			<CoefficientGroup Name="Additional Options Check Box">
+				<Coefficient Name="Gains Scheduling" Type="bool">0</Coefficient>
+			</CoefficientGroup>
+			<CoefficientGroup Name="Additional Options">
+				<Coefficient Name="Inertia" Type="double">123.0000</Coefficient>
+				<Coefficient Name="Viscous Friction" Type="double">456.0000</Coefficient>
+			</CoefficientGroup>
+		</Loop>
+		<Loop Name="torqueLoop">
+			<CoefficientGroup Name="Loop Compensator">
+				<Coefficient Name="b1" Type="double">72.5000</Coefficient>
+				<Coefficient Name="b2" Type="double">72.6000</Coefficient>
+				<Coefficient Name="b3" Type="double">72.7000</Coefficient>
+				<Coefficient Name="b4" Type="double">72.8000</Coefficient>
+				<Coefficient Name="b5" Type="double">72.7000</Coefficient>
+				<Coefficient Name="b6" Type="double">72.8000</Coefficient>
+				<Coefficient Name="a1" Type="double">72.1000</Coefficient>
+				<Coefficient Name="a2" Type="double">72.2000</Coefficient>
+				<Coefficient Name="a3" Type="double">72.3000</Coefficient>
+				<Coefficient Name="a4" Type="double">72.4000</Coefficient>
+				<Coefficient Name="a5" Type="double">72.3000</Coefficient>
+				<Coefficient Name="a6" Type="double">72.4000</Coefficient>
+				<Coefficient Name="Kp" Type="double">72.1000</Coefficient>
+				<Coefficient Name="Km" Type="double">72.2000</Coefficient>
+			</CoefficientGroup>
+			<CoefficientGroup Name="Frequency Response">
+				<Coefficient Name="Amplitude (deg)" Type="double">90.0000</Coefficient>
+				<Coefficient Name="Max Frequency (Hz)" Type="double">60.0000</Coefficient>
+				<Coefficient Name="Alpha" Type="double">2.0000</Coefficient>
+			</CoefficientGroup>
+			<CoefficientGroup Name="Additional Options Check Box">
+				<Coefficient Name="Gains Scheduling" Type="bool">0</Coefficient>
+			</CoefficientGroup>
+			<CoefficientGroup Name="Additional Options">
+				<Coefficient Name="Inertia" Type="double">123.0000</Coefficient>
+				<Coefficient Name="Viscous Friction" Type="double">456.0000</Coefficient>
+			</CoefficientGroup>
+		</Loop>
+		<CoefficientGroup Name="Feedforward Gains">
+			<Coefficient Name="Motor Position Loop" Type="double">96.2000</Coefficient>
+			<Coefficient Name="Current Loop" Type="double">178.5300</Coefficient>
+			<Coefficient Name="Joint Velocity Loop" Type="double">170.3000</Coefficient>
+			<Coefficient Name="Torque Loop" Type="double">1234.5000</Coefficient>
+			<Coefficient Name="Motor Velocity Loop" Type="double">275000.6000</Coefficient>
+		</CoefficientGroup>
+		<CoefficientGroup Name="Control Architecture">
+			<Coefficient Name="Joint Position Loop" Type="bool">0</Coefficient>
+			<Coefficient Name="Motor Position Loop" Type="bool">0</Coefficient>
+			<Coefficient Name="Joint Velocity Loop" Type="bool">0</Coefficient>
+			<Coefficient Name="Motor Velocity Loop" Type="bool">0</Coefficient>
+			<Coefficient Name="Torque Loop" Type="bool">0</Coefficient>
+			<Coefficient Name="Current Loop" Type="bool">0</Coefficient>
+		</CoefficientGroup>
+	</Actuator>
+	<Actuator Id="8">
+		<Loop Name="jointPositionLoop">
+			<CoefficientGroup Name="Loop Compensator">
+				<Coefficient Name="b1" Type="double">72.5000</Coefficient>
+				<Coefficient Name="b2" Type="double">72.6000</Coefficient>
+				<Coefficient Name="b3" Type="double">72.7000</Coefficient>
+				<Coefficient Name="b4" Type="double">72.8000</Coefficient>
+				<Coefficient Name="b5" Type="double">72.7000</Coefficient>
+				<Coefficient Name="b6" Type="double">72.8000</Coefficient>
+				<Coefficient Name="a1" Type="double">72.1000</Coefficient>
+				<Coefficient Name="a2" Type="double">72.2000</Coefficient>
+				<Coefficient Name="a3" Type="double">72.3000</Coefficient>
+				<Coefficient Name="a4" Type="double">72.4000</Coefficient>
+				<Coefficient Name="a5" Type="double">72.3000</Coefficient>
+				<Coefficient Name="a6" Type="double">72.4000</Coefficient>
+				<Coefficient Name="Kp" Type="double">72.1000</Coefficient>
+				<Coefficient Name="Km" Type="double">72.2000</Coefficient>
+			</CoefficientGroup>
+			<CoefficientGroup Name="Frequency Response">
+				<Coefficient Name="Amplitude (deg)" Type="double">90.0000</Coefficient>
+				<Coefficient Name="Max Frequency (Hz)" Type="double">60.0000</Coefficient>
+				<Coefficient Name="Alpha" Type="double">2.0000</Coefficient>
+			</CoefficientGroup>
+			<CoefficientGroup Name="Additional Options Check Box">
+				<Coefficient Name="Gains Scheduling" Type="bool">0</Coefficient>
+			</CoefficientGroup>
+			<CoefficientGroup Name="Additional Options">
+				<Coefficient Name="Inertia" Type="double">123.0000</Coefficient>
+				<Coefficient Name="Viscous Friction" Type="double">456.0000</Coefficient>
+			</CoefficientGroup>
+		</Loop>
+		<Loop Name="motorPositionLoop">
+			<CoefficientGroup Name="Loop Compensator">
+				<Coefficient Name="b1" Type="double">72.5000</Coefficient>
+				<Coefficient Name="b2" Type="double">72.6000</Coefficient>
+				<Coefficient Name="b3" Type="double">72.7000</Coefficient>
+				<Coefficient Name="b4" Type="double">72.8000</Coefficient>
+				<Coefficient Name="b5" Type="double">72.7000</Coefficient>
+				<Coefficient Name="b6" Type="double">72.8000</Coefficient>
+				<Coefficient Name="a1" Type="double">72.1000</Coefficient>
+				<Coefficient Name="a2" Type="double">72.2000</Coefficient>
+				<Coefficient Name="a3" Type="double">72.3000</Coefficient>
+				<Coefficient Name="a4" Type="double">72.4000</Coefficient>
+				<Coefficient Name="a5" Type="double">72.3000</Coefficient>
+				<Coefficient Name="a6" Type="double">72.4000</Coefficient>
+				<Coefficient Name="Kp" Type="double">72.1000</Coefficient>
+				<Coefficient Name="Km" Type="double">72.2000</Coefficient>
+			</CoefficientGroup>
+			<CoefficientGroup Name="Frequency Response">
+				<Coefficient Name="Amplitude (deg)" Type="double">90.0000</Coefficient>
+				<Coefficient Name="Max Frequency (Hz)" Type="double">60.0000</Coefficient>
+				<Coefficient Name="Alpha" Type="double">2.0000</Coefficient>
+			</CoefficientGroup>
+			<CoefficientGroup Name="Additional Options Check Box">
+				<Coefficient Name="Gains Scheduling" Type="bool">0</Coefficient>
+			</CoefficientGroup>
+			<CoefficientGroup Name="Additional Options">
+				<Coefficient Name="Inertia" Type="double">123.0000</Coefficient>
+				<Coefficient Name="Viscous Friction" Type="double">456.0000</Coefficient>
+			</CoefficientGroup>
+		</Loop>
+		<Loop Name="jointVelocityLoop">
+			<CoefficientGroup Name="Loop Compensator">
+				<Coefficient Name="b1" Type="double">72.5000</Coefficient>
+				<Coefficient Name="b2" Type="double">72.6000</Coefficient>
+				<Coefficient Name="b3" Type="double">72.7000</Coefficient>
+				<Coefficient Name="b4" Type="double">72.8000</Coefficient>
+				<Coefficient Name="b5" Type="double">72.7000</Coefficient>
+				<Coefficient Name="b6" Type="double">72.8000</Coefficient>
+				<Coefficient Name="a1" Type="double">72.1000</Coefficient>
+				<Coefficient Name="a2" Type="double">72.2000</Coefficient>
+				<Coefficient Name="a3" Type="double">72.3000</Coefficient>
+				<Coefficient Name="a4" Type="double">72.4000</Coefficient>
+				<Coefficient Name="a5" Type="double">72.3000</Coefficient>
+				<Coefficient Name="a6" Type="double">72.4000</Coefficient>
+				<Coefficient Name="Kp" Type="double">72.1000</Coefficient>
+				<Coefficient Name="Km" Type="double">72.2000</Coefficient>
+			</CoefficientGroup>
+			<CoefficientGroup Name="Frequency Response">
+				<Coefficient Name="Amplitude (deg)" Type="double">90.0000</Coefficient>
+				<Coefficient Name="Max Frequency (Hz)" Type="double">60.0000</Coefficient>
+				<Coefficient Name="Alpha" Type="double">2.0000</Coefficient>
+			</CoefficientGroup>
+			<CoefficientGroup Name="Additional Options Check Box">
+				<Coefficient Name="Gains Scheduling" Type="bool">0</Coefficient>
+			</CoefficientGroup>
+			<CoefficientGroup Name="Additional Options">
+				<Coefficient Name="Inertia" Type="double">123.0000</Coefficient>
+				<Coefficient Name="Viscous Friction" Type="double">456.0000</Coefficient>
+			</CoefficientGroup>
+		</Loop>
+		<Loop Name="motorVelocityLoop">
+			<CoefficientGroup Name="Loop Compensator">
+				<Coefficient Name="b1" Type="double">72.5000</Coefficient>
+				<Coefficient Name="b2" Type="double">72.6000</Coefficient>
+				<Coefficient Name="b3" Type="double">72.7000</Coefficient>
+				<Coefficient Name="b4" Type="double">72.8000</Coefficient>
+				<Coefficient Name="b5" Type="double">72.7000</Coefficient>
+				<Coefficient Name="b6" Type="double">72.8000</Coefficient>
+				<Coefficient Name="a1" Type="double">72.1000</Coefficient>
+				<Coefficient Name="a2" Type="double">72.2000</Coefficient>
+				<Coefficient Name="a3" Type="double">72.3000</Coefficient>
+				<Coefficient Name="a4" Type="double">72.4000</Coefficient>
+				<Coefficient Name="a5" Type="double">72.3000</Coefficient>
+				<Coefficient Name="a6" Type="double">72.4000</Coefficient>
+				<Coefficient Name="Kp" Type="double">72.1000</Coefficient>
+				<Coefficient Name="Km" Type="double">72.2000</Coefficient>
+			</CoefficientGroup>
+			<CoefficientGroup Name="Frequency Response">
+				<Coefficient Name="Amplitude (deg)" Type="double">90.0000</Coefficient>
+				<Coefficient Name="Max Frequency (Hz)" Type="double">60.0000</Coefficient>
+				<Coefficient Name="Alpha" Type="double">2.0000</Coefficient>
+			</CoefficientGroup>
+			<CoefficientGroup Name="Additional Options Check Box">
+				<Coefficient Name="Gains Scheduling" Type="bool">0</Coefficient>
+			</CoefficientGroup>
+			<CoefficientGroup Name="Additional Options">
+				<Coefficient Name="Inertia" Type="double">123.0000</Coefficient>
+				<Coefficient Name="Viscous Friction" Type="double">456.0000</Coefficient>
+			</CoefficientGroup>
+		</Loop>
+		<Loop Name="currentLoop">
+			<CoefficientGroup Name="Loop Compensator">
+				<Coefficient Name="Kpq" Type="double">122.1000</Coefficient>
+				<Coefficient Name="Kiq" Type="double">123.2000</Coefficient>
+				<Coefficient Name="Kpd" Type="double">124.3000</Coefficient>
+				<Coefficient Name="Kid" Type="double">125.4000</Coefficient>
+			</CoefficientGroup>
+			<CoefficientGroup Name="Frequency Response">
+				<Coefficient Name="Amplitude (deg)" Type="double">90.0000</Coefficient>
+				<Coefficient Name="Max Frequency (Hz)" Type="double">60.0000</Coefficient>
+				<Coefficient Name="Alpha" Type="double">2.0000</Coefficient>
+			</CoefficientGroup>
+			<CoefficientGroup Name="Additional Options Check Box">
+				<Coefficient Name="Gains Scheduling" Type="bool">0</Coefficient>
+			</CoefficientGroup>
+			<CoefficientGroup Name="Additional Options">
+				<Coefficient Name="Inertia" Type="double">123.0000</Coefficient>
+				<Coefficient Name="Viscous Friction" Type="double">456.0000</Coefficient>
+			</CoefficientGroup>
+		</Loop>
+		<Loop Name="torqueLoop">
+			<CoefficientGroup Name="Loop Compensator">
+				<Coefficient Name="b1" Type="double">72.5000</Coefficient>
+				<Coefficient Name="b2" Type="double">72.6000</Coefficient>
+				<Coefficient Name="b3" Type="double">72.7000</Coefficient>
+				<Coefficient Name="b4" Type="double">72.8000</Coefficient>
+				<Coefficient Name="b5" Type="double">72.7000</Coefficient>
+				<Coefficient Name="b6" Type="double">72.8000</Coefficient>
+				<Coefficient Name="a1" Type="double">72.1000</Coefficient>
+				<Coefficient Name="a2" Type="double">72.2000</Coefficient>
+				<Coefficient Name="a3" Type="double">72.3000</Coefficient>
+				<Coefficient Name="a4" Type="double">72.4000</Coefficient>
+				<Coefficient Name="a5" Type="double">72.3000</Coefficient>
+				<Coefficient Name="a6" Type="double">72.4000</Coefficient>
+				<Coefficient Name="Kp" Type="double">72.1000</Coefficient>
+				<Coefficient Name="Km" Type="double">72.2000</Coefficient>
+			</CoefficientGroup>
+			<CoefficientGroup Name="Frequency Response">
+				<Coefficient Name="Amplitude (deg)" Type="double">90.0000</Coefficient>
+				<Coefficient Name="Max Frequency (Hz)" Type="double">60.0000</Coefficient>
+				<Coefficient Name="Alpha" Type="double">2.0000</Coefficient>
+			</CoefficientGroup>
+			<CoefficientGroup Name="Additional Options Check Box">
+				<Coefficient Name="Gains Scheduling" Type="bool">0</Coefficient>
+			</CoefficientGroup>
+			<CoefficientGroup Name="Additional Options">
+				<Coefficient Name="Inertia" Type="double">123.0000</Coefficient>
+				<Coefficient Name="Viscous Friction" Type="double">456.0000</Coefficient>
+			</CoefficientGroup>
+		</Loop>
+		<CoefficientGroup Name="Feedforward Gains">
+			<Coefficient Name="Motor Position Loop" Type="double">96.2000</Coefficient>
+			<Coefficient Name="Current Loop" Type="double">178.5300</Coefficient>
+			<Coefficient Name="Joint Velocity Loop" Type="double">170.3000</Coefficient>
+			<Coefficient Name="Torque Loop" Type="double">1234.5000</Coefficient>
+			<Coefficient Name="Motor Velocity Loop" Type="double">275000.6000</Coefficient>
+		</CoefficientGroup>
+		<CoefficientGroup Name="Control Architecture">
+			<Coefficient Name="Joint Position Loop" Type="bool">0</Coefficient>
+			<Coefficient Name="Motor Position Loop" Type="bool">0</Coefficient>
+			<Coefficient Name="Joint Velocity Loop" Type="bool">0</Coefficient>
+			<Coefficient Name="Motor Velocity Loop" Type="bool">0</Coefficient>
+			<Coefficient Name="Torque Loop" Type="bool">0</Coefficient>
+			<Coefficient Name="Current Loop" Type="bool">0</Coefficient>
+		</CoefficientGroup>
+	</Actuator>
+	<Actuator Id="9">
+		<Loop Name="jointPositionLoop">
+			<CoefficientGroup Name="Loop Compensator">
+				<Coefficient Name="b1" Type="double">72.5000</Coefficient>
+				<Coefficient Name="b2" Type="double">72.6000</Coefficient>
+				<Coefficient Name="b3" Type="double">72.7000</Coefficient>
+				<Coefficient Name="b4" Type="double">72.8000</Coefficient>
+				<Coefficient Name="b5" Type="double">72.7000</Coefficient>
+				<Coefficient Name="b6" Type="double">72.8000</Coefficient>
+				<Coefficient Name="a1" Type="double">72.1000</Coefficient>
+				<Coefficient Name="a2" Type="double">72.2000</Coefficient>
+				<Coefficient Name="a3" Type="double">72.3000</Coefficient>
+				<Coefficient Name="a4" Type="double">72.4000</Coefficient>
+				<Coefficient Name="a5" Type="double">72.3000</Coefficient>
+				<Coefficient Name="a6" Type="double">72.4000</Coefficient>
+				<Coefficient Name="Kp" Type="double">72.1000</Coefficient>
+				<Coefficient Name="Km" Type="double">72.2000</Coefficient>
+			</CoefficientGroup>
+			<CoefficientGroup Name="Frequency Response">
+				<Coefficient Name="Amplitude (deg)" Type="double">90.0000</Coefficient>
+				<Coefficient Name="Max Frequency (Hz)" Type="double">60.0000</Coefficient>
+				<Coefficient Name="Alpha" Type="double">2.0000</Coefficient>
+			</CoefficientGroup>
+			<CoefficientGroup Name="Additional Options Check Box">
+				<Coefficient Name="Gains Scheduling" Type="bool">0</Coefficient>
+			</CoefficientGroup>
+			<CoefficientGroup Name="Additional Options">
+				<Coefficient Name="Inertia" Type="double">123.0000</Coefficient>
+				<Coefficient Name="Viscous Friction" Type="double">456.0000</Coefficient>
+			</CoefficientGroup>
+		</Loop>
+		<Loop Name="motorPositionLoop">
+			<CoefficientGroup Name="Loop Compensator">
+				<Coefficient Name="b1" Type="double">72.5000</Coefficient>
+				<Coefficient Name="b2" Type="double">72.6000</Coefficient>
+				<Coefficient Name="b3" Type="double">72.7000</Coefficient>
+				<Coefficient Name="b4" Type="double">72.8000</Coefficient>
+				<Coefficient Name="b5" Type="double">72.7000</Coefficient>
+				<Coefficient Name="b6" Type="double">72.8000</Coefficient>
+				<Coefficient Name="a1" Type="double">72.1000</Coefficient>
+				<Coefficient Name="a2" Type="double">72.2000</Coefficient>
+				<Coefficient Name="a3" Type="double">72.3000</Coefficient>
+				<Coefficient Name="a4" Type="double">72.4000</Coefficient>
+				<Coefficient Name="a5" Type="double">72.3000</Coefficient>
+				<Coefficient Name="a6" Type="double">72.4000</Coefficient>
+				<Coefficient Name="Kp" Type="double">72.1000</Coefficient>
+				<Coefficient Name="Km" Type="double">72.2000</Coefficient>
+			</CoefficientGroup>
+			<CoefficientGroup Name="Frequency Response">
+				<Coefficient Name="Amplitude (deg)" Type="double">90.0000</Coefficient>
+				<Coefficient Name="Max Frequency (Hz)" Type="double">60.0000</Coefficient>
+				<Coefficient Name="Alpha" Type="double">2.0000</Coefficient>
+			</CoefficientGroup>
+			<CoefficientGroup Name="Additional Options Check Box">
+				<Coefficient Name="Gains Scheduling" Type="bool">0</Coefficient>
+			</CoefficientGroup>
+			<CoefficientGroup Name="Additional Options">
+				<Coefficient Name="Inertia" Type="double">123.0000</Coefficient>
+				<Coefficient Name="Viscous Friction" Type="double">456.0000</Coefficient>
+			</CoefficientGroup>
+		</Loop>
+		<Loop Name="jointVelocityLoop">
+			<CoefficientGroup Name="Loop Compensator">
+				<Coefficient Name="b1" Type="double">72.5000</Coefficient>
+				<Coefficient Name="b2" Type="double">72.6000</Coefficient>
+				<Coefficient Name="b3" Type="double">72.7000</Coefficient>
+				<Coefficient Name="b4" Type="double">72.8000</Coefficient>
+				<Coefficient Name="b5" Type="double">72.7000</Coefficient>
+				<Coefficient Name="b6" Type="double">72.8000</Coefficient>
+				<Coefficient Name="a1" Type="double">72.1000</Coefficient>
+				<Coefficient Name="a2" Type="double">72.2000</Coefficient>
+				<Coefficient Name="a3" Type="double">72.3000</Coefficient>
+				<Coefficient Name="a4" Type="double">72.4000</Coefficient>
+				<Coefficient Name="a5" Type="double">72.3000</Coefficient>
+				<Coefficient Name="a6" Type="double">72.4000</Coefficient>
+				<Coefficient Name="Kp" Type="double">72.1000</Coefficient>
+				<Coefficient Name="Km" Type="double">72.2000</Coefficient>
+			</CoefficientGroup>
+			<CoefficientGroup Name="Frequency Response">
+				<Coefficient Name="Amplitude (deg)" Type="double">90.0000</Coefficient>
+				<Coefficient Name="Max Frequency (Hz)" Type="double">60.0000</Coefficient>
+				<Coefficient Name="Alpha" Type="double">2.0000</Coefficient>
+			</CoefficientGroup>
+			<CoefficientGroup Name="Additional Options Check Box">
+				<Coefficient Name="Gains Scheduling" Type="bool">0</Coefficient>
+			</CoefficientGroup>
+			<CoefficientGroup Name="Additional Options">
+				<Coefficient Name="Inertia" Type="double">123.0000</Coefficient>
+				<Coefficient Name="Viscous Friction" Type="double">456.0000</Coefficient>
+			</CoefficientGroup>
+		</Loop>
+		<Loop Name="motorVelocityLoop">
+			<CoefficientGroup Name="Loop Compensator">
+				<Coefficient Name="b1" Type="double">72.5000</Coefficient>
+				<Coefficient Name="b2" Type="double">72.6000</Coefficient>
+				<Coefficient Name="b3" Type="double">72.7000</Coefficient>
+				<Coefficient Name="b4" Type="double">72.8000</Coefficient>
+				<Coefficient Name="b5" Type="double">72.7000</Coefficient>
+				<Coefficient Name="b6" Type="double">72.8000</Coefficient>
+				<Coefficient Name="a1" Type="double">72.1000</Coefficient>
+				<Coefficient Name="a2" Type="double">72.2000</Coefficient>
+				<Coefficient Name="a3" Type="double">72.3000</Coefficient>
+				<Coefficient Name="a4" Type="double">72.4000</Coefficient>
+				<Coefficient Name="a5" Type="double">72.3000</Coefficient>
+				<Coefficient Name="a6" Type="double">72.4000</Coefficient>
+				<Coefficient Name="Kp" Type="double">72.1000</Coefficient>
+				<Coefficient Name="Km" Type="double">72.2000</Coefficient>
+			</CoefficientGroup>
+			<CoefficientGroup Name="Frequency Response">
+				<Coefficient Name="Amplitude (deg)" Type="double">90.0000</Coefficient>
+				<Coefficient Name="Max Frequency (Hz)" Type="double">60.0000</Coefficient>
+				<Coefficient Name="Alpha" Type="double">2.0000</Coefficient>
+			</CoefficientGroup>
+			<CoefficientGroup Name="Additional Options Check Box">
+				<Coefficient Name="Gains Scheduling" Type="bool">0</Coefficient>
+			</CoefficientGroup>
+			<CoefficientGroup Name="Additional Options">
+				<Coefficient Name="Inertia" Type="double">123.0000</Coefficient>
+				<Coefficient Name="Viscous Friction" Type="double">456.0000</Coefficient>
+			</CoefficientGroup>
+		</Loop>
+		<Loop Name="currentLoop">
+			<CoefficientGroup Name="Loop Compensator">
+				<Coefficient Name="Kpq" Type="double">122.1000</Coefficient>
+				<Coefficient Name="Kiq" Type="double">123.2000</Coefficient>
+				<Coefficient Name="Kpd" Type="double">124.3000</Coefficient>
+				<Coefficient Name="Kid" Type="double">125.4000</Coefficient>
+			</CoefficientGroup>
+			<CoefficientGroup Name="Frequency Response">
+				<Coefficient Name="Amplitude (deg)" Type="double">90.0000</Coefficient>
+				<Coefficient Name="Max Frequency (Hz)" Type="double">60.0000</Coefficient>
+				<Coefficient Name="Alpha" Type="double">2.0000</Coefficient>
+			</CoefficientGroup>
+			<CoefficientGroup Name="Additional Options Check Box">
+				<Coefficient Name="Gains Scheduling" Type="bool">0</Coefficient>
+			</CoefficientGroup>
+			<CoefficientGroup Name="Additional Options">
+				<Coefficient Name="Inertia" Type="double">123.0000</Coefficient>
+				<Coefficient Name="Viscous Friction" Type="double">456.0000</Coefficient>
+			</CoefficientGroup>
+		</Loop>
+		<Loop Name="torqueLoop">
+			<CoefficientGroup Name="Loop Compensator">
+				<Coefficient Name="b1" Type="double">72.5000</Coefficient>
+				<Coefficient Name="b2" Type="double">72.6000</Coefficient>
+				<Coefficient Name="b3" Type="double">72.7000</Coefficient>
+				<Coefficient Name="b4" Type="double">72.8000</Coefficient>
+				<Coefficient Name="b5" Type="double">72.7000</Coefficient>
+				<Coefficient Name="b6" Type="double">72.8000</Coefficient>
+				<Coefficient Name="a1" Type="double">72.1000</Coefficient>
+				<Coefficient Name="a2" Type="double">72.2000</Coefficient>
+				<Coefficient Name="a3" Type="double">72.3000</Coefficient>
+				<Coefficient Name="a4" Type="double">72.4000</Coefficient>
+				<Coefficient Name="a5" Type="double">72.3000</Coefficient>
+				<Coefficient Name="a6" Type="double">72.4000</Coefficient>
+				<Coefficient Name="Kp" Type="double">72.1000</Coefficient>
+				<Coefficient Name="Km" Type="double">72.2000</Coefficient>
+			</CoefficientGroup>
+			<CoefficientGroup Name="Frequency Response">
+				<Coefficient Name="Amplitude (deg)" Type="double">90.0000</Coefficient>
+				<Coefficient Name="Max Frequency (Hz)" Type="double">60.0000</Coefficient>
+				<Coefficient Name="Alpha" Type="double">2.0000</Coefficient>
+			</CoefficientGroup>
+			<CoefficientGroup Name="Additional Options Check Box">
+				<Coefficient Name="Gains Scheduling" Type="bool">0</Coefficient>
+			</CoefficientGroup>
+			<CoefficientGroup Name="Additional Options">
+				<Coefficient Name="Inertia" Type="double">123.0000</Coefficient>
+				<Coefficient Name="Viscous Friction" Type="double">456.0000</Coefficient>
+			</CoefficientGroup>
+		</Loop>
+		<CoefficientGroup Name="Feedforward Gains">
+			<Coefficient Name="Motor Position Loop" Type="double">96.2000</Coefficient>
+			<Coefficient Name="Current Loop" Type="double">178.5300</Coefficient>
+			<Coefficient Name="Joint Velocity Loop" Type="double">170.3000</Coefficient>
+			<Coefficient Name="Torque Loop" Type="double">1234.5000</Coefficient>
+			<Coefficient Name="Motor Velocity Loop" Type="double">275000.6000</Coefficient>
+		</CoefficientGroup>
+		<CoefficientGroup Name="Control Architecture">
+			<Coefficient Name="Joint Position Loop" Type="bool">0</Coefficient>
+			<Coefficient Name="Motor Position Loop" Type="bool">0</Coefficient>
+			<Coefficient Name="Joint Velocity Loop" Type="bool">0</Coefficient>
+			<Coefficient Name="Motor Velocity Loop" Type="bool">0</Coefficient>
+			<Coefficient Name="Torque Loop" Type="bool">0</Coefficient>
+			<Coefficient Name="Current Loop" Type="bool">0</Coefficient>
+		</CoefficientGroup>
+	</Actuator>
+	<Actuator Id="10">
+		<Loop Name="jointPositionLoop">
+			<CoefficientGroup Name="Loop Compensator">
+				<Coefficient Name="b1" Type="double">72.5000</Coefficient>
+				<Coefficient Name="b2" Type="double">72.6000</Coefficient>
+				<Coefficient Name="b3" Type="double">72.7000</Coefficient>
+				<Coefficient Name="b4" Type="double">72.8000</Coefficient>
+				<Coefficient Name="b5" Type="double">72.7000</Coefficient>
+				<Coefficient Name="b6" Type="double">72.8000</Coefficient>
+				<Coefficient Name="a1" Type="double">72.1000</Coefficient>
+				<Coefficient Name="a2" Type="double">72.2000</Coefficient>
+				<Coefficient Name="a3" Type="double">72.3000</Coefficient>
+				<Coefficient Name="a4" Type="double">72.4000</Coefficient>
+				<Coefficient Name="a5" Type="double">72.3000</Coefficient>
+				<Coefficient Name="a6" Type="double">72.4000</Coefficient>
+				<Coefficient Name="Kp" Type="double">72.1000</Coefficient>
+				<Coefficient Name="Km" Type="double">72.2000</Coefficient>
+			</CoefficientGroup>
+			<CoefficientGroup Name="Frequency Response">
+				<Coefficient Name="Amplitude (deg)" Type="double">90.0000</Coefficient>
+				<Coefficient Name="Max Frequency (Hz)" Type="double">60.0000</Coefficient>
+				<Coefficient Name="Alpha" Type="double">2.0000</Coefficient>
+			</CoefficientGroup>
+			<CoefficientGroup Name="Additional Options Check Box">
+				<Coefficient Name="Gains Scheduling" Type="bool">0</Coefficient>
+			</CoefficientGroup>
+			<CoefficientGroup Name="Additional Options">
+				<Coefficient Name="Inertia" Type="double">123.0000</Coefficient>
+				<Coefficient Name="Viscous Friction" Type="double">456.0000</Coefficient>
+			</CoefficientGroup>
+		</Loop>
+		<Loop Name="motorPositionLoop">
+			<CoefficientGroup Name="Loop Compensator">
+				<Coefficient Name="b1" Type="double">72.5000</Coefficient>
+				<Coefficient Name="b2" Type="double">72.6000</Coefficient>
+				<Coefficient Name="b3" Type="double">72.7000</Coefficient>
+				<Coefficient Name="b4" Type="double">72.8000</Coefficient>
+				<Coefficient Name="b5" Type="double">72.7000</Coefficient>
+				<Coefficient Name="b6" Type="double">72.8000</Coefficient>
+				<Coefficient Name="a1" Type="double">72.1000</Coefficient>
+				<Coefficient Name="a2" Type="double">72.2000</Coefficient>
+				<Coefficient Name="a3" Type="double">72.3000</Coefficient>
+				<Coefficient Name="a4" Type="double">72.4000</Coefficient>
+				<Coefficient Name="a5" Type="double">72.3000</Coefficient>
+				<Coefficient Name="a6" Type="double">72.4000</Coefficient>
+				<Coefficient Name="Kp" Type="double">72.1000</Coefficient>
+				<Coefficient Name="Km" Type="double">72.2000</Coefficient>
+			</CoefficientGroup>
+			<CoefficientGroup Name="Frequency Response">
+				<Coefficient Name="Amplitude (deg)" Type="double">90.0000</Coefficient>
+				<Coefficient Name="Max Frequency (Hz)" Type="double">60.0000</Coefficient>
+				<Coefficient Name="Alpha" Type="double">2.0000</Coefficient>
+			</CoefficientGroup>
+			<CoefficientGroup Name="Additional Options Check Box">
+				<Coefficient Name="Gains Scheduling" Type="bool">0</Coefficient>
+			</CoefficientGroup>
+			<CoefficientGroup Name="Additional Options">
+				<Coefficient Name="Inertia" Type="double">123.0000</Coefficient>
+				<Coefficient Name="Viscous Friction" Type="double">456.0000</Coefficient>
+			</CoefficientGroup>
+		</Loop>
+		<Loop Name="jointVelocityLoop">
+			<CoefficientGroup Name="Loop Compensator">
+				<Coefficient Name="b1" Type="double">72.5000</Coefficient>
+				<Coefficient Name="b2" Type="double">72.6000</Coefficient>
+				<Coefficient Name="b3" Type="double">72.7000</Coefficient>
+				<Coefficient Name="b4" Type="double">72.8000</Coefficient>
+				<Coefficient Name="b5" Type="double">72.7000</Coefficient>
+				<Coefficient Name="b6" Type="double">72.8000</Coefficient>
+				<Coefficient Name="a1" Type="double">72.1000</Coefficient>
+				<Coefficient Name="a2" Type="double">72.2000</Coefficient>
+				<Coefficient Name="a3" Type="double">72.3000</Coefficient>
+				<Coefficient Name="a4" Type="double">72.4000</Coefficient>
+				<Coefficient Name="a5" Type="double">72.3000</Coefficient>
+				<Coefficient Name="a6" Type="double">72.4000</Coefficient>
+				<Coefficient Name="Kp" Type="double">72.1000</Coefficient>
+				<Coefficient Name="Km" Type="double">72.2000</Coefficient>
+			</CoefficientGroup>
+			<CoefficientGroup Name="Frequency Response">
+				<Coefficient Name="Amplitude (deg)" Type="double">90.0000</Coefficient>
+				<Coefficient Name="Max Frequency (Hz)" Type="double">60.0000</Coefficient>
+				<Coefficient Name="Alpha" Type="double">2.0000</Coefficient>
+			</CoefficientGroup>
+			<CoefficientGroup Name="Additional Options Check Box">
+				<Coefficient Name="Gains Scheduling" Type="bool">0</Coefficient>
+			</CoefficientGroup>
+			<CoefficientGroup Name="Additional Options">
+				<Coefficient Name="Inertia" Type="double">123.0000</Coefficient>
+				<Coefficient Name="Viscous Friction" Type="double">456.0000</Coefficient>
+			</CoefficientGroup>
+		</Loop>
+		<Loop Name="motorVelocityLoop">
+			<CoefficientGroup Name="Loop Compensator">
+				<Coefficient Name="b1" Type="double">72.5000</Coefficient>
+				<Coefficient Name="b2" Type="double">72.6000</Coefficient>
+				<Coefficient Name="b3" Type="double">72.7000</Coefficient>
+				<Coefficient Name="b4" Type="double">72.8000</Coefficient>
+				<Coefficient Name="b5" Type="double">72.7000</Coefficient>
+				<Coefficient Name="b6" Type="double">72.8000</Coefficient>
+				<Coefficient Name="a1" Type="double">72.1000</Coefficient>
+				<Coefficient Name="a2" Type="double">72.2000</Coefficient>
+				<Coefficient Name="a3" Type="double">72.3000</Coefficient>
+				<Coefficient Name="a4" Type="double">72.4000</Coefficient>
+				<Coefficient Name="a5" Type="double">72.3000</Coefficient>
+				<Coefficient Name="a6" Type="double">72.4000</Coefficient>
+				<Coefficient Name="Kp" Type="double">72.1000</Coefficient>
+				<Coefficient Name="Km" Type="double">72.2000</Coefficient>
+			</CoefficientGroup>
+			<CoefficientGroup Name="Frequency Response">
+				<Coefficient Name="Amplitude (deg)" Type="double">90.0000</Coefficient>
+				<Coefficient Name="Max Frequency (Hz)" Type="double">60.0000</Coefficient>
+				<Coefficient Name="Alpha" Type="double">2.0000</Coefficient>
+			</CoefficientGroup>
+			<CoefficientGroup Name="Additional Options Check Box">
+				<Coefficient Name="Gains Scheduling" Type="bool">0</Coefficient>
+			</CoefficientGroup>
+			<CoefficientGroup Name="Additional Options">
+				<Coefficient Name="Inertia" Type="double">123.0000</Coefficient>
+				<Coefficient Name="Viscous Friction" Type="double">456.0000</Coefficient>
+			</CoefficientGroup>
+		</Loop>
+		<Loop Name="currentLoop">
+			<CoefficientGroup Name="Loop Compensator">
+				<Coefficient Name="Kpq" Type="double">122.1000</Coefficient>
+				<Coefficient Name="Kiq" Type="double">123.2000</Coefficient>
+				<Coefficient Name="Kpd" Type="double">124.3000</Coefficient>
+				<Coefficient Name="Kid" Type="double">125.4000</Coefficient>
+			</CoefficientGroup>
+			<CoefficientGroup Name="Frequency Response">
+				<Coefficient Name="Amplitude (deg)" Type="double">90.0000</Coefficient>
+				<Coefficient Name="Max Frequency (Hz)" Type="double">60.0000</Coefficient>
+				<Coefficient Name="Alpha" Type="double">2.0000</Coefficient>
+			</CoefficientGroup>
+			<CoefficientGroup Name="Additional Options Check Box">
+				<Coefficient Name="Gains Scheduling" Type="bool">0</Coefficient>
+			</CoefficientGroup>
+			<CoefficientGroup Name="Additional Options">
+				<Coefficient Name="Inertia" Type="double">123.0000</Coefficient>
+				<Coefficient Name="Viscous Friction" Type="double">456.0000</Coefficient>
+			</CoefficientGroup>
+		</Loop>
+		<Loop Name="torqueLoop">
+			<CoefficientGroup Name="Loop Compensator">
+				<Coefficient Name="b1" Type="double">72.5000</Coefficient>
+				<Coefficient Name="b2" Type="double">72.6000</Coefficient>
+				<Coefficient Name="b3" Type="double">72.7000</Coefficient>
+				<Coefficient Name="b4" Type="double">72.8000</Coefficient>
+				<Coefficient Name="b5" Type="double">72.7000</Coefficient>
+				<Coefficient Name="b6" Type="double">72.8000</Coefficient>
+				<Coefficient Name="a1" Type="double">72.1000</Coefficient>
+				<Coefficient Name="a2" Type="double">72.2000</Coefficient>
+				<Coefficient Name="a3" Type="double">72.3000</Coefficient>
+				<Coefficient Name="a4" Type="double">72.4000</Coefficient>
+				<Coefficient Name="a5" Type="double">72.3000</Coefficient>
+				<Coefficient Name="a6" Type="double">72.4000</Coefficient>
+				<Coefficient Name="Kp" Type="double">72.1000</Coefficient>
+				<Coefficient Name="Km" Type="double">72.2000</Coefficient>
+			</CoefficientGroup>
+			<CoefficientGroup Name="Frequency Response">
+				<Coefficient Name="Amplitude (deg)" Type="double">90.0000</Coefficient>
+				<Coefficient Name="Max Frequency (Hz)" Type="double">60.0000</Coefficient>
+				<Coefficient Name="Alpha" Type="double">2.0000</Coefficient>
+			</CoefficientGroup>
+			<CoefficientGroup Name="Additional Options Check Box">
+				<Coefficient Name="Gains Scheduling" Type="bool">0</Coefficient>
+			</CoefficientGroup>
+			<CoefficientGroup Name="Additional Options">
+				<Coefficient Name="Inertia" Type="double">123.0000</Coefficient>
+				<Coefficient Name="Viscous Friction" Type="double">456.0000</Coefficient>
+			</CoefficientGroup>
+		</Loop>
+		<CoefficientGroup Name="Feedforward Gains">
+			<Coefficient Name="Motor Position Loop" Type="double">96.2000</Coefficient>
+			<Coefficient Name="Current Loop" Type="double">178.5300</Coefficient>
+			<Coefficient Name="Joint Velocity Loop" Type="double">170.3000</Coefficient>
+			<Coefficient Name="Torque Loop" Type="double">1234.5000</Coefficient>
+			<Coefficient Name="Motor Velocity Loop" Type="double">275000.6000</Coefficient>
+		</CoefficientGroup>
+		<CoefficientGroup Name="Control Architecture">
+			<Coefficient Name="Joint Position Loop" Type="bool">0</Coefficient>
+			<Coefficient Name="Motor Position Loop" Type="bool">0</Coefficient>
+			<Coefficient Name="Joint Velocity Loop" Type="bool">0</Coefficient>
+			<Coefficient Name="Motor Velocity Loop" Type="bool">0</Coefficient>
+			<Coefficient Name="Torque Loop" Type="bool">0</Coefficient>
+			<Coefficient Name="Current Loop" Type="bool">0</Coefficient>
+		</CoefficientGroup>
+	</Actuator>
+	<Actuator Id="11">
+		<Loop Name="jointPositionLoop">
+			<CoefficientGroup Name="Loop Compensator">
+				<Coefficient Name="b1" Type="double">72.5000</Coefficient>
+				<Coefficient Name="b2" Type="double">72.6000</Coefficient>
+				<Coefficient Name="b3" Type="double">72.7000</Coefficient>
+				<Coefficient Name="b4" Type="double">72.8000</Coefficient>
+				<Coefficient Name="b5" Type="double">72.7000</Coefficient>
+				<Coefficient Name="b6" Type="double">72.8000</Coefficient>
+				<Coefficient Name="a1" Type="double">72.1000</Coefficient>
+				<Coefficient Name="a2" Type="double">72.2000</Coefficient>
+				<Coefficient Name="a3" Type="double">72.3000</Coefficient>
+				<Coefficient Name="a4" Type="double">72.4000</Coefficient>
+				<Coefficient Name="a5" Type="double">72.3000</Coefficient>
+				<Coefficient Name="a6" Type="double">72.4000</Coefficient>
+				<Coefficient Name="Kp" Type="double">72.1000</Coefficient>
+				<Coefficient Name="Km" Type="double">72.2000</Coefficient>
+			</CoefficientGroup>
+			<CoefficientGroup Name="Frequency Response">
+				<Coefficient Name="Amplitude (deg)" Type="double">90.0000</Coefficient>
+				<Coefficient Name="Max Frequency (Hz)" Type="double">60.0000</Coefficient>
+				<Coefficient Name="Alpha" Type="double">2.0000</Coefficient>
+			</CoefficientGroup>
+			<CoefficientGroup Name="Additional Options Check Box">
+				<Coefficient Name="Gains Scheduling" Type="bool">0</Coefficient>
+			</CoefficientGroup>
+			<CoefficientGroup Name="Additional Options">
+				<Coefficient Name="Inertia" Type="double">123.0000</Coefficient>
+				<Coefficient Name="Viscous Friction" Type="double">456.0000</Coefficient>
+			</CoefficientGroup>
+		</Loop>
+		<Loop Name="motorPositionLoop">
+			<CoefficientGroup Name="Loop Compensator">
+				<Coefficient Name="b1" Type="double">72.5000</Coefficient>
+				<Coefficient Name="b2" Type="double">72.6000</Coefficient>
+				<Coefficient Name="b3" Type="double">72.7000</Coefficient>
+				<Coefficient Name="b4" Type="double">72.8000</Coefficient>
+				<Coefficient Name="b5" Type="double">72.7000</Coefficient>
+				<Coefficient Name="b6" Type="double">72.8000</Coefficient>
+				<Coefficient Name="a1" Type="double">72.1000</Coefficient>
+				<Coefficient Name="a2" Type="double">72.2000</Coefficient>
+				<Coefficient Name="a3" Type="double">72.3000</Coefficient>
+				<Coefficient Name="a4" Type="double">72.4000</Coefficient>
+				<Coefficient Name="a5" Type="double">72.3000</Coefficient>
+				<Coefficient Name="a6" Type="double">72.4000</Coefficient>
+				<Coefficient Name="Kp" Type="double">72.1000</Coefficient>
+				<Coefficient Name="Km" Type="double">72.2000</Coefficient>
+			</CoefficientGroup>
+			<CoefficientGroup Name="Frequency Response">
+				<Coefficient Name="Amplitude (deg)" Type="double">90.0000</Coefficient>
+				<Coefficient Name="Max Frequency (Hz)" Type="double">60.0000</Coefficient>
+				<Coefficient Name="Alpha" Type="double">2.0000</Coefficient>
+			</CoefficientGroup>
+			<CoefficientGroup Name="Additional Options Check Box">
+				<Coefficient Name="Gains Scheduling" Type="bool">0</Coefficient>
+			</CoefficientGroup>
+			<CoefficientGroup Name="Additional Options">
+				<Coefficient Name="Inertia" Type="double">123.0000</Coefficient>
+				<Coefficient Name="Viscous Friction" Type="double">456.0000</Coefficient>
+			</CoefficientGroup>
+		</Loop>
+		<Loop Name="jointVelocityLoop">
+			<CoefficientGroup Name="Loop Compensator">
+				<Coefficient Name="b1" Type="double">72.5000</Coefficient>
+				<Coefficient Name="b2" Type="double">72.6000</Coefficient>
+				<Coefficient Name="b3" Type="double">72.7000</Coefficient>
+				<Coefficient Name="b4" Type="double">72.8000</Coefficient>
+				<Coefficient Name="b5" Type="double">72.7000</Coefficient>
+				<Coefficient Name="b6" Type="double">72.8000</Coefficient>
+				<Coefficient Name="a1" Type="double">72.1000</Coefficient>
+				<Coefficient Name="a2" Type="double">72.2000</Coefficient>
+				<Coefficient Name="a3" Type="double">72.3000</Coefficient>
+				<Coefficient Name="a4" Type="double">72.4000</Coefficient>
+				<Coefficient Name="a5" Type="double">72.3000</Coefficient>
+				<Coefficient Name="a6" Type="double">72.4000</Coefficient>
+				<Coefficient Name="Kp" Type="double">72.1000</Coefficient>
+				<Coefficient Name="Km" Type="double">72.2000</Coefficient>
+			</CoefficientGroup>
+			<CoefficientGroup Name="Frequency Response">
+				<Coefficient Name="Amplitude (deg)" Type="double">90.0000</Coefficient>
+				<Coefficient Name="Max Frequency (Hz)" Type="double">60.0000</Coefficient>
+				<Coefficient Name="Alpha" Type="double">2.0000</Coefficient>
+			</CoefficientGroup>
+			<CoefficientGroup Name="Additional Options Check Box">
+				<Coefficient Name="Gains Scheduling" Type="bool">0</Coefficient>
+			</CoefficientGroup>
+			<CoefficientGroup Name="Additional Options">
+				<Coefficient Name="Inertia" Type="double">123.0000</Coefficient>
+				<Coefficient Name="Viscous Friction" Type="double">456.0000</Coefficient>
+			</CoefficientGroup>
+		</Loop>
+		<Loop Name="motorVelocityLoop">
+			<CoefficientGroup Name="Loop Compensator">
+				<Coefficient Name="b1" Type="double">72.5000</Coefficient>
+				<Coefficient Name="b2" Type="double">72.6000</Coefficient>
+				<Coefficient Name="b3" Type="double">72.7000</Coefficient>
+				<Coefficient Name="b4" Type="double">72.8000</Coefficient>
+				<Coefficient Name="b5" Type="double">72.7000</Coefficient>
+				<Coefficient Name="b6" Type="double">72.8000</Coefficient>
+				<Coefficient Name="a1" Type="double">72.1000</Coefficient>
+				<Coefficient Name="a2" Type="double">72.2000</Coefficient>
+				<Coefficient Name="a3" Type="double">72.3000</Coefficient>
+				<Coefficient Name="a4" Type="double">72.4000</Coefficient>
+				<Coefficient Name="a5" Type="double">72.3000</Coefficient>
+				<Coefficient Name="a6" Type="double">72.4000</Coefficient>
+				<Coefficient Name="Kp" Type="double">72.1000</Coefficient>
+				<Coefficient Name="Km" Type="double">72.2000</Coefficient>
+			</CoefficientGroup>
+			<CoefficientGroup Name="Frequency Response">
+				<Coefficient Name="Amplitude (deg)" Type="double">90.0000</Coefficient>
+				<Coefficient Name="Max Frequency (Hz)" Type="double">60.0000</Coefficient>
+				<Coefficient Name="Alpha" Type="double">2.0000</Coefficient>
+			</CoefficientGroup>
+			<CoefficientGroup Name="Additional Options Check Box">
+				<Coefficient Name="Gains Scheduling" Type="bool">0</Coefficient>
+			</CoefficientGroup>
+			<CoefficientGroup Name="Additional Options">
+				<Coefficient Name="Inertia" Type="double">123.0000</Coefficient>
+				<Coefficient Name="Viscous Friction" Type="double">456.0000</Coefficient>
+			</CoefficientGroup>
+		</Loop>
+		<Loop Name="currentLoop">
+			<CoefficientGroup Name="Loop Compensator">
+				<Coefficient Name="Kpq" Type="double">122.1000</Coefficient>
+				<Coefficient Name="Kiq" Type="double">123.2000</Coefficient>
+				<Coefficient Name="Kpd" Type="double">124.3000</Coefficient>
+				<Coefficient Name="Kid" Type="double">125.4000</Coefficient>
+			</CoefficientGroup>
+			<CoefficientGroup Name="Frequency Response">
+				<Coefficient Name="Amplitude (deg)" Type="double">90.0000</Coefficient>
+				<Coefficient Name="Max Frequency (Hz)" Type="double">60.0000</Coefficient>
+				<Coefficient Name="Alpha" Type="double">2.0000</Coefficient>
+			</CoefficientGroup>
+			<CoefficientGroup Name="Additional Options Check Box">
+				<Coefficient Name="Gains Scheduling" Type="bool">0</Coefficient>
+			</CoefficientGroup>
+			<CoefficientGroup Name="Additional Options">
+				<Coefficient Name="Inertia" Type="double">123.0000</Coefficient>
+				<Coefficient Name="Viscous Friction" Type="double">456.0000</Coefficient>
+			</CoefficientGroup>
+		</Loop>
+		<Loop Name="torqueLoop">
+			<CoefficientGroup Name="Loop Compensator">
+				<Coefficient Name="b1" Type="double">72.5000</Coefficient>
+				<Coefficient Name="b2" Type="double">72.6000</Coefficient>
+				<Coefficient Name="b3" Type="double">72.7000</Coefficient>
+				<Coefficient Name="b4" Type="double">72.8000</Coefficient>
+				<Coefficient Name="b5" Type="double">72.7000</Coefficient>
+				<Coefficient Name="b6" Type="double">72.8000</Coefficient>
+				<Coefficient Name="a1" Type="double">72.1000</Coefficient>
+				<Coefficient Name="a2" Type="double">72.2000</Coefficient>
+				<Coefficient Name="a3" Type="double">72.3000</Coefficient>
+				<Coefficient Name="a4" Type="double">72.4000</Coefficient>
+				<Coefficient Name="a5" Type="double">72.3000</Coefficient>
+				<Coefficient Name="a6" Type="double">72.4000</Coefficient>
+				<Coefficient Name="Kp" Type="double">72.1000</Coefficient>
+				<Coefficient Name="Km" Type="double">72.2000</Coefficient>
+			</CoefficientGroup>
+			<CoefficientGroup Name="Frequency Response">
+				<Coefficient Name="Amplitude (deg)" Type="double">90.0000</Coefficient>
+				<Coefficient Name="Max Frequency (Hz)" Type="double">60.0000</Coefficient>
+				<Coefficient Name="Alpha" Type="double">2.0000</Coefficient>
+			</CoefficientGroup>
+			<CoefficientGroup Name="Additional Options Check Box">
+				<Coefficient Name="Gains Scheduling" Type="bool">0</Coefficient>
+			</CoefficientGroup>
+			<CoefficientGroup Name="Additional Options">
+				<Coefficient Name="Inertia" Type="double">123.0000</Coefficient>
+				<Coefficient Name="Viscous Friction" Type="double">456.0000</Coefficient>
+			</CoefficientGroup>
+		</Loop>
+		<CoefficientGroup Name="Feedforward Gains">
+			<Coefficient Name="Motor Position Loop" Type="double">96.2000</Coefficient>
+			<Coefficient Name="Current Loop" Type="double">178.5300</Coefficient>
+			<Coefficient Name="Joint Velocity Loop" Type="double">170.3000</Coefficient>
+			<Coefficient Name="Torque Loop" Type="double">1234.5000</Coefficient>
+			<Coefficient Name="Motor Velocity Loop" Type="double">275000.6000</Coefficient>
+		</CoefficientGroup>
+		<CoefficientGroup Name="Control Architecture">
+			<Coefficient Name="Joint Position Loop" Type="bool">0</Coefficient>
+			<Coefficient Name="Motor Position Loop" Type="bool">0</Coefficient>
+			<Coefficient Name="Joint Velocity Loop" Type="bool">0</Coefficient>
+			<Coefficient Name="Motor Velocity Loop" Type="bool">0</Coefficient>
+			<Coefficient Name="Torque Loop" Type="bool">0</Coefficient>
+			<Coefficient Name="Current Loop" Type="bool">0</Coefficient>
+		</CoefficientGroup>
+	</Actuator>
+	<Actuator Id="12">
+		<Loop Name="jointPositionLoop">
+			<CoefficientGroup Name="Loop Compensator">
+				<Coefficient Name="b1" Type="double">72.5000</Coefficient>
+				<Coefficient Name="b2" Type="double">72.6000</Coefficient>
+				<Coefficient Name="b3" Type="double">72.7000</Coefficient>
+				<Coefficient Name="b4" Type="double">72.8000</Coefficient>
+				<Coefficient Name="b5" Type="double">72.7000</Coefficient>
+				<Coefficient Name="b6" Type="double">72.8000</Coefficient>
+				<Coefficient Name="a1" Type="double">72.1000</Coefficient>
+				<Coefficient Name="a2" Type="double">72.2000</Coefficient>
+				<Coefficient Name="a3" Type="double">72.3000</Coefficient>
+				<Coefficient Name="a4" Type="double">72.4000</Coefficient>
+				<Coefficient Name="a5" Type="double">72.3000</Coefficient>
+				<Coefficient Name="a6" Type="double">72.4000</Coefficient>
+				<Coefficient Name="Kp" Type="double">72.1000</Coefficient>
+				<Coefficient Name="Km" Type="double">72.2000</Coefficient>
+			</CoefficientGroup>
+			<CoefficientGroup Name="Frequency Response">
+				<Coefficient Name="Amplitude (deg)" Type="double">90.0000</Coefficient>
+				<Coefficient Name="Max Frequency (Hz)" Type="double">60.0000</Coefficient>
+				<Coefficient Name="Alpha" Type="double">2.0000</Coefficient>
+			</CoefficientGroup>
+			<CoefficientGroup Name="Additional Options Check Box">
+				<Coefficient Name="Gains Scheduling" Type="bool">0</Coefficient>
+			</CoefficientGroup>
+			<CoefficientGroup Name="Additional Options">
+				<Coefficient Name="Inertia" Type="double">123.0000</Coefficient>
+				<Coefficient Name="Viscous Friction" Type="double">456.0000</Coefficient>
+			</CoefficientGroup>
+		</Loop>
+		<Loop Name="motorPositionLoop">
+			<CoefficientGroup Name="Loop Compensator">
+				<Coefficient Name="b1" Type="double">72.5000</Coefficient>
+				<Coefficient Name="b2" Type="double">72.6000</Coefficient>
+				<Coefficient Name="b3" Type="double">72.7000</Coefficient>
+				<Coefficient Name="b4" Type="double">72.8000</Coefficient>
+				<Coefficient Name="b5" Type="double">72.7000</Coefficient>
+				<Coefficient Name="b6" Type="double">72.8000</Coefficient>
+				<Coefficient Name="a1" Type="double">72.1000</Coefficient>
+				<Coefficient Name="a2" Type="double">72.2000</Coefficient>
+				<Coefficient Name="a3" Type="double">72.3000</Coefficient>
+				<Coefficient Name="a4" Type="double">72.4000</Coefficient>
+				<Coefficient Name="a5" Type="double">72.3000</Coefficient>
+				<Coefficient Name="a6" Type="double">72.4000</Coefficient>
+				<Coefficient Name="Kp" Type="double">72.1000</Coefficient>
+				<Coefficient Name="Km" Type="double">72.2000</Coefficient>
+			</CoefficientGroup>
+			<CoefficientGroup Name="Frequency Response">
+				<Coefficient Name="Amplitude (deg)" Type="double">90.0000</Coefficient>
+				<Coefficient Name="Max Frequency (Hz)" Type="double">60.0000</Coefficient>
+				<Coefficient Name="Alpha" Type="double">2.0000</Coefficient>
+			</CoefficientGroup>
+			<CoefficientGroup Name="Additional Options Check Box">
+				<Coefficient Name="Gains Scheduling" Type="bool">0</Coefficient>
+			</CoefficientGroup>
+			<CoefficientGroup Name="Additional Options">
+				<Coefficient Name="Inertia" Type="double">123.0000</Coefficient>
+				<Coefficient Name="Viscous Friction" Type="double">456.0000</Coefficient>
+			</CoefficientGroup>
+		</Loop>
+		<Loop Name="jointVelocityLoop">
+			<CoefficientGroup Name="Loop Compensator">
+				<Coefficient Name="b1" Type="double">72.5000</Coefficient>
+				<Coefficient Name="b2" Type="double">72.6000</Coefficient>
+				<Coefficient Name="b3" Type="double">72.7000</Coefficient>
+				<Coefficient Name="b4" Type="double">72.8000</Coefficient>
+				<Coefficient Name="b5" Type="double">72.7000</Coefficient>
+				<Coefficient Name="b6" Type="double">72.8000</Coefficient>
+				<Coefficient Name="a1" Type="double">72.1000</Coefficient>
+				<Coefficient Name="a2" Type="double">72.2000</Coefficient>
+				<Coefficient Name="a3" Type="double">72.3000</Coefficient>
+				<Coefficient Name="a4" Type="double">72.4000</Coefficient>
+				<Coefficient Name="a5" Type="double">72.3000</Coefficient>
+				<Coefficient Name="a6" Type="double">72.4000</Coefficient>
+				<Coefficient Name="Kp" Type="double">72.1000</Coefficient>
+				<Coefficient Name="Km" Type="double">72.2000</Coefficient>
+			</CoefficientGroup>
+			<CoefficientGroup Name="Frequency Response">
+				<Coefficient Name="Amplitude (deg)" Type="double">90.0000</Coefficient>
+				<Coefficient Name="Max Frequency (Hz)" Type="double">60.0000</Coefficient>
+				<Coefficient Name="Alpha" Type="double">2.0000</Coefficient>
+			</CoefficientGroup>
+			<CoefficientGroup Name="Additional Options Check Box">
+				<Coefficient Name="Gains Scheduling" Type="bool">0</Coefficient>
+			</CoefficientGroup>
+			<CoefficientGroup Name="Additional Options">
+				<Coefficient Name="Inertia" Type="double">123.0000</Coefficient>
+				<Coefficient Name="Viscous Friction" Type="double">456.0000</Coefficient>
+			</CoefficientGroup>
+		</Loop>
+		<Loop Name="motorVelocityLoop">
+			<CoefficientGroup Name="Loop Compensator">
+				<Coefficient Name="b1" Type="double">72.5000</Coefficient>
+				<Coefficient Name="b2" Type="double">72.6000</Coefficient>
+				<Coefficient Name="b3" Type="double">72.7000</Coefficient>
+				<Coefficient Name="b4" Type="double">72.8000</Coefficient>
+				<Coefficient Name="b5" Type="double">72.7000</Coefficient>
+				<Coefficient Name="b6" Type="double">72.8000</Coefficient>
+				<Coefficient Name="a1" Type="double">72.1000</Coefficient>
+				<Coefficient Name="a2" Type="double">72.2000</Coefficient>
+				<Coefficient Name="a3" Type="double">72.3000</Coefficient>
+				<Coefficient Name="a4" Type="double">72.4000</Coefficient>
+				<Coefficient Name="a5" Type="double">72.3000</Coefficient>
+				<Coefficient Name="a6" Type="double">72.4000</Coefficient>
+				<Coefficient Name="Kp" Type="double">72.1000</Coefficient>
+				<Coefficient Name="Km" Type="double">72.2000</Coefficient>
+			</CoefficientGroup>
+			<CoefficientGroup Name="Frequency Response">
+				<Coefficient Name="Amplitude (deg)" Type="double">90.0000</Coefficient>
+				<Coefficient Name="Max Frequency (Hz)" Type="double">60.0000</Coefficient>
+				<Coefficient Name="Alpha" Type="double">2.0000</Coefficient>
+			</CoefficientGroup>
+			<CoefficientGroup Name="Additional Options Check Box">
+				<Coefficient Name="Gains Scheduling" Type="bool">0</Coefficient>
+			</CoefficientGroup>
+			<CoefficientGroup Name="Additional Options">
+				<Coefficient Name="Inertia" Type="double">123.0000</Coefficient>
+				<Coefficient Name="Viscous Friction" Type="double">456.0000</Coefficient>
+			</CoefficientGroup>
+		</Loop>
+		<Loop Name="currentLoop">
+			<CoefficientGroup Name="Loop Compensator">
+				<Coefficient Name="Kpq" Type="double">122.1000</Coefficient>
+				<Coefficient Name="Kiq" Type="double">123.2000</Coefficient>
+				<Coefficient Name="Kpd" Type="double">124.3000</Coefficient>
+				<Coefficient Name="Kid" Type="double">125.4000</Coefficient>
+			</CoefficientGroup>
+			<CoefficientGroup Name="Frequency Response">
+				<Coefficient Name="Amplitude (deg)" Type="double">90.0000</Coefficient>
+				<Coefficient Name="Max Frequency (Hz)" Type="double">60.0000</Coefficient>
+				<Coefficient Name="Alpha" Type="double">2.0000</Coefficient>
+			</CoefficientGroup>
+			<CoefficientGroup Name="Additional Options Check Box">
+				<Coefficient Name="Gains Scheduling" Type="bool">0</Coefficient>
+			</CoefficientGroup>
+			<CoefficientGroup Name="Additional Options">
+				<Coefficient Name="Inertia" Type="double">123.0000</Coefficient>
+				<Coefficient Name="Viscous Friction" Type="double">456.0000</Coefficient>
+			</CoefficientGroup>
+		</Loop>
+		<Loop Name="torqueLoop">
+			<CoefficientGroup Name="Loop Compensator">
+				<Coefficient Name="b1" Type="double">72.5000</Coefficient>
+				<Coefficient Name="b2" Type="double">72.6000</Coefficient>
+				<Coefficient Name="b3" Type="double">72.7000</Coefficient>
+				<Coefficient Name="b4" Type="double">72.8000</Coefficient>
+				<Coefficient Name="b5" Type="double">72.7000</Coefficient>
+				<Coefficient Name="b6" Type="double">72.8000</Coefficient>
+				<Coefficient Name="a1" Type="double">72.1000</Coefficient>
+				<Coefficient Name="a2" Type="double">72.2000</Coefficient>
+				<Coefficient Name="a3" Type="double">72.3000</Coefficient>
+				<Coefficient Name="a4" Type="double">72.4000</Coefficient>
+				<Coefficient Name="a5" Type="double">72.3000</Coefficient>
+				<Coefficient Name="a6" Type="double">72.4000</Coefficient>
+				<Coefficient Name="Kp" Type="double">72.1000</Coefficient>
+				<Coefficient Name="Km" Type="double">72.2000</Coefficient>
+			</CoefficientGroup>
+			<CoefficientGroup Name="Frequency Response">
+				<Coefficient Name="Amplitude (deg)" Type="double">90.0000</Coefficient>
+				<Coefficient Name="Max Frequency (Hz)" Type="double">60.0000</Coefficient>
+				<Coefficient Name="Alpha" Type="double">2.0000</Coefficient>
+			</CoefficientGroup>
+			<CoefficientGroup Name="Additional Options Check Box">
+				<Coefficient Name="Gains Scheduling" Type="bool">0</Coefficient>
+			</CoefficientGroup>
+			<CoefficientGroup Name="Additional Options">
+				<Coefficient Name="Inertia" Type="double">123.0000</Coefficient>
+				<Coefficient Name="Viscous Friction" Type="double">456.0000</Coefficient>
+			</CoefficientGroup>
+		</Loop>
+		<CoefficientGroup Name="Feedforward Gains">
+			<Coefficient Name="Motor Position Loop" Type="double">96.2000</Coefficient>
+			<Coefficient Name="Current Loop" Type="double">178.5300</Coefficient>
+			<Coefficient Name="Joint Velocity Loop" Type="double">170.3000</Coefficient>
+			<Coefficient Name="Torque Loop" Type="double">1234.5000</Coefficient>
+			<Coefficient Name="Motor Velocity Loop" Type="double">275000.6000</Coefficient>
+		</CoefficientGroup>
+		<CoefficientGroup Name="Control Architecture">
+			<Coefficient Name="Joint Position Loop" Type="bool">0</Coefficient>
+			<Coefficient Name="Motor Position Loop" Type="bool">0</Coefficient>
+			<Coefficient Name="Joint Velocity Loop" Type="bool">0</Coefficient>
+			<Coefficient Name="Motor Velocity Loop" Type="bool">0</Coefficient>
+			<Coefficient Name="Torque Loop" Type="bool">0</Coefficient>
+			<Coefficient Name="Current Loop" Type="bool">0</Coefficient>
+		</CoefficientGroup>
+	</Actuator>
+	<Actuator Id="13">
+		<Loop Name="jointPositionLoop">
+			<CoefficientGroup Name="Loop Compensator">
+				<Coefficient Name="b1" Type="double">72.5000</Coefficient>
+				<Coefficient Name="b2" Type="double">72.6000</Coefficient>
+				<Coefficient Name="b3" Type="double">72.7000</Coefficient>
+				<Coefficient Name="b4" Type="double">72.8000</Coefficient>
+				<Coefficient Name="b5" Type="double">72.7000</Coefficient>
+				<Coefficient Name="b6" Type="double">72.8000</Coefficient>
+				<Coefficient Name="a1" Type="double">72.1000</Coefficient>
+				<Coefficient Name="a2" Type="double">72.2000</Coefficient>
+				<Coefficient Name="a3" Type="double">72.3000</Coefficient>
+				<Coefficient Name="a4" Type="double">72.4000</Coefficient>
+				<Coefficient Name="a5" Type="double">72.3000</Coefficient>
+				<Coefficient Name="a6" Type="double">72.4000</Coefficient>
+				<Coefficient Name="Kp" Type="double">72.1000</Coefficient>
+				<Coefficient Name="Km" Type="double">72.2000</Coefficient>
+			</CoefficientGroup>
+			<CoefficientGroup Name="Frequency Response">
+				<Coefficient Name="Amplitude (deg)" Type="double">90.0000</Coefficient>
+				<Coefficient Name="Max Frequency (Hz)" Type="double">60.0000</Coefficient>
+				<Coefficient Name="Alpha" Type="double">2.0000</Coefficient>
+			</CoefficientGroup>
+			<CoefficientGroup Name="Additional Options Check Box">
+				<Coefficient Name="Gains Scheduling" Type="bool">0</Coefficient>
+			</CoefficientGroup>
+			<CoefficientGroup Name="Additional Options">
+				<Coefficient Name="Inertia" Type="double">123.0000</Coefficient>
+				<Coefficient Name="Viscous Friction" Type="double">456.0000</Coefficient>
+			</CoefficientGroup>
+		</Loop>
+		<Loop Name="motorPositionLoop">
+			<CoefficientGroup Name="Loop Compensator">
+				<Coefficient Name="b1" Type="double">72.5000</Coefficient>
+				<Coefficient Name="b2" Type="double">72.6000</Coefficient>
+				<Coefficient Name="b3" Type="double">72.7000</Coefficient>
+				<Coefficient Name="b4" Type="double">72.8000</Coefficient>
+				<Coefficient Name="b5" Type="double">72.7000</Coefficient>
+				<Coefficient Name="b6" Type="double">72.8000</Coefficient>
+				<Coefficient Name="a1" Type="double">72.1000</Coefficient>
+				<Coefficient Name="a2" Type="double">72.2000</Coefficient>
+				<Coefficient Name="a3" Type="double">72.3000</Coefficient>
+				<Coefficient Name="a4" Type="double">72.4000</Coefficient>
+				<Coefficient Name="a5" Type="double">72.3000</Coefficient>
+				<Coefficient Name="a6" Type="double">72.4000</Coefficient>
+				<Coefficient Name="Kp" Type="double">72.1000</Coefficient>
+				<Coefficient Name="Km" Type="double">72.2000</Coefficient>
+			</CoefficientGroup>
+			<CoefficientGroup Name="Frequency Response">
+				<Coefficient Name="Amplitude (deg)" Type="double">90.0000</Coefficient>
+				<Coefficient Name="Max Frequency (Hz)" Type="double">60.0000</Coefficient>
+				<Coefficient Name="Alpha" Type="double">2.0000</Coefficient>
+			</CoefficientGroup>
+			<CoefficientGroup Name="Additional Options Check Box">
+				<Coefficient Name="Gains Scheduling" Type="bool">0</Coefficient>
+			</CoefficientGroup>
+			<CoefficientGroup Name="Additional Options">
+				<Coefficient Name="Inertia" Type="double">123.0000</Coefficient>
+				<Coefficient Name="Viscous Friction" Type="double">456.0000</Coefficient>
+			</CoefficientGroup>
+		</Loop>
+		<Loop Name="jointVelocityLoop">
+			<CoefficientGroup Name="Loop Compensator">
+				<Coefficient Name="b1" Type="double">72.5000</Coefficient>
+				<Coefficient Name="b2" Type="double">72.6000</Coefficient>
+				<Coefficient Name="b3" Type="double">72.7000</Coefficient>
+				<Coefficient Name="b4" Type="double">72.8000</Coefficient>
+				<Coefficient Name="b5" Type="double">72.7000</Coefficient>
+				<Coefficient Name="b6" Type="double">72.8000</Coefficient>
+				<Coefficient Name="a1" Type="double">72.1000</Coefficient>
+				<Coefficient Name="a2" Type="double">72.2000</Coefficient>
+				<Coefficient Name="a3" Type="double">72.3000</Coefficient>
+				<Coefficient Name="a4" Type="double">72.4000</Coefficient>
+				<Coefficient Name="a5" Type="double">72.3000</Coefficient>
+				<Coefficient Name="a6" Type="double">72.4000</Coefficient>
+				<Coefficient Name="Kp" Type="double">72.1000</Coefficient>
+				<Coefficient Name="Km" Type="double">72.2000</Coefficient>
+			</CoefficientGroup>
+			<CoefficientGroup Name="Frequency Response">
+				<Coefficient Name="Amplitude (deg)" Type="double">90.0000</Coefficient>
+				<Coefficient Name="Max Frequency (Hz)" Type="double">60.0000</Coefficient>
+				<Coefficient Name="Alpha" Type="double">2.0000</Coefficient>
+			</CoefficientGroup>
+			<CoefficientGroup Name="Additional Options Check Box">
+				<Coefficient Name="Gains Scheduling" Type="bool">0</Coefficient>
+			</CoefficientGroup>
+			<CoefficientGroup Name="Additional Options">
+				<Coefficient Name="Inertia" Type="double">123.0000</Coefficient>
+				<Coefficient Name="Viscous Friction" Type="double">456.0000</Coefficient>
+			</CoefficientGroup>
+		</Loop>
+		<Loop Name="motorVelocityLoop">
+			<CoefficientGroup Name="Loop Compensator">
+				<Coefficient Name="b1" Type="double">72.5000</Coefficient>
+				<Coefficient Name="b2" Type="double">72.6000</Coefficient>
+				<Coefficient Name="b3" Type="double">72.7000</Coefficient>
+				<Coefficient Name="b4" Type="double">72.8000</Coefficient>
+				<Coefficient Name="b5" Type="double">72.7000</Coefficient>
+				<Coefficient Name="b6" Type="double">72.8000</Coefficient>
+				<Coefficient Name="a1" Type="double">72.1000</Coefficient>
+				<Coefficient Name="a2" Type="double">72.2000</Coefficient>
+				<Coefficient Name="a3" Type="double">72.3000</Coefficient>
+				<Coefficient Name="a4" Type="double">72.4000</Coefficient>
+				<Coefficient Name="a5" Type="double">72.3000</Coefficient>
+				<Coefficient Name="a6" Type="double">72.4000</Coefficient>
+				<Coefficient Name="Kp" Type="double">72.1000</Coefficient>
+				<Coefficient Name="Km" Type="double">72.2000</Coefficient>
+			</CoefficientGroup>
+			<CoefficientGroup Name="Frequency Response">
+				<Coefficient Name="Amplitude (deg)" Type="double">90.0000</Coefficient>
+				<Coefficient Name="Max Frequency (Hz)" Type="double">60.0000</Coefficient>
+				<Coefficient Name="Alpha" Type="double">2.0000</Coefficient>
+			</CoefficientGroup>
+			<CoefficientGroup Name="Additional Options Check Box">
+				<Coefficient Name="Gains Scheduling" Type="bool">0</Coefficient>
+			</CoefficientGroup>
+			<CoefficientGroup Name="Additional Options">
+				<Coefficient Name="Inertia" Type="double">123.0000</Coefficient>
+				<Coefficient Name="Viscous Friction" Type="double">456.0000</Coefficient>
+			</CoefficientGroup>
+		</Loop>
+		<Loop Name="currentLoop">
+			<CoefficientGroup Name="Loop Compensator">
+				<Coefficient Name="Kpq" Type="double">122.1000</Coefficient>
+				<Coefficient Name="Kiq" Type="double">123.2000</Coefficient>
+				<Coefficient Name="Kpd" Type="double">124.3000</Coefficient>
+				<Coefficient Name="Kid" Type="double">125.4000</Coefficient>
+			</CoefficientGroup>
+			<CoefficientGroup Name="Frequency Response">
+				<Coefficient Name="Amplitude (deg)" Type="double">90.0000</Coefficient>
+				<Coefficient Name="Max Frequency (Hz)" Type="double">60.0000</Coefficient>
+				<Coefficient Name="Alpha" Type="double">2.0000</Coefficient>
+			</CoefficientGroup>
+			<CoefficientGroup Name="Additional Options Check Box">
+				<Coefficient Name="Gains Scheduling" Type="bool">0</Coefficient>
+			</CoefficientGroup>
+			<CoefficientGroup Name="Additional Options">
+				<Coefficient Name="Inertia" Type="double">123.0000</Coefficient>
+				<Coefficient Name="Viscous Friction" Type="double">456.0000</Coefficient>
+			</CoefficientGroup>
+		</Loop>
+		<Loop Name="torqueLoop">
+			<CoefficientGroup Name="Loop Compensator">
+				<Coefficient Name="b1" Type="double">72.5000</Coefficient>
+				<Coefficient Name="b2" Type="double">72.6000</Coefficient>
+				<Coefficient Name="b3" Type="double">72.7000</Coefficient>
+				<Coefficient Name="b4" Type="double">72.8000</Coefficient>
+				<Coefficient Name="b5" Type="double">72.7000</Coefficient>
+				<Coefficient Name="b6" Type="double">72.8000</Coefficient>
+				<Coefficient Name="a1" Type="double">72.1000</Coefficient>
+				<Coefficient Name="a2" Type="double">72.2000</Coefficient>
+				<Coefficient Name="a3" Type="double">72.3000</Coefficient>
+				<Coefficient Name="a4" Type="double">72.4000</Coefficient>
+				<Coefficient Name="a5" Type="double">72.3000</Coefficient>
+				<Coefficient Name="a6" Type="double">72.4000</Coefficient>
+				<Coefficient Name="Kp" Type="double">72.1000</Coefficient>
+				<Coefficient Name="Km" Type="double">72.2000</Coefficient>
+			</CoefficientGroup>
+			<CoefficientGroup Name="Frequency Response">
+				<Coefficient Name="Amplitude (deg)" Type="double">90.0000</Coefficient>
+				<Coefficient Name="Max Frequency (Hz)" Type="double">60.0000</Coefficient>
+				<Coefficient Name="Alpha" Type="double">2.0000</Coefficient>
+			</CoefficientGroup>
+			<CoefficientGroup Name="Additional Options Check Box">
+				<Coefficient Name="Gains Scheduling" Type="bool">0</Coefficient>
+			</CoefficientGroup>
+			<CoefficientGroup Name="Additional Options">
+				<Coefficient Name="Inertia" Type="double">123.0000</Coefficient>
+				<Coefficient Name="Viscous Friction" Type="double">456.0000</Coefficient>
+			</CoefficientGroup>
+		</Loop>
+		<CoefficientGroup Name="Feedforward Gains">
+			<Coefficient Name="Motor Position Loop" Type="double">96.2000</Coefficient>
+			<Coefficient Name="Current Loop" Type="double">178.5300</Coefficient>
+			<Coefficient Name="Joint Velocity Loop" Type="double">170.3000</Coefficient>
+			<Coefficient Name="Torque Loop" Type="double">1234.5000</Coefficient>
+			<Coefficient Name="Motor Velocity Loop" Type="double">275000.6000</Coefficient>
+		</CoefficientGroup>
+		<CoefficientGroup Name="Control Architecture">
+			<Coefficient Name="Joint Position Loop" Type="bool">0</Coefficient>
+			<Coefficient Name="Motor Position Loop" Type="bool">0</Coefficient>
+			<Coefficient Name="Joint Velocity Loop" Type="bool">0</Coefficient>
+			<Coefficient Name="Motor Velocity Loop" Type="bool">0</Coefficient>
+			<Coefficient Name="Torque Loop" Type="bool">0</Coefficient>
+			<Coefficient Name="Current Loop" Type="bool">0</Coefficient>
+		</CoefficientGroup>
+	</Actuator>
+</ConfigController>

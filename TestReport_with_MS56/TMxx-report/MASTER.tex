@@ -1,0 +1,98 @@
+% Template Header
+\documentclass[12pt]{article}
+\usepackage{graphicx}
+\usepackage[a4paper,margin=15mm]{geometry}
+\usepackage[table]{xcolor}
+\usepackage{tikz}
+\usepackage{lastpage}
+\usepackage{fancyhdr}
+\usepackage{hyperref}
+
+
+\renewcommand{\familydefault}{\sfdefault}
+
+\parskip 7.2pt
+
+\def\doctitle{Gravity Model Report}
+\def\docauthor{Longfei Zhao, Simon Perreault \& Jason Michel Lambert}
+\def\docdate{\today}
+\def\docrevision{DRAFT}
+\def\doctype{X?.?-00\_Documentation R01}
+\def\docconfidentiality{PR37 7DOF}
+\def\docfilename{Gravity Model Report.pdf}
+
+\hypersetup{
+    colorlinks,
+    citecolor=black,
+    filecolor=black,
+    linkcolor=black,
+    urlcolor=black
+}
+% End Template Header
+
+\usepackage{caption} % two figures in a row
+
+\usepackage[cmex10]{amsmath}
+\usepackage{multirow}
+\usepackage{makecell}
+\usepackage{soul}
+\usepackage{array}
+\usepackage{color}
+\usepackage{transparent}
+%% Utilisation de natbib pour les citations et la bibliographie.
+\usepackage{natbib}
+%% Autres packages.
+\usepackage{amsmath,color,soulutf8,longtable,colortbl,setspace,ifthen,xspace,url,pdflscape}
+\usepackage{epstopdf}
+
+
+\begin{document}
+
+\input{kinovacover.tex}
+
+\parindent = 0pt
+
+\tableofcontents
+
+\newpage
+
+\section{Abstract}
+\input{abstract.tex}
+
+\newpage
+
+\section{Test Setup}
+\input{testSetup.tex}
+
+\newpage
+
+\section{Test Procedure}
+\input{testProcedure.tex}
+
+\newpage
+
+\section{Test Results}
+\input{testResults.tex}
+
+
+
+%\section*{Revisions}
+%
+%\begin{tabular}{|m{0.2\textwidth}|m{0.7\textwidth}|}
+%  \hline
+%  Date & Changes                                                              \\ \hline
+%  2016/01/28 & Initial Version                                                \\ \hline
+%\end{tabular}
+%
+
+\newpage
+
+\section{Limitations}
+\input{limitations.tex}
+
+\newpage
+
+\section{Appendix}
+\input{appendix_withvalue.tex}
+
+\end{document}

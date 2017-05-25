@@ -68,8 +68,12 @@ Rz = @(tz)[cos(tz), -sin(tz), 0; sin(tz), cos(tz), 0; 0, 0, 1];
 Ry = @(ty)[cos(ty), 0, sin(ty); 0, 1, 0; -sin(ty), 0, cos(ty)];
 Rx = @(tx)[ 1, 0, 0; 0, cos(tx), -sin(tx); 0, sin(tx), cos(tx)];
 
-% Q = [180 180 180 180 180 180 180]/180*pi; % Pose1
-Q = [180 90 180 180 180 180 180]/180*pi; % Pose2      // temp test to verify gravity model
+Q = [180 180 180 180 180 180 180]/180*pi; % Pose1
+% Q = [180 90 180 180 180 180 180]/180*pi; % Pose2      // temp test to verify gravity model
+% Q = [180 135 180 90 180 225 180]/180*pi; % Pose2 
+
+% Horizontal robot setup
+% Q = [270 180 180 180 180 180 180]/180*pi; % Pose1 to set zero torque
 
 % Q = [179.95709 180.22076 180.22090 179.86920 180.18906 180.01328 179.92484]/180*pi; % A Real robot configuration close to Pose1
 % Q = [138.38727 219.67690 118.79504 114.11444 217.43028 215.32700 205.68263]/180*pi; % Radom Pose2
@@ -79,11 +83,23 @@ Q = [180 90 180 180 180 180 180]/180*pi; % Pose2      // temp test to verify gra
 
 RobotConfig = Set7DOFsParameters();
 
-    RobotConfig.EndEffectorMass = 5.0;
-	RobotConfig.EndEffectorCOMPosition(1) = 1.0;
-	RobotConfig.EndEffectorCOMPosition(2) = 2.0;
-	RobotConfig.EndEffectorCOMPosition(3) = -3.0;
+%     RobotConfig.EndEffectorMass = 5.0;
+% 	RobotConfig.EndEffectorCOMPosition(1) = 1.0;
+% 	RobotConfig.EndEffectorCOMPosition(2) = 2.0;
+% 	RobotConfig.EndEffectorCOMPosition(3) = -3.0;
 
+    RobotConfig.GravityAcceleration(1) = -9.81;
+    RobotConfig.GravityAcceleration(3) = 0.0;
+    
+ 
+%     RobotConfig.EndEffectorCOMPosition(3) = -123.65/1000.0;
+%     RobotConfig.EndEffectorMass = 2.0;
+    RobotConfig.EndEffectorCOMPosition(3) = -116.69/1000.0;
+    RobotConfig.EndEffectorMass = 3.0;
+% 	  RobotConfig.EndEffectorCOMPosition(3) = -113.03/1000.0;
+%     RobotConfig.EndEffectorMass = 4.0;
+
+    
 RobotFrames = UpdateAllFrames(Q, RobotConfig); 
 EEF_Trans = RobotFrames.EEF_Base; 
 Pose = [EEF_Trans(1:3,4)', mat2EulerXYZ(EEF_Trans(1:3, 1:3))*180/pi];
