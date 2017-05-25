@@ -1,0 +1,9 @@
+% abstract
+This report aims to provide a general review on the performance of the gravity model used on the PR37 surgical 7DOF arm MS7. The gravity model is originally designed as a standalone feature offline on PC (named \textbf{JointWrench\_PC} for convenience), and then integrated to real time system in robot base (named \textbf{JointWrench\_Base}). In PR37 arm, torque sensor data from each actuator (named \textbf{JointTorque\_Sensor}) will be used to evaluate gravity performance.
+
+In this report, we will first compare JointWrench\_Base and JointWrench\_PC to confirm that the designed gravity model is well implemented in robot control system. After then, we will compare the component of torque along Z axis in JointWrench\_Base with JointTorque\_Sensor. Assuming that torque sensor reading is reliable, the difference between nominal and experimental joint torques should be below a certain threshold. This report will present all results and analysis regarding to the evaluation of gravity model. 
+
+The tests in this report are designed for a MS7 robot set, which includes the 7DOF arm and IDM, no extra load. 
+
+Robot configuration plays an important role in the gravity model. The pre-defined robot configurations can be divided in two groups. The first group includes robot configurations provided by Auris for different use cases. The second group includes robot configurations that maximize the load a certain joint. Therefore, the pre-defined robot configurations cover the general cases as well as the extreme cases. 
+

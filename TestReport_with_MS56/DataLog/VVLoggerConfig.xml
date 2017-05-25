@@ -1,0 +1,173 @@
+<!-- DataLoggerConfig.xml-->
+
+<!-- design note: should endianess matter???-->
+<!-- design note: dont support array in array for now-->
+
+<DataLoggerConfig name="config" defaultMode="TM-04-18-20" defaultOutputFile="logFile.log">
+    <Projet name="projet" version="version" comment="comment"/>
+    
+	<Mode name="TM-04-18-20" activeOnStart="true" >
+		<!-- Desired Position-->
+		<Variable name="desiredTranslationX"	offset="0x00" type="float" byteSize="8" format="decimal" refId="desiredTranslationX"/>
+		<Variable name="desiredTranslationY"	offset="0x00" type="float" byteSize="8" format="decimal" refId="desiredTranslationY"/>
+		<Variable name="desiredTranslationZ"	offset="0x00" type="float" byteSize="8" format="decimal" refId="desiredTranslationZ"/>
+
+		<Variable name="desiredOrientationX"	offset="0x00" type="float" byteSize="8" format="decimal" refId="desiredOrientationX"/>
+		<Variable name="desiredOrientationY"	offset="0x00" type="float" byteSize="8" format="decimal" refId="desiredOrientationY"/>
+		<Variable name="desiredOrientationZ"	offset="0x00" type="float" byteSize="8" format="decimal" refId="desiredOrientationZ"/>
+
+		<!-- Actual Position-->
+		<Variable name="translationX"			offset="0x00" type="float" byteSize="8" format="decimal" refId="translationX"/>
+		<Variable name="translationY"			offset="0x00" type="float" byteSize="8" format="decimal" refId="translationY"/>
+		<Variable name="translationZ"			offset="0x00" type="float" byteSize="8" format="decimal" refId="translationZ"/>
+
+		<Variable name="orientationX"			offset="0x00" type="float" byteSize="8" format="decimal" refId="orientationX"/>
+		<Variable name="orientationY"			offset="0x00" type="float" byteSize="8" format="decimal" refId="orientationY"/>
+		<Variable name="orientationZ"			offset="0x00" type="float" byteSize="8" format="decimal" refId="orientationZ"/>
+		
+		<!-- Actuators -->
+		<Variable name="ExternalPosition_0"		offset="0x00" type="float" byteSize="8" format="decimal" refId="ExternalPosition_0"/>
+		<Variable name="ExternalPosition_1"		offset="0x00" type="float" byteSize="8" format="decimal" refId="ExternalPosition_1"/>
+		<Variable name="ExternalPosition_2"		offset="0x00" type="float" byteSize="8" format="decimal" refId="ExternalPosition_2"/>
+		<Variable name="ExternalPosition_3"		offset="0x00" type="float" byteSize="8" format="decimal" refId="ExternalPosition_3"/>
+		<Variable name="ExternalPosition_4"		offset="0x00" type="float" byteSize="8" format="decimal" refId="ExternalPosition_4"/>
+		<Variable name="ExternalPosition_5"		offset="0x00" type="float" byteSize="8" format="decimal" refId="ExternalPosition_5"/>
+		<Variable name="ExternalPosition_6"		offset="0x00" type="float" byteSize="8" format="decimal" refId="ExternalPosition_6"/>
+
+		<Variable name="DesiredJointsPos_0"		offset="0x00" type="float" byteSize="8" format="decimal" refId="DesiredJointsPos_0"/>
+		<Variable name="DesiredJointsPos_1"		offset="0x00" type="float" byteSize="8" format="decimal" refId="DesiredJointsPos_1"/>
+		<Variable name="DesiredJointsPos_2"		offset="0x00" type="float" byteSize="8" format="decimal" refId="DesiredJointsPos_2"/>
+		<Variable name="DesiredJointsPos_3"		offset="0x00" type="float" byteSize="8" format="decimal" refId="DesiredJointsPos_3"/>
+		<Variable name="DesiredJointsPos_4"		offset="0x00" type="float" byteSize="8" format="decimal" refId="DesiredJointsPos_4"/>
+		<Variable name="DesiredJointsPos_5"		offset="0x00" type="float" byteSize="8" format="decimal" refId="DesiredJointsPos_5"/>
+		<Variable name="DesiredJointsPos_6"		offset="0x00" type="float" byteSize="8" format="decimal" refId="DesiredJointsPos_6"/>
+		   
+		<Variable name="RawTorque_0"				offset="0x00" type="float" byteSize="8" format="decimal" refId="RawTorque_0"/>
+		<Variable name="RawTorque_1"				offset="0x00" type="float" byteSize="8" format="decimal" refId="RawTorque_1"/>
+		<Variable name="RawTorque_2"				offset="0x00" type="float" byteSize="8" format="decimal" refId="RawTorque_2"/>
+		<Variable name="RawTorque_3"				offset="0x00" type="float" byteSize="8" format="decimal" refId="RawTorque_3"/>
+		<Variable name="RawTorque_4"				offset="0x00" type="float" byteSize="8" format="decimal" refId="RawTorque_4"/>
+		<Variable name="RawTorque_5"				offset="0x00" type="float" byteSize="8" format="decimal" refId="RawTorque_5"/>
+		<Variable name="RawTorque_6"				offset="0x00" type="float" byteSize="8" format="decimal" refId="RawTorque_6"/>
+
+
+		<Variable name="BaseJointCartesianWrenchFx"		offset="0x00" type="float" byteSize="8" format="decimal" refId="BaseJointCartesianWrenchFx"/>
+		<Variable name="BaseJointCartesianWrenchFy"		offset="0x00" type="float" byteSize="8" format="decimal" refId="BaseJointCartesianWrenchFy"/>
+		<Variable name="BaseJointCartesianWrenchFz"		offset="0x00" type="float" byteSize="8" format="decimal" refId="BaseJointCartesianWrenchFz"/>
+		<Variable name="BaseJointCartesianWrenchTx"		offset="0x00" type="float" byteSize="8" format="decimal" refId="BaseJointCartesianWrenchTx"/>
+		<Variable name="BaseJointCartesianWrenchTy"		offset="0x00" type="float" byteSize="8" format="decimal" refId="BaseJointCartesianWrenchTy"/>
+		<Variable name="BaseJointCartesianWrenchTz"		offset="0x00" type="float" byteSize="8" format="decimal" refId="BaseJointCartesianWrenchTz"/>
+
+		<Variable name="JointCartesianWrenchFx_0"	offset="0x00" type="float" byteSize="8" format="decimal" refId="JointCartesianWrenchFx_0"/>
+		<Variable name="JointCartesianWrenchFx_1"	offset="0x00" type="float" byteSize="8" format="decimal" refId="JointCartesianWrenchFx_1"/>
+		<Variable name="JointCartesianWrenchFx_2"	offset="0x00" type="float" byteSize="8" format="decimal" refId="JointCartesianWrenchFx_2"/>
+		<Variable name="JointCartesianWrenchFx_3"	offset="0x00" type="float" byteSize="8" format="decimal" refId="JointCartesianWrenchFx_3"/>
+		<Variable name="JointCartesianWrenchFx_4"	offset="0x00" type="float" byteSize="8" format="decimal" refId="JointCartesianWrenchFx_4"/>
+		<Variable name="JointCartesianWrenchFx_5"	offset="0x00" type="float" byteSize="8" format="decimal" refId="JointCartesianWrenchFx_5"/>
+		<Variable name="JointCartesianWrenchFx_6"	offset="0x00" type="float" byteSize="8" format="decimal" refId="JointCartesianWrenchFx_6"/>
+
+		<Variable name="JointCartesianWrenchFy_0"	offset="0x00" type="float" byteSize="8" format="decimal" refId="JointCartesianWrenchFy_0"/>
+		<Variable name="JointCartesianWrenchFy_1"	offset="0x00" type="float" byteSize="8" format="decimal" refId="JointCartesianWrenchFy_1"/>
+		<Variable name="JointCartesianWrenchFy_2"	offset="0x00" type="float" byteSize="8" format="decimal" refId="JointCartesianWrenchFy_2"/>
+		<Variable name="JointCartesianWrenchFy_3"	offset="0x00" type="float" byteSize="8" format="decimal" refId="JointCartesianWrenchFy_3"/>
+		<Variable name="JointCartesianWrenchFy_4"	offset="0x00" type="float" byteSize="8" format="decimal" refId="JointCartesianWrenchFy_4"/>
+		<Variable name="JointCartesianWrenchFy_5"	offset="0x00" type="float" byteSize="8" format="decimal" refId="JointCartesianWrenchFy_5"/>
+		<Variable name="JointCartesianWrenchFy_6"	offset="0x00" type="float" byteSize="8" format="decimal" refId="JointCartesianWrenchFy_6"/>
+
+		<Variable name="JointCartesianWrenchFz_0"	offset="0x00" type="float" byteSize="8" format="decimal" refId="JointCartesianWrenchFz_0"/>
+		<Variable name="JointCartesianWrenchFz_1"	offset="0x00" type="float" byteSize="8" format="decimal" refId="JointCartesianWrenchFz_1"/>
+		<Variable name="JointCartesianWrenchFz_2"	offset="0x00" type="float" byteSize="8" format="decimal" refId="JointCartesianWrenchFz_2"/>
+		<Variable name="JointCartesianWrenchFz_3"	offset="0x00" type="float" byteSize="8" format="decimal" refId="JointCartesianWrenchFz_3"/>
+		<Variable name="JointCartesianWrenchFz_4"	offset="0x00" type="float" byteSize="8" format="decimal" refId="JointCartesianWrenchFz_4"/>
+		<Variable name="JointCartesianWrenchFz_5"	offset="0x00" type="float" byteSize="8" format="decimal" refId="JointCartesianWrenchFz_5"/>
+		<Variable name="JointCartesianWrenchFz_6"	offset="0x00" type="float" byteSize="8" format="decimal" refId="JointCartesianWrenchFz_6"/>
+
+		<Variable name="JointCartesianWrenchTx_0"	offset="0x00" type="float" byteSize="8" format="decimal" refId="JointCartesianWrenchTx_0"/>
+		<Variable name="JointCartesianWrenchTx_1"	offset="0x00" type="float" byteSize="8" format="decimal" refId="JointCartesianWrenchTx_1"/>
+		<Variable name="JointCartesianWrenchTx_2"	offset="0x00" type="float" byteSize="8" format="decimal" refId="JointCartesianWrenchTx_2"/>
+		<Variable name="JointCartesianWrenchTx_3"	offset="0x00" type="float" byteSize="8" format="decimal" refId="JointCartesianWrenchTx_3"/>
+		<Variable name="JointCartesianWrenchTx_4"	offset="0x00" type="float" byteSize="8" format="decimal" refId="JointCartesianWrenchTx_4"/>
+		<Variable name="JointCartesianWrenchTx_5"	offset="0x00" type="float" byteSize="8" format="decimal" refId="JointCartesianWrenchTx_5"/>
+		<Variable name="JointCartesianWrenchTx_6"	offset="0x00" type="float" byteSize="8" format="decimal" refId="JointCartesianWrenchTx_6"/>
+
+		<Variable name="JointCartesianWrenchTy_0"	offset="0x00" type="float" byteSize="8" format="decimal" refId="JointCartesianWrenchTy_0"/>
+		<Variable name="JointCartesianWrenchTy_1"	offset="0x00" type="float" byteSize="8" format="decimal" refId="JointCartesianWrenchTy_1"/>
+		<Variable name="JointCartesianWrenchTy_2"	offset="0x00" type="float" byteSize="8" format="decimal" refId="JointCartesianWrenchTy_2"/>
+		<Variable name="JointCartesianWrenchTy_3"	offset="0x00" type="float" byteSize="8" format="decimal" refId="JointCartesianWrenchTy_3"/>
+		<Variable name="JointCartesianWrenchTy_4"	offset="0x00" type="float" byteSize="8" format="decimal" refId="JointCartesianWrenchTy_4"/>
+		<Variable name="JointCartesianWrenchTy_5"	offset="0x00" type="float" byteSize="8" format="decimal" refId="JointCartesianWrenchTy_5"/>
+		<Variable name="JointCartesianWrenchTy_6"	offset="0x00" type="float" byteSize="8" format="decimal" refId="JointCartesianWrenchTy_6"/>
+
+		<Variable name="JointCartesianWrenchTz_0"	offset="0x00" type="float" byteSize="8" format="decimal" refId="JointCartesianWrenchTz_0"/>
+		<Variable name="JointCartesianWrenchTz_1"	offset="0x00" type="float" byteSize="8" format="decimal" refId="JointCartesianWrenchTz_1"/>
+		<Variable name="JointCartesianWrenchTz_2"	offset="0x00" type="float" byteSize="8" format="decimal" refId="JointCartesianWrenchTz_2"/>
+		<Variable name="JointCartesianWrenchTz_3"	offset="0x00" type="float" byteSize="8" format="decimal" refId="JointCartesianWrenchTz_3"/>
+		<Variable name="JointCartesianWrenchTz_4"	offset="0x00" type="float" byteSize="8" format="decimal" refId="JointCartesianWrenchTz_4"/>
+		<Variable name="JointCartesianWrenchTz_5"	offset="0x00" type="float" byteSize="8" format="decimal" refId="JointCartesianWrenchTz_5"/>
+		<Variable name="JointCartesianWrenchTz_6"	offset="0x00" type="float" byteSize="8" format="decimal" refId="JointCartesianWrenchTz_6"/>
+
+
+		<Variable name="Velocity_0"				offset="0x00" type="float" byteSize="8" format="decimal" refId="Velocity_0"/>
+		<Variable name="Velocity_1"				offset="0x00" type="float" byteSize="8" format="decimal" refId="Velocity_1"/>
+		<Variable name="Velocity_2"				offset="0x00" type="float" byteSize="8" format="decimal" refId="Velocity_2"/>
+		<Variable name="Velocity_3"				offset="0x00" type="float" byteSize="8" format="decimal" refId="Velocity_3"/>
+		<Variable name="Velocity_4"				offset="0x00" type="float" byteSize="8" format="decimal" refId="Velocity_4"/>
+		<Variable name="Velocity_5"				offset="0x00" type="float" byteSize="8" format="decimal" refId="Velocity_5"/>
+		<Variable name="Velocity_6"				offset="0x00" type="float" byteSize="8" format="decimal" refId="Velocity_6"/>
+
+		<Variable name="Temperature_0"			offset="0x00" type="float" byteSize="8" format="decimal" refId="Temperature_0"/>
+		<Variable name="Temperature_1"			offset="0x00" type="float" byteSize="8" format="decimal" refId="Temperature_1"/>
+		<Variable name="Temperature_2"			offset="0x00" type="float" byteSize="8" format="decimal" refId="Temperature_2"/>
+		<Variable name="Temperature_3"			offset="0x00" type="float" byteSize="8" format="decimal" refId="Temperature_3"/>
+		<Variable name="Temperature_4"			offset="0x00" type="float" byteSize="8" format="decimal" refId="Temperature_4"/>
+		<Variable name="Temperature_5"			offset="0x00" type="float" byteSize="8" format="decimal" refId="Temperature_5"/>
+		<Variable name="Temperature_6"			offset="0x00" type="float" byteSize="8" format="decimal" refId="Temperature_6"/>
+
+		<Variable name="FaultBankAFlags_0"		offset="0x00" type="int" byteSize="8" format="decimal" refId="FaultBankAFlags_0"/>
+		<Variable name="FaultBankAFlags_1"		offset="0x00" type="int" byteSize="8" format="decimal" refId="FaultBankAFlags_1"/>
+		<Variable name="FaultBankAFlags_2"		offset="0x00" type="int" byteSize="8" format="decimal" refId="FaultBankAFlags_2"/>
+		<Variable name="FaultBankAFlags_3"		offset="0x00" type="int" byteSize="8" format="decimal" refId="FaultBankAFlags_3"/>
+		<Variable name="FaultBankAFlags_4"		offset="0x00" type="int" byteSize="8" format="decimal" refId="FaultBankAFlags_4"/>
+		<Variable name="FaultBankAFlags_5"		offset="0x00" type="int" byteSize="8" format="decimal" refId="FaultBankAFlags_5"/>
+		<Variable name="FaultBankAFlags_6"		offset="0x00" type="int" byteSize="8" format="decimal" refId="FaultBankAFlags_6"/>
+
+		<Variable name="FaultBankBFlags_0"		offset="0x00" type="int" byteSize="8" format="decimal" refId="FaultBankBFlags_0"/>
+		<Variable name="FaultBankBFlags_1"		offset="0x00" type="int" byteSize="8" format="decimal" refId="FaultBankBFlags_1"/>
+		<Variable name="FaultBankBFlags_2"		offset="0x00" type="int" byteSize="8" format="decimal" refId="FaultBankBFlags_2"/>
+		<Variable name="FaultBankBFlags_3"		offset="0x00" type="int" byteSize="8" format="decimal" refId="FaultBankBFlags_3"/>
+		<Variable name="FaultBankBFlags_4"		offset="0x00" type="int" byteSize="8" format="decimal" refId="FaultBankBFlags_4"/>
+		<Variable name="FaultBankBFlags_5"		offset="0x00" type="int" byteSize="8" format="decimal" refId="FaultBankBFlags_5"/>
+		<Variable name="FaultBankBFlags_6"		offset="0x00" type="int" byteSize="8" format="decimal" refId="FaultBankBFlags_6"/>
+
+		<Variable name="warningFlags_0"			offset="0x00" type="int" byteSize="8" format="decimal" refId="warningFlags_0"/>
+		<Variable name="warningFlags_1"			offset="0x00" type="int" byteSize="8" format="decimal" refId="warningFlags_1"/>
+		<Variable name="warningFlags_2"			offset="0x00" type="int" byteSize="8" format="decimal" refId="warningFlags_2"/>
+		<Variable name="warningFlags_3"			offset="0x00" type="int" byteSize="8" format="decimal" refId="warningFlags_3"/>
+		<Variable name="warningFlags_4"			offset="0x00" type="int" byteSize="8" format="decimal" refId="warningFlags_4"/>
+		<Variable name="warningFlags_5"			offset="0x00" type="int" byteSize="8" format="decimal" refId="warningFlags_5"/>
+		<Variable name="warningFlags_6"			offset="0x00" type="int" byteSize="8" format="decimal" refId="warningFlags_6"/>
+
+		<Variable name="flags_0"					offset="0x00" type="int" byteSize="8" format="decimal" refId="flags_0"/>
+		<Variable name="flags_1"					offset="0x00" type="int" byteSize="8" format="decimal" refId="flags_1"/>
+		<Variable name="flags_2"					offset="0x00" type="int" byteSize="8" format="decimal" refId="flags_2"/>
+		<Variable name="flags_3"					offset="0x00" type="int" byteSize="8" format="decimal" refId="flags_3"/>
+		<Variable name="flags_4"					offset="0x00" type="int" byteSize="8" format="decimal" refId="flags_4"/>
+		<Variable name="flags_5"					offset="0x00" type="int" byteSize="8" format="decimal" refId="flags_5"/>
+		<Variable name="flags_6"					offset="0x00" type="int" byteSize="8" format="decimal" refId="flags_6"/>
+
+		<Variable name="commandMode_0"			offset="0x00" type="int" byteSize="8" format="decimal" refId="commandMode_0"/>
+		<Variable name="commandMode_1"			offset="0x00" type="int" byteSize="8" format="decimal" refId="commandMode_1"/>
+		<Variable name="commandMode_2"			offset="0x00" type="int" byteSize="8" format="decimal" refId="commandMode_2"/>
+		<Variable name="commandMode_3"			offset="0x00" type="int" byteSize="8" format="decimal" refId="commandMode_3"/>
+		<Variable name="commandMode_4"			offset="0x00" type="int" byteSize="8" format="decimal" refId="commandMode_4"/>
+		<Variable name="commandMode_5"			offset="0x00" type="int" byteSize="8" format="decimal" refId="commandMode_5"/>
+		<Variable name="commandMode_6"			offset="0x00" type="int" byteSize="8" format="decimal" refId="commandMode_6"/>
+
+		<!-- Bug fix -->
+		<Variable name="DerniereLigne" 		        offset="0x00" type="int"   byteSize="2" format="decimal" refId="commandMode_6"/>
+
+	</Mode>
+
+</DataLoggerConfig>
+
+

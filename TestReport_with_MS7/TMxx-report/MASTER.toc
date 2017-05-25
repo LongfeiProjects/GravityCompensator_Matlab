@@ -1,0 +1,25 @@
+\contentsline {section}{\numberline {1}Abstract}{2}{section.1}
+\contentsline {section}{\numberline {2}Test Setup}{3}{section.2}
+\contentsline {subsection}{\numberline {2.1}Robot setup}{3}{subsection.2.1}
+\contentsline {subsection}{\numberline {2.2}Pre-defined robot configurations}{3}{subsection.2.2}
+\contentsline {section}{\numberline {3}Test Procedure}{8}{section.3}
+\contentsline {subsection}{\numberline {3.1}Source Code Repository}{8}{subsection.3.1}
+\contentsline {subsection}{\numberline {3.2}Data acquisition}{8}{subsection.3.2}
+\contentsline {section}{\numberline {4}Gravity Model Test Results}{10}{section.4}
+\contentsline {section}{\numberline {5}Sensor Reliability Analysis}{16}{section.5}
+\contentsline {section}{\numberline {6}Appendix}{18}{section.6}
+\contentsline {subsection}{\numberline {6.1}Test at robot configuration 1}{18}{subsection.6.1}
+\contentsline {subsection}{\numberline {6.2}Test at robot configuration 2}{18}{subsection.6.2}
+\contentsline {subsection}{\numberline {6.3}Test at robot configuration 3}{19}{subsection.6.3}
+\contentsline {subsection}{\numberline {6.4}Test at robot configuration 4}{19}{subsection.6.4}
+\contentsline {subsection}{\numberline {6.5}Test at robot configuration 5}{21}{subsection.6.5}
+\contentsline {subsection}{\numberline {6.6}Test at robot configuration 6}{21}{subsection.6.6}
+\contentsline {subsection}{\numberline {6.7}Test at robot configuration 7}{23}{subsection.6.7}
+\contentsline {subsection}{\numberline {6.8}Test at robot configuration 8}{23}{subsection.6.8}
+\contentsline {subsection}{\numberline {6.9}Test at robot configuration 9}{25}{subsection.6.9}
+\contentsline {subsection}{\numberline {6.10}Test at robot configuration 10}{25}{subsection.6.10}
+\contentsline {subsection}{\numberline {6.11}Test at robot configuration 11}{26}{subsection.6.11}
+\contentsline {subsection}{\numberline {6.12}Test at robot configuration 12}{27}{subsection.6.12}
+\contentsline {subsection}{\numberline {6.13}Test at robot configuration 13}{27}{subsection.6.13}
+\contentsline {subsection}{\numberline {6.14}Test at robot configuration 14}{29}{subsection.6.14}
+\contentsline {subsection}{\numberline {6.15}Test at robot configuration 15}{29}{subsection.6.15}

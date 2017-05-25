@@ -1,0 +1,107 @@
+% To use this cover, you need to have the following in your preamble
+%
+% \documentclass[12pt]{article}
+% \usepackage{graphicx}
+% \usepackage[a4paper,margin=15mm]{geometry}
+% \usepackage[table]{xcolor}
+% \usepackage{tikz}
+% \usepackage{lastpage}
+% \usepackage{fancyhdr}
+%
+% And you need to define these parameters:
+%
+% \def\doctitle{TITLE}
+% \def\docauthor{AUTHOR}
+% \def\docdate{DATE}                % Note: \today could be used for DATE
+% \def\docrevision{REVISION}        % For example `Revision 01`
+% \def\doctype{TYPE}                % For example `F7.3-02_Product Requirement R01`
+% \def\docconfidentiality{CONF}     % For example `Internal Use Only`, or `Confidential`
+% \def\docfilename{FILENAME}
+%
+% This cover was designed with this family of fonts, and may be out of shape with a different font:
+%
+% \renewcommand{\familydefault}{\sfdefault}
+%
+% The Kinova logo must be present in images/logo_kinova.pdf, and a version with
+% white font instead of black, in images/logo_kinova_inv.pdf.
+% If you have an svg, you can convert it first to eps with Inkscape:
+%
+%     inkscape file.svg --export-eps=file.eps
+%
+% and then from eps to pdf:
+%
+%     epstopdf --outfile=file.pdf file.eps
+%
+% To use this cover, after \begin{document}, simply do:
+%
+%     \input{kinovacover.tex}
+%
+
+\begin{titlepage}
+
+  \vspace*{10mm}
+  \begin{center}
+    \Huge{\textbf{\doctitle}}
+
+    \vspace*{15mm}
+    \Large{\textbf{\docrevision}}
+
+    \Large{\textbf{\docdate}}
+
+    \vspace*{15mm}
+    \textbf{By}
+
+    \Large{\textbf{\docauthor}}
+  \end{center}
+
+  \vspace*{10mm}
+  \hspace{-5cm}
+  \begin{tikzpicture}
+    \draw[color=black,fill=black] (0,0) rectangle (50cm,5.5cm);
+    \draw[color=cyan,fill=cyan] (0,5.5cm) rectangle (50cm,6cm);
+  \end{tikzpicture}
+
+  \vspace*{-50mm}
+
+  \begin{center}
+    \includegraphics[width=10cm]{images/logo_kinova_inv}
+  \end{center}
+
+  \vspace*{20mm}
+  \noindent
+  \textbf{Warning}
+
+  \noindent
+  The information contained in this document is the property of Kinova. Except as
+  specifically authorized in writing by Kinova, the holder of this document shall keep the
+  information contained here confidential and shall protect same in whole or in part from
+  disclosure and dissemination to third parties and use same for evaluation, operation and
+  maintenance purposes only. This document is not an engagement of Kinova to develop,
+  implement or design the product or techniques described here.
+
+\end{titlepage}
+
+\newpage
+
+\setlength{\voffset}{-1in}
+\setlength{\topmargin}{10pt}
+\setlength{\headheight}{50pt}
+\setlength{\footskip}{40pt}
+\setlength{\textheight}{0.9\textheight}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\color{gray}{\renewcommand{\arraystretch}{0.75}\begin{tabular}{l}
+    \footnotesize \doctype - \doctitle \\
+    \footnotesize Effective Date: \docdate \\
+    \footnotesize \textbf{\docconfidentiality} \\
+  \end{tabular}}
+}
+\fancyhead[R]{\includegraphics[width=40mm]{images/logo_kinova}\vspace*{-15pt}}
+\renewcommand{\headrulewidth}{0.5pt}
+\fancyfoot[L]{\vspace*{-7pt}\color{gray}{\renewcommand{\arraystretch}{0.75}\begin{tabular}{l}
+    \footnotesize \docfilename \\
+    \footnotesize Printed: \docdate \\
+  \end{tabular}}
+}
+\fancyfoot[R]{\footnotesize Page \thepage~of \pageref{LastPage}}
+\renewcommand{\footrulewidth}{0.5pt}

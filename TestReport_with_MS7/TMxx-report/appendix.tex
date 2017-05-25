@@ -1,0 +1,1006 @@
+
+% start of template --------------------------------------------------------------------------------------------------------------------------------------------------------
+
+\subsection{Test at robot configuration 1}
+Robot joint angles are  [ 115        236.85         138.2        264.09            63        235.28        155.28];
+
+\begin{table}[h!]
+	\centering
+	\caption{Joint wrench obtained from PC (N/Nm)}
+	\label{wrech_PC_Pose1}
+	\begin{tabular}{|l|r|r|r|r|r|r|r|r|}
+		\hline
+		\textbf{}  & \textbf{Base} & \textbf{Joint1}  & \textbf{Joint2}  & \textbf{Joint3}  & \textbf{Joint4}  & \textbf{Joint5}  & \textbf{Joint6}  & \textbf{Joint7} \\ \hline
+		\textbf{Fx PC}  & 0.0000        & 88.3813        & 40.0077        & 41.3077        & -31.7388        & 9.3230        & -10.1604        & 2.1196 \\ \hline
+		\textbf{Fy PC}  & 108.1749        & -41.2129        & -61.2548        & 0.9694        & -33.4970        & -19.3483        & -15.6950        & 12.2486 \\ \hline
+		\textbf{Fz PC}  & 0.0000        & 0.0000        & -34.1163        & 48.1370        & 0.7052        & 22.6615        & -14.7627        & 10.8864 \\ \hline
+		\textbf{Tx PC}  & -26.9294        & -6.6482        & -6.8397        & -0.8133        & 0.8670        & -3.1205        & -2.3025        & 1.1891 \\ \hline
+		\textbf{Ty PC}  & 0.0000        & -14.2571        & -2.3645        & 2.2332        & -0.6445        & 0.6351        & 0.0795        & -0.1716 \\ \hline
+		\textbf{Tz PC}  & -10.4385        & 10.4379        & -3.7754        & 0.6529        & 8.4087        & 1.8261        & 1.5002        & -0.0384 \\ \hline
+	\end{tabular}
+\end{table}
+
+\begin{table}[h!]
+	\centering
+	\caption{Joint wrench obtained from Robot (N/Nm)}
+	\label{wrech_Robot_Pose1}
+	\begin{tabular}{|l|r|r|r|r|r|r|r|r|}
+		\hline
+		\textbf{} & \textbf{Base} & \textbf{Joint1}  & \textbf{Joint2}  & \textbf{Joint3}  & \textbf{Joint4}  & \textbf{Joint5}  & \textbf{Joint6}  & \textbf{Joint7} \\ \hline
+		\textbf{Fx Robot}  & 0.0000        & 88.3813        & 40.0065        & 41.3069        & -31.7388        & 9.3232        & -10.1603        & 2.1196 \\ \hline
+		\textbf{Fy Robot}  & 108.1750        & -41.2129        & -61.2556        & 0.9694        & -33.4971        & -19.3482        & -15.6951        & 12.2485 \\ \hline
+		\textbf{Fz Robot}  & 0.0000        & 0.0000        & -34.1163        & 48.1376        & 0.7052        & 22.6615        & -14.7626        & 10.8865 \\ \hline
+		\textbf{Tx Robot}  & -26.9291        & -6.6481        & -6.8397        & -0.8133        & 0.8670        & -3.1205        & -2.3024        & 1.1891 \\ \hline
+		\textbf{Ty Robot}  & 0.0000        & -14.2568        & -2.3645        & 2.2333        & -0.6445        & 0.6351        & 0.0795        & -0.1716 \\ \hline
+		\textbf{Tz Robot}  & -10.4385        & 10.4379        & -3.7752        & 0.6529        & 8.4087        & 1.8260        & 1.5002        & -0.0384 \\ \hline
+	\end{tabular}
+\end{table}
+
+\begin{table}[h!]
+	\centering
+	\caption{Joint wrench error between data from PC and Robot (N/Nm)}
+	\label{wrech_Error_Pose1}
+	\begin{tabular}{|l|r|r|r|r|r|r|r|r|}
+		\hline
+		\textbf{}  & \textbf{Base} & \textbf{Joint1}  & \textbf{Joint2}  & \textbf{Joint3}  & \textbf{Joint4}  & \textbf{Joint5}  & \textbf{Joint6}  & \textbf{Joint7} \\ \hline
+		\textbf{Fx Error}  & 0.0000        & -0.0000        & 0.0012        & 0.0008        & -0.0000        & -0.0002        & -0.0001        & -0.0000 \\ \hline
+		\textbf{Fy Error}  & -0.0001        & -0.0000        & 0.0008        & 0.0000        & 0.0001        & -0.0001        & 0.0001        & 0.0001 \\ \hline
+		\textbf{Fz Error}  & 0.0000        & 0.0000        & 0.0000        & -0.0006        & 0.0000        & -0.0000        & -0.0001        & -0.0001 \\ \hline
+		\textbf{Tx Error}  & -0.0003        & -0.0001        & 0.0000        & 0.0000        & -0.0000        & -0.0000        & -0.0001        & -0.0000 \\ \hline
+		\textbf{Ty Error}  & 0.0000        & -0.0003        & -0.0000        & -0.0001        & -0.0000        & -0.0000        & 0.0000        & 0.0000 \\ \hline
+		\textbf{Tz Error}  & 0.0000        & 0.0000        & -0.0002        & -0.0000        & 0.0000        & 0.0001        & 0.0000        & 0.0000 \\ \hline
+	\end{tabular}
+\end{table}
+
+\begin{table}[h!]
+	\centering
+	\caption{Joint torque along axis comparison with sensor data (Nm)}
+	\label{wrech_Sensor_Pose1}
+	\begin{tabular}{|l|r|r|r|r|r|r|r|}
+		\hline
+		\textbf{} & \textbf{Joint1} & \textbf{Joint2} & \textbf{Joint3} & \textbf{Joint4} & \textbf{Joint5} & \textbf{Joint6} & \textbf{Joint7} \\ \hline
+		\textbf{Tz Sensor}  & 10.0093           & -3.4472           & 1.4829            & 8.4686           & 2.5647           & 1.3346           & 0.4115           \\ \hline
+		\textbf{Tz Robot}  	& 10.4379           & -3.7752           & 0.6529            & 8.4087           & 1.8260           & 1.5002           & -0.0384           \\ \hline
+		\textbf{Tz PC}  	& 10.4379           & -3.7754           & 0.6529            & 8.4087           & 1.8261           & 1.5002           & -0.0384           \\ \hline
+	\end{tabular}
+\end{table}
+
+% end of template --------------------------------------------------------------------------------------------------------------------------------------------------------
+% start of template --------------------------------------------------------------------------------------------------------------------------------------------------------
+
+\subsection{Test at robot configuration 2}
+Robot joint angles are  [ 140        245.42         90.92        281.41        353.62        295.06         265.4];
+
+\begin{table}[h!]
+	\centering
+	\caption{Joint wrench obtained from PC (N/Nm)}
+	\label{wrech_PC_Pose2}
+	\begin{tabular}{|l|r|r|r|r|r|r|r|r|}
+		\hline
+		\textbf{}  & \textbf{Base} & \textbf{Joint1}  & \textbf{Joint2}  & \textbf{Joint3}  & \textbf{Joint4}  & \textbf{Joint5}  & \textbf{Joint6}  & \textbf{Joint7} \\ \hline
+		\textbf{Fx PC}  & 0.0000        & 62.6833        & 21.5842        & 48.8627        & -33.4761        & 23.3919        & -21.3574        & 4.0351 \\ \hline
+		\textbf{Fy PC}  & 108.1749        & -74.7031        & -47.1875        & 16.1795        & -29.5078        & -5.3970        & -9.7163        & -14.5373 \\ \hline
+		\textbf{Fz PC}  & 0.0000        & 0.0000        & -61.8397        & 37.0822        & 11.7704        & 19.9627        & -4.1179        & 6.7394 \\ \hline
+		\textbf{Tx PC}  & -28.1356        & -12.9746        & -13.0452        & 0.1969        & 1.3541        & -0.3368        & -0.6232        & -1.0514 \\ \hline
+		\textbf{Ty PC}  & 0.0000        & -10.8870        & -1.4418        & -1.7831        & 0.6664        & 0.6854        & 0.1599        & -0.3263 \\ \hline
+		\textbf{Tz PC}  & -14.8875        & 14.8870        & -3.4530        & 0.5185        & 5.5219        & 0.5800        & 2.8552        & -0.0743 \\ \hline
+	\end{tabular}
+\end{table}
+
+\begin{table}[h!]
+	\centering
+	\caption{Joint wrench obtained from Robot (N/Nm)}
+	\label{wrech_Robot_Pose2}
+	\begin{tabular}{|l|r|r|r|r|r|r|r|r|}
+		\hline
+		\textbf{} & \textbf{Base} & \textbf{Joint1}  & \textbf{Joint2}  & \textbf{Joint3}  & \textbf{Joint4}  & \textbf{Joint5}  & \textbf{Joint6}  & \textbf{Joint7} \\ \hline
+		\textbf{Fx Robot}  & 0.0000        & 62.6833        & 21.5833        & 48.8624        & -33.4757        & 23.3916        & -21.3577        & 4.0357 \\ \hline
+		\textbf{Fy Robot}  & 108.1750        & -74.7031        & -47.1879        & 16.1796        & -29.5082        & -5.3974        & -9.7156        & -14.5373 \\ \hline
+		\textbf{Fz Robot}  & 0.0000        & 0.0000        & -61.8397        & 37.0826        & 11.7705        & 19.9630        & -4.1182        & 6.7390 \\ \hline
+		\textbf{Tx Robot}  & -28.1355        & -12.9745        & -13.0453        & 0.1970        & 1.3542        & -0.3368        & -0.6233        & -1.0514 \\ \hline
+		\textbf{Ty Robot}  & 0.0000        & -10.8869        & -1.4417        & -1.7832        & 0.6663        & 0.6855        & 0.1599        & -0.3263 \\ \hline
+		\textbf{Tz Robot}  & -14.8877        & 14.8872        & -3.4529        & 0.5184        & 5.5217        & 0.5800        & 2.8552        & -0.0743 \\ \hline
+	\end{tabular}
+\end{table}
+
+\begin{table}[h!]
+	\centering
+	\caption{Joint wrench error between data from PC and Robot (N/Nm)}
+	\label{wrech_Error_Pose2}
+	\begin{tabular}{|l|r|r|r|r|r|r|r|r|}
+		\hline
+		\textbf{}  & \textbf{Base} & \textbf{Joint1}  & \textbf{Joint2}  & \textbf{Joint3}  & \textbf{Joint4}  & \textbf{Joint5}  & \textbf{Joint6}  & \textbf{Joint7} \\ \hline
+		\textbf{Fx Error}  & 0.0000        & 0.0000        & 0.0009        & 0.0003        & -0.0004        & 0.0003        & 0.0003        & -0.0006 \\ \hline
+		\textbf{Fy Error}  & -0.0001        & -0.0000        & 0.0004        & -0.0001        & 0.0004        & 0.0004        & -0.0007        & -0.0000 \\ \hline
+		\textbf{Fz Error}  & 0.0000        & 0.0000        & -0.0000        & -0.0004        & -0.0001        & -0.0003        & 0.0003        & 0.0004 \\ \hline
+		\textbf{Tx Error}  & -0.0001        & -0.0001        & 0.0001        & -0.0001        & -0.0001        & 0.0000        & 0.0001        & -0.0000 \\ \hline
+		\textbf{Ty Error}  & 0.0000        & -0.0001        & -0.0001        & 0.0001        & 0.0001        & -0.0001        & 0.0000        & 0.0000 \\ \hline
+		\textbf{Tz Error}  & 0.0002        & -0.0002        & -0.0001        & 0.0001        & 0.0002        & -0.0000        & -0.0000        & 0.0000 \\ \hline
+	\end{tabular}
+\end{table}
+
+\begin{table}[h!]
+	\centering
+	\caption{Joint torque along axis comparison with sensor data (Nm)}
+	\label{wrech_Sensor_Pose2}
+	\begin{tabular}{|l|r|r|r|r|r|r|r|}
+		\hline
+		\textbf{} & \textbf{Joint1} & \textbf{Joint2} & \textbf{Joint3} & \textbf{Joint4} & \textbf{Joint5} & \textbf{Joint6} & \textbf{Joint7} \\ \hline
+		\textbf{Tz Sensor}  & 16.2343           & -5.077           & 1.6388            & 4.1064           & 0.48671           & 1.9726           & -0.61055           \\ \hline
+		\textbf{Tz Robot}  	& 14.8872           & -3.4529           & 0.5184            & 5.5217           & 0.5800           & 2.8552           & -0.0743           \\ \hline
+		\textbf{Tz PC}  	& 14.8870           & -3.4530           & 0.5185            & 5.5219           & 0.5800           & 2.8552           & -0.0743           \\ \hline
+	\end{tabular}
+\end{table}
+
+% end of template --------------------------------------------------------------------------------------------------------------------------------------------------------
+% start of template --------------------------------------------------------------------------------------------------------------------------------------------------------
+
+\subsection{Test at robot configuration 3}
+Robot joint angles are  [ 293        137.05        220.52          87.4        217.98           307        103.13];
+
+\begin{table}[h!]
+	\centering
+	\caption{Joint wrench obtained from PC (N/Nm)}
+	\label{wrech_PC_Pose3}
+	\begin{tabular}{|l|r|r|r|r|r|r|r|r|}
+		\hline
+		\textbf{}  & \textbf{Base} & \textbf{Joint1}  & \textbf{Joint2}  & \textbf{Joint3}  & \textbf{Joint4}  & \textbf{Joint5}  & \textbf{Joint6}  & \textbf{Joint7} \\ \hline
+		\textbf{Fx PC}  & 0.0000        & -89.7658        & -54.3901        & -16.3872        & 29.4566        & 29.8256        & -18.0636        & 5.8455 \\ \hline
+		\textbf{Fy PC}  & 108.1749        & 38.1033        & -50.6309        & 46.6132        & -10.5962        & 5.8195        & -14.8827        & 11.5022 \\ \hline
+		\textbf{Fz PC}  & 0.0000        & 0.0000        & 31.5422        & 39.7883        & 33.9106        & 7.1686        & 4.4402        & 10.3230 \\ \hline
+		\textbf{Tx PC}  & -32.3267        & 8.2555        & 7.9955        & 4.5748        & 6.0459        & 0.1017        & 0.5170        & 1.1185 \\ \hline
+		\textbf{Ty PC}  & 0.0000        & 19.4486        & -3.1052        & -3.0284        & -0.7245        & -0.0633        & 0.1789        & -0.4727 \\ \hline
+		\textbf{Tz PC}  & -4.2492        & 4.2486        & 8.8028        & 5.4321        & -5.4782        & -0.3718        & 2.7028        & -0.1067 \\ \hline
+	\end{tabular}
+\end{table}
+
+\begin{table}[h!]
+	\centering
+	\caption{Joint wrench obtained from Robot (N/Nm)}
+	\label{wrech_Robot_Pose3}
+	\begin{tabular}{|l|r|r|r|r|r|r|r|r|}
+		\hline
+		\textbf{} & \textbf{Base} & \textbf{Joint1}  & \textbf{Joint2}  & \textbf{Joint3}  & \textbf{Joint4}  & \textbf{Joint5}  & \textbf{Joint6}  & \textbf{Joint7} \\ \hline
+		\textbf{Fx Robot}  & 0.0000        & -89.7637        & -54.3887        & -16.3871        & 29.4561        & 29.8257        & -18.0637        & 5.8451 \\ \hline
+		\textbf{Fy Robot}  & 108.1750        & 38.1083        & -50.6300        & 46.6138        & -10.5959        & 5.8192        & -14.8826        & 11.5024 \\ \hline
+		\textbf{Fz Robot}  & 0.0000        & 0.0000        & 31.5463        & 39.7875        & 33.9111        & 7.1683        & 4.4401        & 10.3230 \\ \hline
+		\textbf{Tx Robot}  & -32.3264        & 8.2564        & 7.9962        & 4.5749        & 6.0460        & 0.1017        & 0.5170        & 1.1185 \\ \hline
+		\textbf{Ty Robot}  & 0.0000        & 19.4479        & -3.1053        & -3.0284        & -0.7245        & -0.0633        & 0.1788        & -0.4727 \\ \hline
+		\textbf{Tz Robot}  & -4.2499        & 4.2493        & 8.8023        & 5.4322        & -5.4781        & -0.3717        & 2.7029        & -0.1067 \\ \hline
+	\end{tabular}
+\end{table}
+
+\begin{table}[h!]
+	\centering
+	\caption{Joint wrench error between data from PC and Robot (N/Nm)}
+	\label{wrech_Error_Pose3}
+	\begin{tabular}{|l|r|r|r|r|r|r|r|r|}
+		\hline
+		\textbf{}  & \textbf{Base} & \textbf{Joint1}  & \textbf{Joint2}  & \textbf{Joint3}  & \textbf{Joint4}  & \textbf{Joint5}  & \textbf{Joint6}  & \textbf{Joint7} \\ \hline
+		\textbf{Fx Error}  & 0.0000        & -0.0021        & -0.0014        & -0.0001        & 0.0005        & -0.0001        & 0.0001        & 0.0004 \\ \hline
+		\textbf{Fy Error}  & -0.0001        & -0.0050        & -0.0009        & -0.0006        & -0.0003        & 0.0003        & -0.0001        & -0.0002 \\ \hline
+		\textbf{Fz Error}  & 0.0000        & 0.0000        & -0.0041        & 0.0008        & -0.0005        & 0.0003        & 0.0001        & -0.0000 \\ \hline
+		\textbf{Tx Error}  & -0.0003        & -0.0009        & -0.0007        & -0.0001        & -0.0001        & -0.0000        & -0.0000        & -0.0000 \\ \hline
+		\textbf{Ty Error}  & 0.0000        & 0.0007        & 0.0001        & -0.0000        & 0.0000        & 0.0000        & 0.0001        & -0.0000 \\ \hline
+		\textbf{Tz Error}  & 0.0007        & -0.0007        & 0.0005        & -0.0001        & -0.0001        & -0.0001        & -0.0001        & -0.0000 \\ \hline
+	\end{tabular}
+\end{table}
+
+\begin{table}[h!]
+	\centering
+	\caption{Joint torque along axis comparison with sensor data (Nm)}
+	\label{wrech_Sensor_Pose3}
+	\begin{tabular}{|l|r|r|r|r|r|r|r|}
+		\hline
+		\textbf{} & \textbf{Joint1} & \textbf{Joint2} & \textbf{Joint3} & \textbf{Joint4} & \textbf{Joint5} & \textbf{Joint6} & \textbf{Joint7} \\ \hline
+		\textbf{Tz Sensor}  & 3.5107           & 10.2389           & 5.2892            & -5.333           & -1.1707           & 1.8613           & 0.16644           \\ \hline
+		\textbf{Tz Robot}  	& 4.2493           & 8.8023           & 5.4322            & -5.4781           & -0.3717           & 2.7029           & -0.1067           \\ \hline
+		\textbf{Tz PC}  	& 4.2486           & 8.8028           & 5.4321            & -5.4782           & -0.3718           & 2.7028           & -0.1067           \\ \hline
+	\end{tabular}
+\end{table}
+
+% end of template --------------------------------------------------------------------------------------------------------------------------------------------------------
+% start of template --------------------------------------------------------------------------------------------------------------------------------------------------------
+
+\subsection{Test at robot configuration 4}
+Robot joint angles are  [ 10        176.73        147.59         43.32        142.68           275        205.12];
+
+\begin{table}[h!]
+	\centering
+	\caption{Joint wrench obtained from PC (N/Nm)}
+	\label{wrech_PC_Pose4}
+	\begin{tabular}{|l|r|r|r|r|r|r|r|r|}
+		\hline
+		\textbf{}  & \textbf{Base} & \textbf{Joint1}  & \textbf{Joint2}  & \textbf{Joint3}  & \textbf{Joint4}  & \textbf{Joint5}  & \textbf{Joint6}  & \textbf{Joint7} \\ \hline
+		\textbf{Fx PC}  & 0.0000        & 16.9338        & 13.9951        & -24.1999        & 12.4947        & -10.7742        & -5.6655        & -2.7496 \\ \hline
+		\textbf{Fy PC}  & 108.1749        & 96.0365        & 0.7996        & 58.6379        & -12.4110        & 28.0756        & 8.7477        & -15.1215 \\ \hline
+		\textbf{Fz PC}  & 0.0000        & 0.0000        & 79.4996        & -0.6284        & 42.6585        & 8.3963        & 21.4215        & -6.0676 \\ \hline
+		\textbf{Tx PC}  & -37.5746        & 25.9755        & 15.1159        & 2.9538        & 10.4943        & 2.3780        & 3.1230        & -1.3331 \\ \hline
+		\textbf{Ty PC}  & 0.0000        & -4.5802        & -8.8592        & 1.3075        & 2.6242        & 1.8363        & -0.0277        & 0.2224 \\ \hline
+		\textbf{Tz PC}  & -10.3631        & 10.3626        & -2.5719        & 8.2603        & -2.3103        & -3.0890        & 0.8373        & 0.0499 \\ \hline
+	\end{tabular}
+\end{table}
+
+\begin{table}[h!]
+	\centering
+	\caption{Joint wrench obtained from Robot (N/Nm)}
+	\label{wrech_Robot_Pose4}
+	\begin{tabular}{|l|r|r|r|r|r|r|r|r|}
+		\hline
+		\textbf{} & \textbf{Base} & \textbf{Joint1}  & \textbf{Joint2}  & \textbf{Joint3}  & \textbf{Joint4}  & \textbf{Joint5}  & \textbf{Joint6}  & \textbf{Joint7} \\ \hline
+		\textbf{Fx Robot}  & 0.0000        & 16.9338        & 13.9951        & -24.1998        & 12.4944        & -10.7745        & -5.6656        & -2.7491 \\ \hline
+		\textbf{Fy Robot}  & 108.1750        & 96.0365        & 0.7998        & 58.6379        & -12.4113        & 28.0754        & 8.7480        & -15.1215 \\ \hline
+		\textbf{Fz Robot}  & 0.0000        & 0.0000        & 79.4996        & -0.6285        & 42.6585        & 8.3965        & 21.4214        & -6.0678 \\ \hline
+		\textbf{Tx Robot}  & -37.5747        & 25.9755        & 15.1161        & 2.9539        & 10.4943        & 2.3779        & 3.1230        & -1.3331 \\ \hline
+		\textbf{Ty Robot}  & 0.0000        & -4.5802        & -8.8593        & 1.3076        & 2.6242        & 1.8364        & -0.0277        & 0.2223 \\ \hline
+		\textbf{Tz Robot}  & -10.3634        & 10.3628        & -2.5719        & 8.2604        & -2.3102        & -3.0890        & 0.8373        & 0.0499 \\ \hline
+	\end{tabular}
+\end{table}
+
+\begin{table}[h!]
+	\centering
+	\caption{Joint wrench error between data from PC and Robot (N/Nm)}
+	\label{wrech_Error_Pose4}
+	\begin{tabular}{|l|r|r|r|r|r|r|r|r|}
+		\hline
+		\textbf{}  & \textbf{Base} & \textbf{Joint1}  & \textbf{Joint2}  & \textbf{Joint3}  & \textbf{Joint4}  & \textbf{Joint5}  & \textbf{Joint6}  & \textbf{Joint7} \\ \hline
+		\textbf{Fx Error}  & 0.0000        & -0.0000        & -0.0000        & -0.0001        & 0.0003        & 0.0003        & 0.0001        & -0.0005 \\ \hline
+		\textbf{Fy Error}  & -0.0001        & -0.0000        & -0.0002        & -0.0000        & 0.0003        & 0.0002        & -0.0003        & -0.0000 \\ \hline
+		\textbf{Fz Error}  & 0.0000        & 0.0000        & -0.0000        & 0.0001        & -0.0000        & -0.0002        & 0.0001        & 0.0002 \\ \hline
+		\textbf{Tx Error}  & 0.0001        & -0.0000        & -0.0002        & -0.0001        & -0.0000        & 0.0001        & -0.0000        & -0.0000 \\ \hline
+		\textbf{Ty Error}  & 0.0000        & -0.0000        & 0.0001        & -0.0001        & -0.0000        & -0.0001        & 0.0000        & 0.0001 \\ \hline
+		\textbf{Tz Error}  & 0.0003        & -0.0002        & 0.0000        & -0.0001        & -0.0001        & -0.0000        & -0.0000        & 0.0000 \\ \hline
+	\end{tabular}
+\end{table}
+
+\begin{table}[h!]
+	\centering
+	\caption{Joint torque along axis comparison with sensor data (Nm)}
+	\label{wrech_Sensor_Pose4}
+	\begin{tabular}{|l|r|r|r|r|r|r|r|}
+		\hline
+		\textbf{} & \textbf{Joint1} & \textbf{Joint2} & \textbf{Joint3} & \textbf{Joint4} & \textbf{Joint5} & \textbf{Joint6} & \textbf{Joint7} \\ \hline
+		\textbf{Tz Sensor}  & 9.8927           & 0.3421           & 8.0436            & -0.39419           & -3.3573           & -0.19854           & -0.57235           \\ \hline
+		\textbf{Tz Robot}  	& 10.3628           & -2.5719           & 8.2604            & -2.3102           & -3.0890           & 0.8373           & 0.0499           \\ \hline
+		\textbf{Tz PC}  	& 10.3626           & -2.5719           & 8.2603            & -2.3103           & -3.0890           & 0.8373           & 0.0499           \\ \hline
+	\end{tabular}
+\end{table}
+
+% end of template --------------------------------------------------------------------------------------------------------------------------------------------------------
+% start of template --------------------------------------------------------------------------------------------------------------------------------------------------------
+
+\subsection{Test at robot configuration 5}
+Robot joint angles are  [ 85        255.93        141.29        236.09         65.84        228.26         130.5];
+
+\begin{table}[h!]
+	\centering
+	\caption{Joint wrench obtained from PC (N/Nm)}
+	\label{wrech_PC_Pose5}
+	\begin{tabular}{|l|r|r|r|r|r|r|r|r|}
+		\hline
+		\textbf{}  & \textbf{Base} & \textbf{Joint1}  & \textbf{Joint2}  & \textbf{Joint3}  & \textbf{Joint4}  & \textbf{Joint5}  & \textbf{Joint6}  & \textbf{Joint7} \\ \hline
+		\textbf{Fx PC}  & 0.0000        & 97.1469        & 19.5504        & 8.5309        & -33.5485        & 3.0373        & -10.0236        & -4.9469 \\ \hline
+		\textbf{Fy PC}  & 108.1749        & 8.4993        & -78.0062        & 13.9225        & -30.0302        & -23.5128        & -12.0491        & 13.3684 \\ \hline
+		\textbf{Fz PC}  & 0.0000        & 0.0000        & 7.0357        & 61.3011        & 10.1285        & 20.3161        & -17.9401        & 8.3576 \\ \hline
+		\textbf{Tx PC}  & -21.0004        & 0.8543        & 4.6632        & 2.4953        & 3.4746        & -3.8614        & -2.6493        & 1.2333 \\ \hline
+		\textbf{Ty PC}  & 0.0000        & -9.7647        & 1.3271        & 7.9974        & -0.7541        & 1.2320        & -0.0504        & 0.3995 \\ \hline
+		\textbf{Tz PC}  & 1.0877        & -1.0882        & 1.7565        & -2.1636        & 9.2729        & 2.0032        & 1.5141        & 0.0910 \\ \hline
+	\end{tabular}
+\end{table}
+
+\begin{table}[h!]
+	\centering
+	\caption{Joint wrench obtained from Robot (N/Nm)}
+	\label{wrech_Robot_Pose5}
+	\begin{tabular}{|l|r|r|r|r|r|r|r|r|}
+		\hline
+		\textbf{} & \textbf{Base} & \textbf{Joint1}  & \textbf{Joint2}  & \textbf{Joint3}  & \textbf{Joint4}  & \textbf{Joint5}  & \textbf{Joint6}  & \textbf{Joint7} \\ \hline
+		\textbf{Fx Robot}  & 0.0000        & 97.1469        & 19.5510        & 8.5311        & -33.5489        & 3.0371        & -10.0239        & -4.9471 \\ \hline
+		\textbf{Fy Robot}  & 108.1750        & 8.4992        & -78.0061        & 13.9228        & -30.0297        & -23.5131        & -12.0485        & 13.3686 \\ \hline
+		\textbf{Fz Robot}  & 0.0000        & 0.0000        & 7.0357        & 61.3010        & 10.1287        & 20.3157        & -17.9404        & 8.3572 \\ \hline
+		\textbf{Tx Robot}  & -21.0006        & 0.8543        & 4.6633        & 2.4954        & 3.4747        & -3.8613        & -2.6493        & 1.2333 \\ \hline
+		\textbf{Ty Robot}  & 0.0000        & -9.7648        & 1.3272        & 7.9974        & -0.7542        & 1.2321        & -0.0504        & 0.3995 \\ \hline
+		\textbf{Tz Robot}  & 1.0878        & -1.0883        & 1.7564        & -2.1637        & 9.2729        & 2.0032        & 1.5141        & 0.0910 \\ \hline
+	\end{tabular}
+\end{table}
+
+\begin{table}[h!]
+	\centering
+	\caption{Joint wrench error between data from PC and Robot (N/Nm)}
+	\label{wrech_Error_Pose5}
+	\begin{tabular}{|l|r|r|r|r|r|r|r|r|}
+		\hline
+		\textbf{}  & \textbf{Base} & \textbf{Joint1}  & \textbf{Joint2}  & \textbf{Joint3}  & \textbf{Joint4}  & \textbf{Joint5}  & \textbf{Joint6}  & \textbf{Joint7} \\ \hline
+		\textbf{Fx Error}  & 0.0000        & 0.0000        & -0.0006        & -0.0002        & 0.0004        & 0.0002        & 0.0003        & 0.0002 \\ \hline
+		\textbf{Fy Error}  & -0.0001        & 0.0001        & -0.0001        & -0.0003        & -0.0005        & 0.0003        & -0.0006        & -0.0002 \\ \hline
+		\textbf{Fz Error}  & 0.0000        & 0.0000        & -0.0000        & 0.0001        & -0.0002        & 0.0004        & 0.0003        & 0.0004 \\ \hline
+		\textbf{Tx Error}  & 0.0002        & -0.0000        & -0.0001        & -0.0001        & -0.0001        & -0.0001        & -0.0000        & -0.0000 \\ \hline
+		\textbf{Ty Error}  & 0.0000        & 0.0001        & -0.0001        & 0.0000        & 0.0001        & -0.0001        & 0.0000        & -0.0000 \\ \hline
+		\textbf{Tz Error}  & -0.0001        & 0.0001        & 0.0001        & 0.0001        & -0.0000        & -0.0000        & -0.0000        & 0.0000 \\ \hline
+	\end{tabular}
+\end{table}
+
+\begin{table}[h!]
+	\centering
+	\caption{Joint torque along axis comparison with sensor data (Nm)}
+	\label{wrech_Sensor_Pose5}
+	\begin{tabular}{|l|r|r|r|r|r|r|r|}
+		\hline
+		\textbf{} & \textbf{Joint1} & \textbf{Joint2} & \textbf{Joint3} & \textbf{Joint4} & \textbf{Joint5} & \textbf{Joint6} & \textbf{Joint7} \\ \hline
+		\textbf{Tz Sensor}  & 0.021227           & 2.1926           & -1.5405            & 9.573           & 2.6239           & 0.65048           & 0.40946           \\ \hline
+		\textbf{Tz Robot}  	& -1.0883           & 1.7564           & -2.1637            & 9.2729           & 2.0032           & 1.5141           & 0.0910           \\ \hline
+		\textbf{Tz PC}  	& -1.0882           & 1.7565           & -2.1636            & 9.2729           & 2.0032           & 1.5141           & 0.0910           \\ \hline
+	\end{tabular}
+\end{table}
+
+% end of template --------------------------------------------------------------------------------------------------------------------------------------------------------
+% start of template --------------------------------------------------------------------------------------------------------------------------------------------------------
+
+\subsection{Test at robot configuration 6}
+Robot joint angles are  [ 140        205.51         96.12        275.16         313.2        260.62        229.57];
+
+\begin{table}[h!]
+	\centering
+	\caption{Joint wrench obtained from PC (N/Nm)}
+	\label{wrech_PC_Pose6}
+	\begin{tabular}{|l|r|r|r|r|r|r|r|r|}
+		\hline
+		\textbf{}  & \textbf{Base} & \textbf{Joint1}  & \textbf{Joint2}  & \textbf{Joint3}  & \textbf{Joint4}  & \textbf{Joint5}  & \textbf{Joint6}  & \textbf{Joint7} \\ \hline
+		\textbf{Fx PC}  & 0.0000        & 62.6833        & 46.8310        & 52.2432        & -16.1423        & 18.7452        & -16.3613        & 8.4161 \\ \hline
+		\textbf{Fy PC}  & 108.1749        & -74.7031        & -22.3472        & 31.4114        & -36.7034        & -2.6220        & -17.1991        & -7.7387 \\ \hline
+		\textbf{Fz PC}  & 0.0000        & 0.0000        & -61.8397        & 17.5616        & 22.8515        & 24.8307        & -2.0006        & 11.9297 \\ \hline
+		\textbf{Tx PC}  & -40.1542        & -22.1814        & -15.1976        & 3.6196        & 2.9506        & -0.4845        & -0.4897        & -0.4069 \\ \hline
+		\textbf{Ty PC}  & 0.0000        & -18.6124        & -0.9151        & -5.4116        & 0.1957        & 0.3763        & 0.2198        & -0.6805 \\ \hline
+		\textbf{Tz PC}  & -9.7958        & 9.7952        & -11.1784        & -1.0884        & 2.3987        & 0.4055        & 2.1152        & -0.1543 \\ \hline
+	\end{tabular}
+\end{table}
+
+\begin{table}[h!]
+	\centering
+	\caption{Joint wrench obtained from Robot (N/Nm)}
+	\label{wrech_Robot_Pose6}
+	\begin{tabular}{|l|r|r|r|r|r|r|r|r|}
+		\hline
+		\textbf{} & \textbf{Base} & \textbf{Joint1}  & \textbf{Joint2}  & \textbf{Joint3}  & \textbf{Joint4}  & \textbf{Joint5}  & \textbf{Joint6}  & \textbf{Joint7} \\ \hline
+		\textbf{Fx Robot}  & 0.0000        & 62.6833        & 46.8305        & 52.2433        & -16.1421        & 18.7449        & -16.3619        & 8.4165 \\ \hline
+		\textbf{Fy Robot}  & 108.1750        & -74.7031        & -22.3482        & 31.4108        & -36.7037        & -2.6220        & -17.1985        & -7.7388 \\ \hline
+		\textbf{Fz Robot}  & 0.0000        & 0.0000        & -61.8397        & 17.5623        & 22.8511        & 24.8309        & -2.0006        & 11.9293 \\ \hline
+		\textbf{Tx Robot}  & -40.1541        & -22.1813        & -15.1978        & 3.6196        & 2.9505        & -0.4845        & -0.4897        & -0.4069 \\ \hline
+		\textbf{Ty Robot}  & 0.0000        & -18.6123        & -0.9152        & -5.4118        & 0.1957        & 0.3764        & 0.2199        & -0.6805 \\ \hline
+		\textbf{Tz Robot}  & -9.7962        & 9.7957        & -11.1784        & -1.0882        & 2.3985        & 0.4055        & 2.1153        & -0.1543 \\ \hline
+	\end{tabular}
+\end{table}
+
+\begin{table}[h!]
+	\centering
+	\caption{Joint wrench error between data from PC and Robot (N/Nm)}
+	\label{wrech_Error_Pose6}
+	\begin{tabular}{|l|r|r|r|r|r|r|r|r|}
+		\hline
+		\textbf{}  & \textbf{Base} & \textbf{Joint1}  & \textbf{Joint2}  & \textbf{Joint3}  & \textbf{Joint4}  & \textbf{Joint5}  & \textbf{Joint6}  & \textbf{Joint7} \\ \hline
+		\textbf{Fx Error}  & 0.0000        & -0.0000        & 0.0005        & -0.0001        & -0.0002        & 0.0003        & 0.0006        & -0.0004 \\ \hline
+		\textbf{Fy Error}  & -0.0001        & -0.0000        & 0.0010        & 0.0006        & 0.0003        & 0.0000        & -0.0006        & 0.0001 \\ \hline
+		\textbf{Fz Error}  & 0.0000        & 0.0000        & 0.0000        & -0.0007        & 0.0004        & -0.0002        & -0.0000        & 0.0004 \\ \hline
+		\textbf{Tx Error}  & -0.0001        & -0.0001        & 0.0002        & 0.0000        & 0.0001        & -0.0000        & 0.0000        & 0.0000 \\ \hline
+		\textbf{Ty Error}  & 0.0000        & -0.0001        & 0.0001        & 0.0002        & 0.0000        & -0.0001        & -0.0001        & -0.0000 \\ \hline
+		\textbf{Tz Error}  & 0.0004        & -0.0005        & -0.0000        & -0.0002        & 0.0002        & 0.0000        & -0.0001        & 0.0000 \\ \hline
+	\end{tabular}
+\end{table}
+
+\begin{table}[h!]
+	\centering
+	\caption{Joint torque along axis comparison with sensor data (Nm)}
+	\label{wrech_Sensor_Pose6}
+	\begin{tabular}{|l|r|r|r|r|r|r|r|}
+		\hline
+		\textbf{} & \textbf{Joint1} & \textbf{Joint2} & \textbf{Joint3} & \textbf{Joint4} & \textbf{Joint5} & \textbf{Joint6} & \textbf{Joint7} \\ \hline
+		\textbf{Tz Sensor}  & 11.2995           & -12.9665           & 0.0023581            & 0.81721           & 0.33965           & 1.2177           & -0.6378           \\ \hline
+		\textbf{Tz Robot}  	& 9.7957           & -11.1784           & -1.0882            & 2.3985           & 0.4055           & 2.1153           & -0.1543           \\ \hline
+		\textbf{Tz PC}  	& 9.7952           & -11.1784           & -1.0884            & 2.3987           & 0.4055           & 2.1152           & -0.1543           \\ \hline
+	\end{tabular}
+\end{table}
+
+% end of template --------------------------------------------------------------------------------------------------------------------------------------------------------
+% start of template --------------------------------------------------------------------------------------------------------------------------------------------------------
+
+\subsection{Test at robot configuration 7}
+Robot joint angles are  [ 120        240.31         140.2        239.88         66.74        239.24        115.38];
+
+\begin{table}[h!]
+	\centering
+	\caption{Joint wrench obtained from PC (N/Nm)}
+	\label{wrech_PC_Pose7}
+	\begin{tabular}{|l|r|r|r|r|r|r|r|r|}
+		\hline
+		\textbf{}  & \textbf{Base} & \textbf{Joint1}  & \textbf{Joint2}  & \textbf{Joint3}  & \textbf{Joint4}  & \textbf{Joint5}  & \textbf{Joint6}  & \textbf{Joint7} \\ \hline
+		\textbf{Fx PC}  & 0.0000        & 84.4530        & 34.6273        & 41.2102        & -14.9883        & 7.1472        & -16.4419        & 1.0798 \\ \hline
+		\textbf{Fy PC}  & 108.1749        & -48.7590        & -60.7327        & -6.9508        & -43.3553        & -7.9648        & -16.1318        & 12.1105 \\ \hline
+		\textbf{Fz PC}  & 0.0000        & 0.0000        & -40.3630        & 47.7267        & -5.0566        & 29.3308        & -6.0771        & 11.1894 \\ \hline
+		\textbf{Tx PC}  & -29.3426        & -9.0721        & -12.5834        & -2.7018        & -0.3930        & -1.2577        & -0.9995        & 1.1835 \\ \hline
+		\textbf{Ty PC}  & 0.0000        & -15.7133        & -3.3880        & -2.9276        & -0.2412        & 1.8144        & 0.0853        & -0.0876 \\ \hline
+		\textbf{Tz PC}  & -15.8765        & 15.8760        & -5.6975        & 1.9066        & 3.2334        & 0.7992        & 2.4778        & -0.0194 \\ \hline
+	\end{tabular}
+\end{table}
+
+\begin{table}[h!]
+	\centering
+	\caption{Joint wrench obtained from Robot (N/Nm)}
+	\label{wrech_Robot_Pose7}
+	\begin{tabular}{|l|r|r|r|r|r|r|r|r|}
+		\hline
+		\textbf{} & \textbf{Base} & \textbf{Joint1}  & \textbf{Joint2}  & \textbf{Joint3}  & \textbf{Joint4}  & \textbf{Joint5}  & \textbf{Joint6}  & \textbf{Joint7} \\ \hline
+		\textbf{Fx Robot}  & 0.0000        & 84.4530        & 34.6274        & 41.2101        & -14.9889        & 7.1479        & -16.4410        & 1.0797 \\ \hline
+		\textbf{Fy Robot}  & 108.1750        & -48.7590        & -60.7327        & -6.9516        & -43.3550        & -7.9649        & -16.1327        & 12.1100 \\ \hline
+		\textbf{Fz Robot}  & 0.0000        & 0.0000        & -40.3630        & 47.7267        & -5.0573        & 29.3307        & -6.0771        & 11.1900 \\ \hline
+		\textbf{Tx Robot}  & -29.3424        & -9.0720        & -12.5835        & -2.7021        & -0.3933        & -1.2578        & -0.9996        & 1.1835 \\ \hline
+		\textbf{Ty Robot}  & 0.0000        & -15.7131        & -3.3882        & -2.9274        & -0.2412        & 1.8142        & 0.0853        & -0.0876 \\ \hline
+		\textbf{Tz Robot}  & -15.8767        & 15.8761        & -5.6974        & 1.9068        & 3.2335        & 0.7992        & 2.4777        & -0.0194 \\ \hline
+	\end{tabular}
+\end{table}
+
+\begin{table}[h!]
+	\centering
+	\caption{Joint wrench error between data from PC and Robot (N/Nm)}
+	\label{wrech_Error_Pose7}
+	\begin{tabular}{|l|r|r|r|r|r|r|r|r|}
+		\hline
+		\textbf{}  & \textbf{Base} & \textbf{Joint1}  & \textbf{Joint2}  & \textbf{Joint3}  & \textbf{Joint4}  & \textbf{Joint5}  & \textbf{Joint6}  & \textbf{Joint7} \\ \hline
+		\textbf{Fx Error}  & 0.0000        & -0.0000        & -0.0001        & 0.0001        & 0.0006        & -0.0007        & -0.0009        & 0.0001 \\ \hline
+		\textbf{Fy Error}  & -0.0001        & -0.0000        & 0.0000        & 0.0008        & -0.0003        & 0.0001        & 0.0009        & 0.0005 \\ \hline
+		\textbf{Fz Error}  & 0.0000        & 0.0000        & 0.0000        & 0.0000        & 0.0007        & 0.0001        & 0.0000        & -0.0006 \\ \hline
+		\textbf{Tx Error}  & -0.0002        & -0.0001        & 0.0001        & 0.0003        & 0.0003        & 0.0001        & 0.0001        & 0.0000 \\ \hline
+		\textbf{Ty Error}  & 0.0000        & -0.0002        & 0.0002        & -0.0002        & 0.0000        & 0.0002        & -0.0000        & -0.0000 \\ \hline
+		\textbf{Tz Error}  & 0.0002        & -0.0001        & -0.0001        & -0.0002        & -0.0001        & 0.0000        & 0.0001        & 0.0000 \\ \hline
+	\end{tabular}
+\end{table}
+
+\begin{table}[h!]
+	\centering
+	\caption{Joint torque along axis comparison with sensor data (Nm)}
+	\label{wrech_Sensor_Pose7}
+	\begin{tabular}{|l|r|r|r|r|r|r|r|}
+		\hline
+		\textbf{} & \textbf{Joint1} & \textbf{Joint2} & \textbf{Joint3} & \textbf{Joint4} & \textbf{Joint5} & \textbf{Joint6} & \textbf{Joint7} \\ \hline
+		\textbf{Tz Sensor}  & 17.3061           & -6.9872           & 2.9837            & 1.7733           & 0.77568           & 1.6021           & 0.27495           \\ \hline
+		\textbf{Tz Robot}  	& 15.8761           & -5.6974           & 1.9068            & 3.2335           & 0.7992           & 2.4777           & -0.0194           \\ \hline
+		\textbf{Tz PC}  	& 15.8760           & -5.6975           & 1.9066            & 3.2334           & 0.7992           & 2.4778           & -0.0194           \\ \hline
+	\end{tabular}
+\end{table}
+
+% end of template --------------------------------------------------------------------------------------------------------------------------------------------------------
+% start of template --------------------------------------------------------------------------------------------------------------------------------------------------------
+
+\subsection{Test at robot configuration 8}
+Robot joint angles are  [ 285        113.25        129.73        289.67       7.89001        195.54         83.44];
+
+\begin{table}[h!]
+	\centering
+	\caption{Joint wrench obtained from PC (N/Nm)}
+	\label{wrech_PC_Pose8}
+	\begin{tabular}{|l|r|r|r|r|r|r|r|r|}
+		\hline
+		\textbf{}  & \textbf{Base} & \textbf{Joint1}  & \textbf{Joint2}  & \textbf{Joint3}  & \textbf{Joint4}  & \textbf{Joint5}  & \textbf{Joint6}  & \textbf{Joint7} \\ \hline
+		\textbf{Fx PC}  & 0.0000        & -94.1951        & -30.7803        & -28.0880        & -31.6901        & 21.7839        & 20.5809        & 2.1618 \\ \hline
+		\textbf{Fy PC}  & 108.1749        & 25.2395        & -71.6430        & -8.1081        & 33.0280        & 1.0097        & 11.9723        & -14.1209 \\ \hline
+		\textbf{Fz PC}  & 0.0000        & 0.0000        & 20.8934        & 56.3006        & -5.8985        & -22.3442        & 0.7704        & -8.3043 \\ \hline
+		\textbf{Tx PC}  & -40.7575        & 7.6504        & 9.0381        & -4.0882        & -0.7479        & 0.1878        & 0.1377        & -1.2932 \\ \hline
+		\textbf{Ty PC}  & 0.0000        & 28.5518        & 1.1857        & 15.0731        & 1.2244        & -5.0407        & -0.0424        & -0.1744 \\ \hline
+		\textbf{Tz PC}  & -4.1932        & 4.1927        & 17.3807        & 0.1311        & 10.8741        & -0.0447        & -3.0209        & -0.0400 \\ \hline
+	\end{tabular}
+\end{table}
+
+\begin{table}[h!]
+	\centering
+	\caption{Joint wrench obtained from Robot (N/Nm)}
+	\label{wrech_Robot_Pose8}
+	\begin{tabular}{|l|r|r|r|r|r|r|r|r|}
+		\hline
+		\textbf{} & \textbf{Base} & \textbf{Joint1}  & \textbf{Joint2}  & \textbf{Joint3}  & \textbf{Joint4}  & \textbf{Joint5}  & \textbf{Joint6}  & \textbf{Joint7} \\ \hline
+		\textbf{Fx Robot}  & 0.0000        & -94.1951        & -30.7796        & -28.0877        & -31.6909        & 21.7844        & 20.5809        & 2.1611 \\ \hline
+		\textbf{Fy Robot}  & 108.1750        & 25.2395        & -71.6433        & -8.1077        & 33.0272        & 1.0089        & 11.9723        & -14.1210 \\ \hline
+		\textbf{Fz Robot}  & 0.0000        & 0.0000        & 20.8934        & 56.3008        & -5.8983        & -22.3437        & 0.7698        & -8.3043 \\ \hline
+		\textbf{Tx Robot}  & -40.7574        & 7.6504        & 9.0382        & -4.0882        & -0.7479        & 0.1876        & 0.1376        & -1.2932 \\ \hline
+		\textbf{Ty Robot}  & 0.0000        & 28.5518        & 1.1857        & 15.0732        & 1.2244        & -5.0407        & -0.0424        & -0.1744 \\ \hline
+		\textbf{Tz Robot}  & -4.1934        & 4.1928        & 17.3806        & 0.1311        & 10.8744        & -0.0447        & -3.0209        & -0.0400 \\ \hline
+	\end{tabular}
+\end{table}
+
+\begin{table}[h!]
+	\centering
+	\caption{Joint wrench error between data from PC and Robot (N/Nm)}
+	\label{wrech_Error_Pose8}
+	\begin{tabular}{|l|r|r|r|r|r|r|r|r|}
+		\hline
+		\textbf{}  & \textbf{Base} & \textbf{Joint1}  & \textbf{Joint2}  & \textbf{Joint3}  & \textbf{Joint4}  & \textbf{Joint5}  & \textbf{Joint6}  & \textbf{Joint7} \\ \hline
+		\textbf{Fx Error}  & 0.0000        & -0.0000        & -0.0007        & -0.0003        & 0.0008        & -0.0005        & -0.0000        & 0.0007 \\ \hline
+		\textbf{Fy Error}  & -0.0001        & 0.0000        & 0.0003        & -0.0004        & 0.0008        & 0.0008        & -0.0000        & 0.0001 \\ \hline
+		\textbf{Fz Error}  & 0.0000        & 0.0000        & -0.0000        & -0.0002        & -0.0002        & -0.0005        & 0.0006        & -0.0000 \\ \hline
+		\textbf{Tx Error}  & -0.0001        & -0.0000        & -0.0001        & 0.0000        & 0.0000        & 0.0002        & 0.0001        & -0.0000 \\ \hline
+		\textbf{Ty Error}  & 0.0000        & 0.0000        & -0.0000        & -0.0001        & 0.0000        & 0.0000        & -0.0000        & -0.0000 \\ \hline
+		\textbf{Tz Error}  & 0.0002        & -0.0001        & 0.0001        & -0.0000        & -0.0003        & -0.0000        & -0.0000        & -0.0000 \\ \hline
+	\end{tabular}
+\end{table}
+
+\begin{table}[h!]
+	\centering
+	\caption{Joint torque along axis comparison with sensor data (Nm)}
+	\label{wrech_Sensor_Pose8}
+	\begin{tabular}{|l|r|r|r|r|r|r|r|}
+		\hline
+		\textbf{} & \textbf{Joint1} & \textbf{Joint2} & \textbf{Joint3} & \textbf{Joint4} & \textbf{Joint5} & \textbf{Joint6} & \textbf{Joint7} \\ \hline
+		\textbf{Tz Sensor}  & 3.3341           & 18.5119           & 1.1798            & 9.2112           & 0.98877           & -4.0431           & 0.3875           \\ \hline
+		\textbf{Tz Robot}  	& 4.1928           & 17.3806           & 0.1311            & 10.8744           & -0.0447           & -3.0209           & -0.0400           \\ \hline
+		\textbf{Tz PC}  	& 4.1927           & 17.3807           & 0.1311            & 10.8741           & -0.0447           & -3.0209           & -0.0400           \\ \hline
+	\end{tabular}
+\end{table}
+
+% end of template --------------------------------------------------------------------------------------------------------------------------------------------------------
+% start of template --------------------------------------------------------------------------------------------------------------------------------------------------------
+
+\subsection{Test at robot configuration 9}
+Robot joint angles are  [ 285        121.22        234.46        131.94        356.65         77.01        227.27];
+
+\begin{table}[h!]
+	\centering
+	\caption{Joint wrench obtained from PC (N/Nm)}
+	\label{wrech_PC_Pose9}
+	\begin{tabular}{|l|r|r|r|r|r|r|r|r|}
+		\hline
+		\textbf{}  & \textbf{Base} & \textbf{Joint1}  & \textbf{Joint2}  & \textbf{Joint3}  & \textbf{Joint4}  & \textbf{Joint5}  & \textbf{Joint6}  & \textbf{Joint7} \\ \hline
+		\textbf{Fx PC}  & 0.0000        & -94.1951        & -40.4166        & -5.1016        & 25.8768        & -16.4586        & 17.0267        & -0.8567 \\ \hline
+		\textbf{Fy PC}  & 108.1749        & 25.2395        & -66.6832        & 35.3885        & -28.2400        & -18.4101        & -8.9598        & 15.2865 \\ \hline
+		\textbf{Fz PC}  & 0.0000        & 0.0000        & 20.8934        & 52.4029        & 25.7448        & 19.1050        & -14.0468        & 6.2148 \\ \hline
+		\textbf{Tx PC}  & -33.5108        & 5.7749        & 7.3088        & 7.6205        & 5.0807        & -1.2807        & -2.0721        & 1.3491 \\ \hline
+		\textbf{Ty PC}  & 0.0000        & 21.5521        & -1.1772        & -3.2051        & 1.0385        & -0.9321        & -0.0839        & 0.0690 \\ \hline
+		\textbf{Tz PC}  & -3.2177        & 3.2171        & 10.3810        & 2.9064        & -3.9677        & -2.0016        & -2.4582        & 0.0161 \\ \hline
+	\end{tabular}
+\end{table}
+
+\begin{table}[h!]
+	\centering
+	\caption{Joint wrench obtained from Robot (N/Nm)}
+	\label{wrech_Robot_Pose9}
+	\begin{tabular}{|l|r|r|r|r|r|r|r|r|}
+		\hline
+		\textbf{} & \textbf{Base} & \textbf{Joint1}  & \textbf{Joint2}  & \textbf{Joint3}  & \textbf{Joint4}  & \textbf{Joint5}  & \textbf{Joint6}  & \textbf{Joint7} \\ \hline
+		\textbf{Fx Robot}  & 0.0000        & -94.1951        & -40.4176        & -5.1022        & 25.8757        & -16.4574        & 17.0266        & -0.8564 \\ \hline
+		\textbf{Fy Robot}  & 108.1750        & 25.2395        & -66.6826        & 35.3891        & -28.2407        & -18.4108        & -8.9593        & 15.2867 \\ \hline
+		\textbf{Fz Robot}  & 0.0000        & 0.0000        & 20.8934        & 52.4024        & 25.7452        & 19.1054        & -14.0473        & 6.2144 \\ \hline
+		\textbf{Tx Robot}  & -33.5115        & 5.7750        & 7.3087        & 7.6208        & 5.0809        & -1.2808        & -2.0722        & 1.3491 \\ \hline
+		\textbf{Ty Robot}  & 0.0000        & 21.5528        & -1.1771        & -3.2048        & 1.0386        & -0.9322        & -0.0839        & 0.0690 \\ \hline
+		\textbf{Tz Robot}  & -3.2176        & 3.2170        & 10.3816        & 2.9063        & -3.9674        & -2.0016        & -2.4581        & 0.0161 \\ \hline
+	\end{tabular}
+\end{table}
+
+\begin{table}[h!]
+	\centering
+	\caption{Joint wrench error between data from PC and Robot (N/Nm)}
+	\label{wrech_Error_Pose9}
+	\begin{tabular}{|l|r|r|r|r|r|r|r|r|}
+		\hline
+		\textbf{}  & \textbf{Base} & \textbf{Joint1}  & \textbf{Joint2}  & \textbf{Joint3}  & \textbf{Joint4}  & \textbf{Joint5}  & \textbf{Joint6}  & \textbf{Joint7} \\ \hline
+		\textbf{Fx Error}  & 0.0000        & -0.0000        & 0.0010        & 0.0006        & 0.0011        & -0.0012        & 0.0001        & -0.0003 \\ \hline
+		\textbf{Fy Error}  & -0.0001        & 0.0000        & -0.0006        & -0.0006        & 0.0007        & 0.0007        & -0.0005        & -0.0002 \\ \hline
+		\textbf{Fz Error}  & 0.0000        & 0.0000        & -0.0000        & 0.0005        & -0.0004        & -0.0004        & 0.0005        & 0.0004 \\ \hline
+		\textbf{Tx Error}  & 0.0007        & -0.0001        & 0.0001        & -0.0003        & -0.0002        & 0.0001        & 0.0001        & -0.0000 \\ \hline
+		\textbf{Ty Error}  & 0.0000        & -0.0007        & -0.0001        & -0.0003        & -0.0001        & 0.0001        & 0.0000        & -0.0000 \\ \hline
+		\textbf{Tz Error}  & -0.0001        & 0.0001        & -0.0006        & 0.0001        & -0.0003        & 0.0000        & -0.0001        & -0.0000 \\ \hline
+	\end{tabular}
+\end{table}
+
+\begin{table}[h!]
+	\centering
+	\caption{Joint torque along axis comparison with sensor data (Nm)}
+	\label{wrech_Sensor_Pose9}
+	\begin{tabular}{|l|r|r|r|r|r|r|r|}
+		\hline
+		\textbf{} & \textbf{Joint1} & \textbf{Joint2} & \textbf{Joint3} & \textbf{Joint4} & \textbf{Joint5} & \textbf{Joint6} & \textbf{Joint7} \\ \hline
+		\textbf{Tz Sensor}  & 0.64883           & 13.8044           & 2.6118            & -3.6479           & -2.1038           & -2.521           & -0.45804           \\ \hline
+		\textbf{Tz Robot}  	& 3.2170           & 10.3816           & 2.9063            & -3.9674           & -2.0016           & -2.4581           & 0.0161           \\ \hline
+		\textbf{Tz PC}  	& 3.2171           & 10.3810           & 2.9064            & -3.9677           & -2.0016           & -2.4582           & 0.0161           \\ \hline
+	\end{tabular}
+\end{table}
+
+% end of template --------------------------------------------------------------------------------------------------------------------------------------------------------
+% start of template --------------------------------------------------------------------------------------------------------------------------------------------------------
+
+\subsection{Test at robot configuration 10}
+Robot joint angles are  [ 340        141.74         22.27         67.95         16.12         61.73        153.11];
+
+\begin{table}[h!]
+	\centering
+	\caption{Joint wrench obtained from PC (N/Nm)}
+	\label{wrech_PC_Pose10}
+	\begin{tabular}{|l|r|r|r|r|r|r|r|r|}
+		\hline
+		\textbf{}  & \textbf{Base} & \textbf{Joint1}  & \textbf{Joint2}  & \textbf{Joint3}  & \textbf{Joint4}  & \textbf{Joint5}  & \textbf{Joint6}  & \textbf{Joint7} \\ \hline
+		\textbf{Fx PC}  & 0.0000        & -33.3531        & -21.6796        & -6.8255        & 10.9234        & 1.3213        & -0.0534        & 7.4982 \\ \hline
+		\textbf{Fy PC}  & 108.1749        & 91.6369        & -17.0969        & -61.6225        & -0.9329        & 31.1877        & 1.1159        & -14.7042 \\ \hline
+		\textbf{Fz PC}  & 0.0000        & 0.0000        & 75.8576        & 13.4356        & -44.8298        & 0.6311        & 23.7961        & -0.7740 \\ \hline
+		\textbf{Tx PC}  & -45.9037        & 32.6122        & 18.5977        & -9.1616        & -9.8036        & 1.4349        & 3.3356        & -1.2024 \\ \hline
+		\textbf{Ty PC}  & 0.0000        & 11.8699        & 11.5327        & -1.2975        & -3.4075        & -0.1215        & 0.1374        & -0.6059 \\ \hline
+		\textbf{Tz PC}  & -1.1715        & 1.1710        & 7.9143        & -10.6054        & -2.3179        & 3.0004        & 0.0010        & -0.1377 \\ \hline
+	\end{tabular}
+\end{table}
+
+\begin{table}[h!]
+	\centering
+	\caption{Joint wrench obtained from Robot (N/Nm)}
+	\label{wrech_Robot_Pose10}
+	\begin{tabular}{|l|r|r|r|r|r|r|r|r|}
+		\hline
+		\textbf{} & \textbf{Base} & \textbf{Joint1}  & \textbf{Joint2}  & \textbf{Joint3}  & \textbf{Joint4}  & \textbf{Joint5}  & \textbf{Joint6}  & \textbf{Joint7} \\ \hline
+		\textbf{Fx Robot}  & 0.0000        & -33.3531        & -21.6795        & -6.8250        & 10.9233        & 1.3217        & -0.0536        & 7.4981 \\ \hline
+		\textbf{Fy Robot}  & 108.1750        & 91.6369        & -17.0969        & -61.6225        & -0.9326        & 31.1877        & 1.1162        & -14.7042 \\ \hline
+		\textbf{Fz Robot}  & 0.0000        & 0.0000        & 75.8576        & 13.4356        & -44.8298        & 0.6309        & 23.7961        & -0.7742 \\ \hline
+		\textbf{Tx Robot}  & -45.9037        & 32.6123        & 18.5977        & -9.1616        & -9.8037        & 1.4350        & 3.3356        & -1.2024 \\ \hline
+		\textbf{Ty Robot}  & 0.0000        & 11.8699        & 11.5328        & -1.2976        & -3.4076        & -0.1215        & 0.1374        & -0.6059 \\ \hline
+		\textbf{Tz Robot}  & -1.1716        & 1.1710        & 7.9144        & -10.6054        & -2.3179        & 3.0005        & 0.0011        & -0.1377 \\ \hline
+	\end{tabular}
+\end{table}
+
+\begin{table}[h!]
+	\centering
+	\caption{Joint wrench error between data from PC and Robot (N/Nm)}
+	\label{wrech_Error_Pose10}
+	\begin{tabular}{|l|r|r|r|r|r|r|r|r|}
+		\hline
+		\textbf{}  & \textbf{Base} & \textbf{Joint1}  & \textbf{Joint2}  & \textbf{Joint3}  & \textbf{Joint4}  & \textbf{Joint5}  & \textbf{Joint6}  & \textbf{Joint7} \\ \hline
+		\textbf{Fx Error}  & 0.0000        & 0.0000        & -0.0001        & -0.0005        & 0.0001        & -0.0004        & 0.0002        & 0.0001 \\ \hline
+		\textbf{Fy Error}  & -0.0001        & 0.0000        & -0.0000        & -0.0000        & -0.0003        & 0.0000        & -0.0003        & 0.0000 \\ \hline
+		\textbf{Fz Error}  & 0.0000        & 0.0000        & -0.0000        & 0.0000        & -0.0000        & 0.0002        & 0.0000        & 0.0002 \\ \hline
+		\textbf{Tx Error}  & -0.0000        & -0.0001        & -0.0000        & 0.0000        & 0.0001        & -0.0001        & -0.0000        & 0.0000 \\ \hline
+		\textbf{Ty Error}  & 0.0000        & 0.0000        & -0.0001        & 0.0001        & 0.0001        & 0.0000        & 0.0000        & 0.0000 \\ \hline
+		\textbf{Tz Error}  & 0.0001        & -0.0000        & -0.0001        & 0.0000        & 0.0000        & -0.0001        & -0.0001        & 0.0000 \\ \hline
+	\end{tabular}
+\end{table}
+
+\begin{table}[h!]
+	\centering
+	\caption{Joint torque along axis comparison with sensor data (Nm)}
+	\label{wrech_Sensor_Pose10}
+	\begin{tabular}{|l|r|r|r|r|r|r|r|}
+		\hline
+		\textbf{} & \textbf{Joint1} & \textbf{Joint2} & \textbf{Joint3} & \textbf{Joint4} & \textbf{Joint5} & \textbf{Joint6} & \textbf{Joint7} \\ \hline
+		\textbf{Tz Sensor}  & -1.4312           & 10.9292           & -11.2448            & -0.8095           & 3.1447           & 0.87527           & 0.20194           \\ \hline
+		\textbf{Tz Robot}  	& 1.1710           & 7.9144           & -10.6054            & -2.3179           & 3.0005           & 0.0011           & -0.1377           \\ \hline
+		\textbf{Tz PC}  	& 1.1710           & 7.9143           & -10.6054            & -2.3179           & 3.0004           & 0.0010           & -0.1377           \\ \hline
+	\end{tabular}
+\end{table}
+
+% end of template --------------------------------------------------------------------------------------------------------------------------------------------------------
+% start of template --------------------------------------------------------------------------------------------------------------------------------------------------------
+
+\subsection{Test at robot configuration 11}
+Robot joint angles are  [ 180  180  180  180  180  180  180];
+
+\begin{table}[h!]
+	\centering
+	\caption{Joint wrench obtained from PC (N/Nm)}
+	\label{wrech_PC_Pose11}
+	\begin{tabular}{|l|r|r|r|r|r|r|r|r|}
+		\hline
+		\textbf{}  & \textbf{Base} & \textbf{Joint1}  & \textbf{Joint2}  & \textbf{Joint3}  & \textbf{Joint4}  & \textbf{Joint5}  & \textbf{Joint6}  & \textbf{Joint7} \\ \hline
+		\textbf{Fx PC}  & 0.0000        & 0.0000        & 0.0000        & 0.0000        & 0.0000        & 0.0000        & 0.0000        & 0.0000 \\ \hline
+		\textbf{Fy PC}  & 108.1749        & -97.5180        & 0.0000        & -63.4384        & 0.0000        & -31.2221        & 0.0000        & 16.5238 \\ \hline
+		\textbf{Fz PC}  & 0.0000        & 0.0000        & -80.7260        & 0.0000        & -46.1509        & 0.0000        & -23.8223        & 0.0000 \\ \hline
+		\textbf{Tx PC}  & -59.1388        & -47.9403        & -36.3751        & -24.3045        & -14.8206        & -6.2177        & -3.3222        & 1.3353 \\ \hline
+		\textbf{Ty PC}  & 0.0000        & 0.0000        & 0.0006        & 0.0000        & 0.0002        & 0.0000        & 0.0001        & 0.0000 \\ \hline
+		\textbf{Tz PC}  & 0.0005        & -0.0011        & 0.0000        & -0.0004        & 0.0000        & -0.0007        & 0.0000        & 0.0005 \\ \hline
+	\end{tabular}
+\end{table}
+
+\begin{table}[h!]
+	\centering
+	\caption{Joint wrench obtained from Robot (N/Nm)}
+	\label{wrech_Robot_Pose11}
+	\begin{tabular}{|l|r|r|r|r|r|r|r|r|}
+		\hline
+		\textbf{} & \textbf{Base} & \textbf{Joint1}  & \textbf{Joint2}  & \textbf{Joint3}  & \textbf{Joint4}  & \textbf{Joint5}  & \textbf{Joint6}  & \textbf{Joint7} \\ \hline
+		\textbf{Fx Robot}  & 0.0000        & 0.0000        & 0.0000        & 0.0000        & 0.0000        & 0.0000        & 0.0000        & -0.0000 \\ \hline
+		\textbf{Fy Robot}  & 108.1750        & -97.5180        & 0.0000        & -63.4384        & 0.0000        & -31.2221        & 0.0000        & 16.5238 \\ \hline
+		\textbf{Fz Robot}  & 0.0000        & 0.0000        & -80.7260        & 0.0000        & -46.1509        & 0.0000        & -23.8223        & 0.0000 \\ \hline
+		\textbf{Tx Robot}  & -59.1388        & -47.9403        & -36.3751        & -24.3045        & -14.8206        & -6.2177        & -3.3221        & 1.3353 \\ \hline
+		\textbf{Ty Robot}  & 0.0000        & 0.0000        & 0.0006        & 0.0000        & 0.0002        & 0.0000        & 0.0001        & 0.0000 \\ \hline
+		\textbf{Tz Robot}  & 0.0005        & -0.0011        & 0.0000        & -0.0004        & 0.0000        & -0.0007        & -0.0000        & 0.0005 \\ \hline
+	\end{tabular}
+\end{table}
+
+\begin{table}[h!]
+	\centering
+	\caption{Joint wrench error between data from PC and Robot (N/Nm)}
+	\label{wrech_Error_Pose11}
+	\begin{tabular}{|l|r|r|r|r|r|r|r|r|}
+		\hline
+		\textbf{}  & \textbf{Base} & \textbf{Joint1}  & \textbf{Joint2}  & \textbf{Joint3}  & \textbf{Joint4}  & \textbf{Joint5}  & \textbf{Joint6}  & \textbf{Joint7} \\ \hline
+		\textbf{Fx Error}  & 0.0000        & 0.0000        & 0.0000        & 0.0000        & 0.0000        & 0.0000        & -0.0000        & 0.0000 \\ \hline
+		\textbf{Fy Error}  & -0.0001        & -0.0000        & 0.0000        & -0.0000        & 0.0000        & -0.0000        & -0.0000        & -0.0000 \\ \hline
+		\textbf{Fz Error}  & 0.0000        & 0.0000        & 0.0000        & 0.0000        & 0.0000        & 0.0000        & -0.0000        & 0.0000 \\ \hline
+		\textbf{Tx Error}  & 0.0000        & -0.0000        & 0.0000        & -0.0000        & -0.0000        & 0.0000        & -0.0001        & 0.0000 \\ \hline
+		\textbf{Ty Error}  & 0.0000        & 0.0000        & 0.0000        & 0.0000        & -0.0000        & 0.0000        & 0.0000        & -0.0000 \\ \hline
+		\textbf{Tz Error}  & -0.0000        & -0.0000        & 0.0000        & 0.0000        & 0.0000        & -0.0000        & 0.0000        & 0.0000 \\ \hline
+	\end{tabular}
+\end{table}
+
+\begin{table}[h!]
+	\centering
+	\caption{Joint torque along axis comparison with sensor data (Nm)}
+	\label{wrech_Sensor_Pose11}
+	\begin{tabular}{|l|r|r|r|r|r|r|r|}
+		\hline
+		\textbf{} & \textbf{Joint1} & \textbf{Joint2} & \textbf{Joint3} & \textbf{Joint4} & \textbf{Joint5} & \textbf{Joint6} & \textbf{Joint7} \\ \hline
+		\textbf{Tz Sensor}  & -0.0084548           & 0.004673           & 0.020459            & 0.024678           & 0.012828           & 0.012407           & -0.53406           \\ \hline
+		\textbf{Tz Robot}  	& -0.0011           & 0.0000           & -0.0004            & 0.0000           & -0.0007           & -0.0000           & 0.0005           \\ \hline
+		\textbf{Tz PC}  	& -0.0011           & 0.0000           & -0.0004            & 0.0000           & -0.0007           & 0.0000           & 0.0005           \\ \hline
+	\end{tabular}
+\end{table}
+
+% end of template --------------------------------------------------------------------------------------------------------------------------------------------------------
+% start of template --------------------------------------------------------------------------------------------------------------------------------------------------------
+
+\subsection{Test at robot configuration 12}
+Robot joint angles are  [ 270  180  180  180  180  180  180];
+
+\begin{table}[h!]
+	\centering
+	\caption{Joint wrench obtained from PC (N/Nm)}
+	\label{wrech_PC_Pose12}
+	\begin{tabular}{|l|r|r|r|r|r|r|r|r|}
+		\hline
+		\textbf{}  & \textbf{Base} & \textbf{Joint1}  & \textbf{Joint2}  & \textbf{Joint3}  & \textbf{Joint4}  & \textbf{Joint5}  & \textbf{Joint6}  & \textbf{Joint7} \\ \hline
+		\textbf{Fx PC}  & 0.0000        & -97.5180        & -80.7260        & -63.4384        & -46.1509        & -31.2221        & -23.8223        & 16.5238 \\ \hline
+		\textbf{Fy PC}  & 108.1749        & 0.0000        & 0.0000        & 0.0000        & 0.0000        & 0.0000        & 0.0000        & 0.0000 \\ \hline
+		\textbf{Fz PC}  & 0.0000        & 0.0000        & 0.0000        & 0.0000        & 0.0000        & 0.0000        & 0.0000        & 0.0000 \\ \hline
+		\textbf{Tx PC}  & -59.1388        & 0.0000        & 0.0000        & 0.0000        & 0.0000        & 0.0000        & 0.0000        & 0.0000 \\ \hline
+		\textbf{Ty PC}  & 0.0000        & 47.9403        & 7.7253        & 24.3045        & 2.0463        & 6.2177        & 0.3979        & -1.3353 \\ \hline
+		\textbf{Tz PC}  & 11.4968        & -11.4973        & 36.3751        & -4.2715        & 14.8206        & -0.3282        & 3.3222        & -0.3026 \\ \hline
+	\end{tabular}
+\end{table}
+
+\begin{table}[h!]
+	\centering
+	\caption{Joint wrench obtained from Robot (N/Nm)}
+	\label{wrech_Robot_Pose12}
+	\begin{tabular}{|l|r|r|r|r|r|r|r|r|}
+		\hline
+		\textbf{} & \textbf{Base} & \textbf{Joint1}  & \textbf{Joint2}  & \textbf{Joint3}  & \textbf{Joint4}  & \textbf{Joint5}  & \textbf{Joint6}  & \textbf{Joint7} \\ \hline
+		\textbf{Fx Robot}  & 0.0000        & -97.5180        & -80.7260        & -63.4384        & -46.1509        & -31.2221        & -23.8223        & 16.5238 \\ \hline
+		\textbf{Fy Robot}  & 108.1750        & -0.0000        & -0.0000        & -0.0000        & -0.0000        & -0.0000        & -0.0000        & 0.0000 \\ \hline
+		\textbf{Fz Robot}  & 0.0000        & 0.0000        & -0.0000        & 0.0000        & -0.0000        & 0.0000        & -0.0000        & 0.0000 \\ \hline
+		\textbf{Tx Robot}  & -59.1388        & -0.0000        & -0.0000        & -0.0000        & -0.0000        & -0.0000        & -0.0000        & 0.0000 \\ \hline
+		\textbf{Ty Robot}  & 0.0000        & 47.9403        & 7.7253        & 24.3045        & 2.0463        & 6.2177        & 0.3979        & -1.3353 \\ \hline
+		\textbf{Tz Robot}  & 11.4968        & -11.4973        & 36.3751        & -4.2715        & 14.8206        & -0.3282        & 3.3221        & -0.3025 \\ \hline
+	\end{tabular}
+\end{table}
+
+\begin{table}[h!]
+	\centering
+	\caption{Joint wrench error between data from PC and Robot (N/Nm)}
+	\label{wrech_Error_Pose12}
+	\begin{tabular}{|l|r|r|r|r|r|r|r|r|}
+		\hline
+		\textbf{}  & \textbf{Base} & \textbf{Joint1}  & \textbf{Joint2}  & \textbf{Joint3}  & \textbf{Joint4}  & \textbf{Joint5}  & \textbf{Joint6}  & \textbf{Joint7} \\ \hline
+		\textbf{Fx Error}  & 0.0000        & -0.0000        & 0.0000        & -0.0000        & 0.0000        & 0.0000        & -0.0000        & -0.0000 \\ \hline
+		\textbf{Fy Error}  & -0.0001        & 0.0000        & 0.0000        & 0.0000        & 0.0000        & 0.0000        & 0.0000        & -0.0000 \\ \hline
+		\textbf{Fz Error}  & 0.0000        & 0.0000        & 0.0000        & 0.0000        & 0.0000        & 0.0000        & 0.0000        & 0.0000 \\ \hline
+		\textbf{Tx Error}  & 0.0000        & 0.0000        & 0.0000        & 0.0000        & 0.0000        & 0.0000        & 0.0000        & -0.0000 \\ \hline
+		\textbf{Ty Error}  & 0.0000        & 0.0000        & 0.0000        & -0.0000        & 0.0000        & -0.0000        & 0.0000        & -0.0000 \\ \hline
+		\textbf{Tz Error}  & 0.0000        & -0.0000        & -0.0000        & 0.0000        & 0.0000        & -0.0000        & 0.0001        & -0.0001 \\ \hline
+	\end{tabular}
+\end{table}
+
+\begin{table}[h!]
+	\centering
+	\caption{Joint torque along axis comparison with sensor data (Nm)}
+	\label{wrech_Sensor_Pose12}
+	\begin{tabular}{|l|r|r|r|r|r|r|r|}
+		\hline
+		\textbf{} & \textbf{Joint1} & \textbf{Joint2} & \textbf{Joint3} & \textbf{Joint4} & \textbf{Joint5} & \textbf{Joint6} & \textbf{Joint7} \\ \hline
+		\textbf{Tz Sensor}  & -14.223           & 37.1155           & -4.5126            & 15.042           & -0.40186           & 3.4402           & -0.78022           \\ \hline
+		\textbf{Tz Robot}  	& -11.4973           & 36.3751           & -4.2715            & 14.8206           & -0.3282           & 3.3221           & -0.3025           \\ \hline
+		\textbf{Tz PC}  	& -11.4973           & 36.3751           & -4.2715            & 14.8206           & -0.3282           & 3.3222           & -0.3026           \\ \hline
+	\end{tabular}
+\end{table}
+
+% end of template --------------------------------------------------------------------------------------------------------------------------------------------------------
+% start of template --------------------------------------------------------------------------------------------------------------------------------------------------------
+
+\subsection{Test at robot configuration 13}
+Robot joint angles are  [ 180  180  180  180  180   90  180];
+
+\begin{table}[h!]
+	\centering
+	\caption{Joint wrench obtained from PC (N/Nm)}
+	\label{wrech_PC_Pose13}
+	\begin{tabular}{|l|r|r|r|r|r|r|r|r|}
+		\hline
+		\textbf{}  & \textbf{Base} & \textbf{Joint1}  & \textbf{Joint2}  & \textbf{Joint3}  & \textbf{Joint4}  & \textbf{Joint5}  & \textbf{Joint6}  & \textbf{Joint7} \\ \hline
+		\textbf{Fx PC}  & 0.0000        & 0.0000        & 0.0000        & 0.0000        & 0.0000        & 0.0000        & 0.0000        & 0.0000 \\ \hline
+		\textbf{Fy PC}  & 108.1749        & -97.5180        & 0.0000        & -63.4384        & 0.0000        & -31.2221        & 0.0000        & 16.5238 \\ \hline
+		\textbf{Fz PC}  & 0.0000        & 0.0000        & -80.7260        & 0.0000        & -46.1509        & 0.0000        & -23.8223        & 0.0000 \\ \hline
+		\textbf{Tx PC}  & -55.8165        & -44.6181        & -33.0529        & -20.9822        & -11.4984        & -2.8955        & -3.3222        & 1.3353 \\ \hline
+		\textbf{Ty PC}  & 0.0000        & 0.0000        & 3.3226        & 0.0000        & 3.3223        & 0.0000        & 0.0001        & 0.0000 \\ \hline
+		\textbf{Tz PC}  & 3.3226        & -3.3231        & 0.0000        & -3.3225        & 0.0000        & -3.3227        & 0.0000        & 0.0005 \\ \hline
+	\end{tabular}
+\end{table}
+
+\begin{table}[h!]
+	\centering
+	\caption{Joint wrench obtained from Robot (N/Nm)}
+	\label{wrech_Robot_Pose13}
+	\begin{tabular}{|l|r|r|r|r|r|r|r|r|}
+		\hline
+		\textbf{} & \textbf{Base} & \textbf{Joint1}  & \textbf{Joint2}  & \textbf{Joint3}  & \textbf{Joint4}  & \textbf{Joint5}  & \textbf{Joint6}  & \textbf{Joint7} \\ \hline
+		\textbf{Fx Robot}  & 0.0000        & 0.0000        & 0.0000        & 0.0000        & 0.0000        & 0.0000        & -0.0000        & 0.0000 \\ \hline
+		\textbf{Fy Robot}  & 108.1750        & -97.5180        & 0.0000        & -63.4384        & 0.0000        & -31.2221        & 0.0000        & 16.5238 \\ \hline
+		\textbf{Fz Robot}  & 0.0000        & 0.0000        & -80.7260        & 0.0000        & -46.1509        & 0.0000        & -23.8223        & 0.0000 \\ \hline
+		\textbf{Tx Robot}  & -55.8165        & -44.6181        & -33.0529        & -20.9822        & -11.4984        & -2.8955        & -3.3221        & 1.3353 \\ \hline
+		\textbf{Ty Robot}  & 0.0000        & 0.0000        & 3.3226        & 0.0000        & 3.3223        & 0.0000        & 0.0001        & 0.0000 \\ \hline
+		\textbf{Tz Robot}  & 3.3226        & -3.3232        & 0.0000        & -3.3225        & 0.0000        & -3.3228        & 0.0000        & 0.0005 \\ \hline
+	\end{tabular}
+\end{table}
+
+\begin{table}[h!]
+	\centering
+	\caption{Joint wrench error between data from PC and Robot (N/Nm)}
+	\label{wrech_Error_Pose13}
+	\begin{tabular}{|l|r|r|r|r|r|r|r|r|}
+		\hline
+		\textbf{}  & \textbf{Base} & \textbf{Joint1}  & \textbf{Joint2}  & \textbf{Joint3}  & \textbf{Joint4}  & \textbf{Joint5}  & \textbf{Joint6}  & \textbf{Joint7} \\ \hline
+		\textbf{Fx Error}  & 0.0000        & 0.0000        & 0.0000        & 0.0000        & 0.0000        & 0.0000        & 0.0000        & 0.0000 \\ \hline
+		\textbf{Fy Error}  & -0.0001        & -0.0000        & 0.0000        & -0.0000        & 0.0000        & 0.0000        & -0.0000        & -0.0000 \\ \hline
+		\textbf{Fz Error}  & 0.0000        & 0.0000        & 0.0000        & 0.0000        & 0.0000        & 0.0000        & -0.0000        & 0.0000 \\ \hline
+		\textbf{Tx Error}  & 0.0000        & -0.0000        & -0.0000        & 0.0000        & 0.0000        & -0.0000        & -0.0001        & 0.0000 \\ \hline
+		\textbf{Ty Error}  & 0.0000        & 0.0000        & -0.0000        & 0.0000        & -0.0000        & 0.0000        & 0.0000        & 0.0000 \\ \hline
+		\textbf{Tz Error}  & -0.0000        & 0.0001        & 0.0000        & -0.0000        & 0.0000        & 0.0001        & -0.0000        & 0.0000 \\ \hline
+	\end{tabular}
+\end{table}
+
+\begin{table}[h!]
+	\centering
+	\caption{Joint torque along axis comparison with sensor data (Nm)}
+	\label{wrech_Sensor_Pose13}
+	\begin{tabular}{|l|r|r|r|r|r|r|r|}
+		\hline
+		\textbf{} & \textbf{Joint1} & \textbf{Joint2} & \textbf{Joint3} & \textbf{Joint4} & \textbf{Joint5} & \textbf{Joint6} & \textbf{Joint7} \\ \hline
+		\textbf{Tz Sensor}  & -3.4566           & 0.023453           & -3.3845            & 0.023353           & -3.4193           & 1.182           & -0.52291           \\ \hline
+		\textbf{Tz Robot}  	& -3.3232           & 0.0000           & -3.3225            & 0.0000           & -3.3228           & 0.0000           & 0.0005           \\ \hline
+		\textbf{Tz PC}  	& -3.3231           & 0.0000           & -3.3225            & 0.0000           & -3.3227           & 0.0000           & 0.0005           \\ \hline
+	\end{tabular}
+\end{table}
+
+% end of template --------------------------------------------------------------------------------------------------------------------------------------------------------
+% start of template --------------------------------------------------------------------------------------------------------------------------------------------------------
+
+\subsection{Test at robot configuration 14}
+Robot joint angles are  [ 180  180  180   90  180  180  180];
+
+\begin{table}[h!]
+	\centering
+	\caption{Joint wrench obtained from PC (N/Nm)}
+	\label{wrech_PC_Pose14}
+	\begin{tabular}{|l|r|r|r|r|r|r|r|r|}
+		\hline
+		\textbf{}  & \textbf{Base} & \textbf{Joint1}  & \textbf{Joint2}  & \textbf{Joint3}  & \textbf{Joint4}  & \textbf{Joint5}  & \textbf{Joint6}  & \textbf{Joint7} \\ \hline
+		\textbf{Fx PC}  & 0.0000        & 0.0000        & 0.0000        & 0.0000        & 0.0000        & 0.0000        & 0.0000        & 0.0000 \\ \hline
+		\textbf{Fy PC}  & 108.1749        & -97.5180        & 0.0000        & -63.4384        & 0.0000        & -31.2221        & 0.0000        & 16.5238 \\ \hline
+		\textbf{Fz PC}  & 0.0000        & 0.0000        & -80.7260        & 0.0000        & -46.1509        & 0.0000        & -23.8223        & 0.0000 \\ \hline
+		\textbf{Tx PC}  & -44.3179        & -33.1195        & -21.5543        & -9.4837        & -14.8206        & -6.2177        & -3.3222        & 1.3353 \\ \hline
+		\textbf{Ty PC}  & 0.0000        & 0.0000        & 14.8209        & 0.0000        & 0.0002        & 0.0000        & 0.0001        & 0.0000 \\ \hline
+		\textbf{Tz PC}  & 14.8209        & -14.8214        & 0.0000        & -14.8208        & 0.0000        & -0.0007        & 0.0000        & 0.0005 \\ \hline
+	\end{tabular}
+\end{table}
+
+\begin{table}[h!]
+	\centering
+	\caption{Joint wrench obtained from Robot (N/Nm)}
+	\label{wrech_Robot_Pose14}
+	\begin{tabular}{|l|r|r|r|r|r|r|r|r|}
+		\hline
+		\textbf{} & \textbf{Base} & \textbf{Joint1}  & \textbf{Joint2}  & \textbf{Joint3}  & \textbf{Joint4}  & \textbf{Joint5}  & \textbf{Joint6}  & \textbf{Joint7} \\ \hline
+		\textbf{Fx Robot}  & 0.0000        & 0.0000        & 0.0000        & 0.0000        & -0.0000        & 0.0000        & 0.0000        & 0.0000 \\ \hline
+		\textbf{Fy Robot}  & 108.1750        & -97.5180        & 0.0000        & -63.4384        & 0.0000        & -31.2221        & 0.0000        & 16.5238 \\ \hline
+		\textbf{Fz Robot}  & 0.0000        & 0.0000        & -80.7260        & 0.0000        & -46.1509        & 0.0000        & -23.8223        & 0.0000 \\ \hline
+		\textbf{Tx Robot}  & -44.3179        & -33.1195        & -21.5543        & -9.4837        & -14.8206        & -6.2177        & -3.3221        & 1.3353 \\ \hline
+		\textbf{Ty Robot}  & 0.0000        & 0.0000        & 14.8209        & 0.0000        & 0.0002        & 0.0000        & 0.0001        & 0.0000 \\ \hline
+		\textbf{Tz Robot}  & 14.8209        & -14.8214        & 0.0000        & -14.8208        & 0.0000        & -0.0007        & -0.0000        & 0.0005 \\ \hline
+	\end{tabular}
+\end{table}
+
+\begin{table}[h!]
+	\centering
+	\caption{Joint wrench error between data from PC and Robot (N/Nm)}
+	\label{wrech_Error_Pose14}
+	\begin{tabular}{|l|r|r|r|r|r|r|r|r|}
+		\hline
+		\textbf{}  & \textbf{Base} & \textbf{Joint1}  & \textbf{Joint2}  & \textbf{Joint3}  & \textbf{Joint4}  & \textbf{Joint5}  & \textbf{Joint6}  & \textbf{Joint7} \\ \hline
+		\textbf{Fx Error}  & 0.0000        & 0.0000        & 0.0000        & 0.0000        & 0.0000        & 0.0000        & -0.0000        & 0.0000 \\ \hline
+		\textbf{Fy Error}  & -0.0001        & -0.0000        & 0.0000        & -0.0000        & -0.0000        & 0.0000        & -0.0000        & -0.0000 \\ \hline
+		\textbf{Fz Error}  & 0.0000        & 0.0000        & 0.0000        & 0.0000        & 0.0000        & 0.0000        & -0.0000        & 0.0000 \\ \hline
+		\textbf{Tx Error}  & -0.0000        & 0.0000        & -0.0000        & -0.0000        & -0.0000        & 0.0000        & -0.0001        & 0.0000 \\ \hline
+		\textbf{Ty Error}  & 0.0000        & 0.0000        & -0.0000        & 0.0000        & -0.0000        & 0.0000        & 0.0000        & 0.0000 \\ \hline
+		\textbf{Tz Error}  & -0.0000        & 0.0000        & 0.0000        & 0.0000        & -0.0000        & -0.0000        & 0.0000        & 0.0000 \\ \hline
+	\end{tabular}
+\end{table}
+
+\begin{table}[h!]
+	\centering
+	\caption{Joint torque along axis comparison with sensor data (Nm)}
+	\label{wrech_Sensor_Pose14}
+	\begin{tabular}{|l|r|r|r|r|r|r|r|}
+		\hline
+		\textbf{} & \textbf{Joint1} & \textbf{Joint2} & \textbf{Joint3} & \textbf{Joint4} & \textbf{Joint5} & \textbf{Joint6} & \textbf{Joint7} \\ \hline
+		\textbf{Tz Sensor}  & -15.3095           & -0.0042463           & -15.2085            & 1.7405           & 0.00066198           & 0.12946           & -0.52346           \\ \hline
+		\textbf{Tz Robot}  	& -14.8214           & 0.0000           & -14.8208            & 0.0000           & -0.0007           & -0.0000           & 0.0005           \\ \hline
+		\textbf{Tz PC}  	& -14.8214           & 0.0000           & -14.8208            & 0.0000           & -0.0007           & 0.0000           & 0.0005           \\ \hline
+	\end{tabular}
+\end{table}
+
+% end of template --------------------------------------------------------------------------------------------------------------------------------------------------------
+% start of template --------------------------------------------------------------------------------------------------------------------------------------------------------
+
+\subsection{Test at robot configuration 15}
+Robot joint angles are  [ 180   90  180  180  180  180  180];
+
+\begin{table}[h!]
+	\centering
+	\caption{Joint wrench obtained from PC (N/Nm)}
+	\label{wrech_PC_Pose15}
+	\begin{tabular}{|l|r|r|r|r|r|r|r|r|}
+		\hline
+		\textbf{}  & \textbf{Base} & \textbf{Joint1}  & \textbf{Joint2}  & \textbf{Joint3}  & \textbf{Joint4}  & \textbf{Joint5}  & \textbf{Joint6}  & \textbf{Joint7} \\ \hline
+		\textbf{Fx PC}  & 0.0000        & 0.0000        & 0.0000        & 0.0000        & 0.0000        & 0.0000        & 0.0000        & 0.0000 \\ \hline
+		\textbf{Fy PC}  & 108.1749        & -97.5180        & 0.0000        & -63.4384        & 0.0000        & -31.2221        & 0.0000        & 16.5238 \\ \hline
+		\textbf{Fz PC}  & 0.0000        & 0.0000        & -80.7260        & 0.0000        & -46.1509        & 0.0000        & -23.8223        & 0.0000 \\ \hline
+		\textbf{Tx PC}  & -22.7631        & -11.5646        & -36.3751        & -24.3045        & -14.8206        & -6.2177        & -3.3222        & 1.3353 \\ \hline
+		\textbf{Ty PC}  & 0.0000        & 0.0000        & 0.0006        & 0.0000        & 0.0002        & 0.0000        & 0.0001        & 0.0000 \\ \hline
+		\textbf{Tz PC}  & 36.3751        & -36.3756        & 0.0000        & -0.0004        & 0.0000        & -0.0007        & 0.0000        & 0.0005 \\ \hline
+	\end{tabular}
+\end{table}
+
+\begin{table}[h!]
+	\centering
+	\caption{Joint wrench obtained from Robot (N/Nm)}
+	\label{wrech_Robot_Pose15}
+	\begin{tabular}{|l|r|r|r|r|r|r|r|r|}
+		\hline
+		\textbf{} & \textbf{Base} & \textbf{Joint1}  & \textbf{Joint2}  & \textbf{Joint3}  & \textbf{Joint4}  & \textbf{Joint5}  & \textbf{Joint6}  & \textbf{Joint7} \\ \hline
+		\textbf{Fx Robot}  & 0.0000        & 0.0000        & -0.0000        & 0.0000        & 0.0000        & 0.0000        & 0.0000        & 0.0000 \\ \hline
+		\textbf{Fy Robot}  & 108.1750        & -97.5180        & 0.0000        & -63.4384        & 0.0000        & -31.2221        & 0.0000        & 16.5238 \\ \hline
+		\textbf{Fz Robot}  & 0.0000        & 0.0000        & -80.7260        & 0.0000        & -46.1509        & 0.0000        & -23.8223        & 0.0000 \\ \hline
+		\textbf{Tx Robot}  & -22.7631        & -11.5646        & -36.3751        & -24.3045        & -14.8206        & -6.2177        & -3.3221        & 1.3353 \\ \hline
+		\textbf{Ty Robot}  & 0.0000        & 0.0000        & 0.0006        & 0.0000        & 0.0002        & 0.0000        & 0.0001        & 0.0000 \\ \hline
+		\textbf{Tz Robot}  & 36.3751        & -36.3756        & 0.0000        & -0.0004        & -0.0000        & -0.0007        & -0.0000        & 0.0005 \\ \hline
+	\end{tabular}
+\end{table}
+
+\begin{table}[h!]
+	\centering
+	\caption{Joint wrench error between data from PC and Robot (N/Nm)}
+	\label{wrech_Error_Pose15}
+	\begin{tabular}{|l|r|r|r|r|r|r|r|r|}
+		\hline
+		\textbf{}  & \textbf{Base} & \textbf{Joint1}  & \textbf{Joint2}  & \textbf{Joint3}  & \textbf{Joint4}  & \textbf{Joint5}  & \textbf{Joint6}  & \textbf{Joint7} \\ \hline
+		\textbf{Fx Error}  & 0.0000        & 0.0000        & 0.0000        & 0.0000        & -0.0000        & 0.0000        & -0.0000        & 0.0000 \\ \hline
+		\textbf{Fy Error}  & -0.0001        & -0.0000        & -0.0000        & -0.0000        & -0.0000        & 0.0000        & -0.0000        & -0.0000 \\ \hline
+		\textbf{Fz Error}  & 0.0000        & 0.0000        & 0.0000        & 0.0000        & 0.0000        & 0.0000        & -0.0000        & 0.0000 \\ \hline
+		\textbf{Tx Error}  & 0.0000        & -0.0000        & 0.0000        & 0.0000        & -0.0000        & 0.0000        & -0.0001        & 0.0000 \\ \hline
+		\textbf{Ty Error}  & 0.0000        & 0.0000        & 0.0000        & 0.0000        & -0.0000        & 0.0000        & 0.0000        & 0.0000 \\ \hline
+		\textbf{Tz Error}  & -0.0000        & -0.0000        & -0.0000        & 0.0000        & 0.0000        & -0.0000        & 0.0000        & 0.0000 \\ \hline
+	\end{tabular}
+\end{table}
+
+\begin{table}[h!]
+	\centering
+	\caption{Joint torque along axis comparison with sensor data (Nm)}
+	\label{wrech_Sensor_Pose15}
+	\begin{tabular}{|l|r|r|r|r|r|r|r|}
+		\hline
+		\textbf{} & \textbf{Joint1} & \textbf{Joint2} & \textbf{Joint3} & \textbf{Joint4} & \textbf{Joint5} & \textbf{Joint6} & \textbf{Joint7} \\ \hline
+		\textbf{Tz Sensor}  & -37.5028           & 2.146           & -0.057257            & 0.30268           & -0.003178           & 0.052608           & -0.52433           \\ \hline
+		\textbf{Tz Robot}  	& -36.3756           & 0.0000           & -0.0004            & -0.0000           & -0.0007           & -0.0000           & 0.0005           \\ \hline
+		\textbf{Tz PC}  	& -36.3756           & 0.0000           & -0.0004            & 0.0000           & -0.0007           & 0.0000           & 0.0005           \\ \hline
+	\end{tabular}
+\end{table}
+
+% end of template --------------------------------------------------------------------------------------------------------------------------------------------------------

@@ -1,0 +1,88 @@
+<Actuator1>
+	<JointPosition>
+		<LoopCompensator>
+			<a2>xx.x</a2>
+			<a3>xx.x</a3>
+			<a4>xx.x</a4>
+			<a5>xx.x</a5>
+			<a6>xx.x</a6>
+			<b1>xx.x</b1>
+			<b2>xx.x</b2>
+			<b3>xx.x</b3>
+			<b4>xx.x</b4>
+			<b5>xx.x</b5>
+			<b6>xx.x</b6>
+		</LoopCompensator>
+		<FrequencyResponse>
+			<Amplitude>xx.x</Amplitude>
+			<StartFrequency>xx.x</StartFrequency>
+			<EndFrequency>xx.x</EndFrequency>
+			<EndingTime>xx.x</EndingTime>
+		</FrequencyResponse>
+		<AdditionalOptions>
+			<Inertia>xx.x</Inertia>
+			<ViscousFriction>xx.x</ViscousFriction>
+		</AdditionalOptions>
+	</JointPosition>
+	<Loop2>
+		<LoopCompensator>
+			<a1>xx.x</a1>
+			<a2>xx.x</a2>
+			<a3>xx.x</a3>
+			<a4>xx.x</a4>
+			<b1>xx.x</b1>
+			<b2>xx.x</b2>
+			<b3>xx.x</b3>
+			<b4>xx.x</b4>
+		</LoopCompensator>
+		<FrequencyResponse>
+			<Amplitude>xx.x</Amplitude>
+			<StartFrequency>xx.x</StartFrequency>
+			<EndFrequency>xx.x</EndFrequency>
+			<EndingTime>xx.x</EndingTime>
+		</FrequencyResponse>
+		<AdditionalOptions>
+			<Inertia>xx.x</Inertia>
+			<ViscousFriction>xx.x</ViscousFriction>
+			<GainsScheduling>true</GainsScheduling>
+		</AdditionalOptions>
+	</Loop2>	
+	...
+	
+	<FeedforwardGains>
+		<MotorPosition>xx.x</MotorPosition>
+		<JointVelocity>xx.x</JointVelocity>
+		<MotorVelocity>xx.x</MotorVelocity>
+		<Current>xx.x</Current>
+		<Torque>xx.x</Torque>
+	</FeedforwardGains>
+	<ControlArchitecture>
+		<JointPosition>true</JointPosition>
+		<MotorPosition>true</MotorPosition>
+		<JointVelocity>false</JointVelocity>
+		<MotorVelocity>true</MotorVelocity>
+		<Current>true</Current>
+		<Torque>false</Torque>
+	</ControlArchitecture>
+</Actuator1>
+<Actuator2>
+...
+</Actuator2>
+...
+
+
+<Pose>
+	<Actuator1>180.0</Actuator1>
+	<Actuator2>180.0</Actuator2>
+	<Actuator3>180.0</Actuator3>
+	<Actuator4>180.0</Actuator4>
+	<Actuator5>180.0</Actuator5>
+	<Actuator6>180.0</Actuator6>
+	<Actuator7>180.0</Actuator7>
+	<Actuator8>180.0</Actuator8>
+	<Actuator9>180.0</Actuator9>
+	<Actuator10>180.0</Actuator10>
+	<Actuator11>180.0</Actuator11>
+	<Actuator12>180.0</Actuator12>
+	<Actuator13>180.0</Actuator13>
+</Pose>	

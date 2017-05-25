@@ -1,0 +1,51 @@
+<!-- DataLoggerConfig.xml-->
+
+<!-- design note: should endianess matter???-->
+<!-- design note: dont support array in array for now-->
+
+<DataLoggerConfig name="Idm" defaultMode="BWTestMode" defaultOutputFile="idmlogFile.log">
+    <Projet name="projet" version="version" comment="comment"/>
+
+    <Mode name="BWTestMode" activeOnStart="true" speed = "1">
+
+        <Variable name="StatusFlagsIdm" 		offset="0x00" type="float" byteSize="4" format="decimal" refId="StatusFlags(Idm)"/> <!-- default refId is "" -->
+        <Variable name="FrameIdIdm"                     offset="0x00" type="float" byteSize="4" format="decimal" refId="FrameId(Idm)"/>
+        <Variable name="JitterComm_usIdm"               offset="0x00" type="float" byteSize="4" format="decimal" refId="JitterComm_us(Idm)"/>
+
+        <Variable name="Position_degIdm"                offset="0x00" type="float" byteSize="4" format="decimal" refId="Position_deg(Idm)"/>
+        <Variable name="PositionError_degIdm"           offset="0x00" type="float" byteSize="4" format="decimal" refId="PositionError_deg(Idm)"/>
+        <Variable name="PositionOutputCmdIdm"           offset="0x00" type="float" byteSize="4" format="decimal" refId="PositionOutputCmd(Idm)"/>
+        <Variable name="PositionFromHalls_degIdm"       offset="0x00" type="float" byteSize="4" format="decimal" refId="PositionFromHalls_deg(Idm)"/>
+
+        <Variable name="RollPositionAbsolute_degIdm"    offset="0x00" type="float" byteSize="4" format="decimal" refId="RollPositionAbsolute_deg(Idm)"/>
+
+        <Variable name="Velocity_degpsecIdm" 	        offset="0x00" type="float" byteSize="4" format="decimal" refId="Velocity_degpsec(Idm)"/>
+        <Variable name="VelocityError_degpsecIdm" 	offset="0x00" type="float" byteSize="4" format="decimal" refId="VelocityError_degpsec(Idm)"/>
+        <Variable name="VelocityOutputCmdIdm"           offset="0x00" type="float" byteSize="4" format="decimal" refId="VelocityOutputCmd(Idm)"/>
+        <Variable name="CurrentMotor_ampIdm" 		offset="0x00" type="float" byteSize="4" format="decimal" refId="CurrentMotor_amp(Idm)"/>
+        <Variable name="TorqueJoint_nmIdm" 		offset="0x00" type="float" byteSize="4" format="decimal" refId="TorqueJoint_nm(Idm)"/>
+
+        <Variable name="VoltageDigital_vIdm" 		offset="0x00" type="float" byteSize="4" format="decimal" refId="VoltageDigital_v(Idm)"/>
+        <Variable name="VoltageDrive_vIdm" 		offset="0x00" type="float" byteSize="4" format="decimal" refId="VoltageDrive_v(Idm)"/>
+        <Variable name="TemperatureAmbient1_degcIdm" 	offset="0x00" type="float" byteSize="4" format="decimal" refId="TemperatureAmbient1_degc(Idm)"/>
+        <Variable name="TemperatureAmbient2_degcIdm" 	offset="0x00" type="float" byteSize="4" format="decimal" refId="TemperatureAmbient2_degc(Idm)"/>
+
+
+        <Variable name="TemperatureMotor_degcIdm" 	offset="0x00" type="float" byteSize="4" format="decimal" refId="TemperatureMotor_degc(Idm)"/>
+
+        <Variable name="FaultFlagsIdm"                  offset="0x00" type="float" byteSize="4" format="decimal" refId="FaultFlags(Idm)"/>
+        <Variable name="WarningFlagsIdm"                offset="0x00" type="float" byteSize="4" format="decimal" refId="WarningFlags(Idm)"/>
+
+        <Variable name="CustomData0Idm" 		offset="0x00" type="float" byteSize="4" format="decimal" refId="CustomData0(Idm)"/>
+        <Variable name="CustomData1Idm" 		offset="0x00" type="float" byteSize="4" format="decimal" refId="CustomData1(Idm)"/>
+
+        <Variable name="FlagsIdm" 		        offset="0x00" type="int"   byteSize="4" format="decimal" refId="Flags(Idm)"/>
+
+        <Variable name="PositionCmd_degIdm" 		offset="0x00" type="int"   byteSize="4" format="decimal" refId="PositionCmd_deg(Idm)"/>
+        <Variable name="VelocityCmd_degpsecIdm" 	offset="0x00" type="int"   byteSize="4" format="decimal" refId="VelocityCmd_degpsec(Idm)"/>
+        <Variable name="CurrentMotorCmd_ampIdm" 	offset="0x00" type="int"   byteSize="4" format="decimal" refId="CurrentMotorCmd_amp(Idm)"/>
+
+        <Variable name="avoidBug"                       offset="0x00" type="int"   byteSize="4" format="decimal" refId="FrameId(Idm)"/>
+    </Mode>
+
+</DataLoggerConfig>
